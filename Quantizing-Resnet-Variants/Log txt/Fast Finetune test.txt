@@ -1,0 +1,48 @@
+(vitis-ai-pytorch) vitis-ai-user@docker-desktop:/workspace/src/vai_quantizer/vai_q_pytorch/example/resnet101$ python quantization.py --quant_mode test --fast_finetune --batch_size 1 --subset_len 8
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'
+
+[VAIQ_NOTE]: Loading NNDCT kernels...
+Train dataset size: 12000
+Test dataset size: 3000
+-------- Start resnet101 test 
+
+[VAIQ_NOTE]: OS and CPU information:
+               system --- Linux
+                 node --- docker-desktop
+              release --- 5.15.90.1-microsoft-standard-WSL2
+              version --- #1 SMP Fri Jan 27 02:56:13 UTC 2023
+              machine --- x86_64
+            processor --- x86_64
+
+[VAIQ_NOTE]: Tools version information:
+                  GCC --- GCC 7.5.0
+               python --- 3.8.6
+              pytorch --- 1.13.1
+        vai_q_pytorch --- 3.5.0+60df3f1+torch1.13.1
+
+[VAIQ_NOTE]: Quant config file is empty, use default quant configuration
+
+[VAIQ_NOTE]: Quantization test process start up...
+
+[VAIQ_NOTE]: =>Quant Module is in 'cpu'.
+
+[VAIQ_NOTE]: =>Parsing ResNet...
+
+[VAIQ_NOTE]: Start to trace and freeze model...
+
+[VAIQ_NOTE]: The input model nndct_st_ResNet_ed is torch.nn.Module.
+
+[VAIQ_NOTE]: Finish tracing.
+
+[VAIQ_NOTE]: Processing ops...
+██████████████████████████████████████████████████| 348/348 [00:01<00:00, 261.20it/s, OpInfo: name = return_0, type = Return]              
+
+[VAIQ_NOTE]: =>Doing weights equalization...
+
+[VAIQ_NOTE]: =>Quantizable module is generated.(quantize_result/ResNet.py)
+
+[VAIQ_NOTE]: =>Get module with quantization.
+
+[VAIQ_NOTE]: =>Loading quant model parameters.(quantize_result/param.pth)
+Accuracy: 100.0000%
+-------- End of resnet101 test 

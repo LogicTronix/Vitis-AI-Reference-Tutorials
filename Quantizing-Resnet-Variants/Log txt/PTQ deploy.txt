@@ -1,0 +1,56 @@
+(vitis-ai-pytorch) vitis-ai-user@docker-desktop:/workspace/src/vai_quantizer/vai_q_pytorch/example/resnet101$ python quantization.py --subset_len 1 --quant_mode test --deploy --batch_size 1
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'
+
+[VAIQ_NOTE]: Loading NNDCT kernels...
+Train dataset size: 12000
+Test dataset size: 3000
+-------- Start resnet101 test 
+
+[VAIQ_NOTE]: OS and CPU information:
+               system --- Linux
+                 node --- docker-desktop
+              release --- 5.15.90.1-microsoft-standard-WSL2
+              version --- #1 SMP Fri Jan 27 02:56:13 UTC 2023
+              machine --- x86_64
+            processor --- x86_64
+
+[VAIQ_NOTE]: Tools version information:
+                  GCC --- GCC 7.5.0
+               python --- 3.8.6
+              pytorch --- 1.13.1
+        vai_q_pytorch --- 3.5.0+60df3f1+torch1.13.1
+
+[VAIQ_NOTE]: Quant config file is empty, use default quant configuration
+
+[VAIQ_NOTE]: Quantization test process start up...
+
+[VAIQ_NOTE]: =>Quant Module is in 'cpu'.
+
+[VAIQ_NOTE]: =>Parsing ResNet...
+
+[VAIQ_NOTE]: Start to trace and freeze model...
+
+[VAIQ_NOTE]: The input model nndct_st_ResNet_ed is torch.nn.Module.
+
+[VAIQ_NOTE]: Finish tracing.
+
+[VAIQ_NOTE]: Processing ops...
+██████████████████████████████████████████████████| 348/348 [00:01<00:00, 297.85it/s, OpInfo: name = return_0, type = Return]              
+
+[VAIQ_NOTE]: =>Doing weights equalization...
+
+[VAIQ_NOTE]: =>Quantizable module is generated.(quantize_result/ResNet.py)
+
+[VAIQ_NOTE]: =>Get module with quantization.
+Accuracy: 0.0000%
+/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.8/site-packages/pytorch_nndct/nn/modules/prim_ops.py:116: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if not (list(self.node.out_tensors[0].shape[1:]) == list(input.size())[1:]):
+/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.8/site-packages/pytorch_nndct/quantization/quantizerimpl.py:17: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if inf.sum() > 0 or nan.sum() > 0:
+/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.8/site-packages/pytorch_nndct/nn/modules/fix_ops.py:67: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if (isinstance(tensor, torch.Tensor) and
+/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.8/site-packages/pytorch_nndct/nn/modules/adaptive_avg_pool.py:41: TracerWarning: Converting a tensor to a Python integer might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  input_size = [int(dim) for dim in input.shape[2:]]
+
+[VAIQ_NOTE]: ResNet_int.pt is generated.(quantize_result/ResNet_int.pt)
+-------- End of resnet101 test 

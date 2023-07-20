@@ -1,0 +1,66 @@
+(vitis-ai-pytorch) vitis-ai-user@VENOM:/workspace/src/vai_quantizer/vai_q_pytorch/example/resnet101$ python qat.py --subset_len 64
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'
+
+[VAIQ_NOTE]: Loading NNDCT kernels...
+Used arguments: Namespace(batch_size=4, mode='train', output_dir='qat_result', subset_len=64)
+Train dataset size: 12000
+Test dataset size: 3000
+
+[VAIQ_NOTE]: Quant config file is empty, use default quant configuration
+
+[VAIQ_NOTE]: Quantization calibration process start up...
+
+[VAIQ_NOTE]: =>Quant Module is in 'cpu'.
+
+[VAIQ_NOTE]: =>Parsing ResNet...
+
+[VAIQ_NOTE]: Start to trace and freeze model...
+
+[VAIQ_NOTE]: The input model nndct_st_ResNet_ed is torch.nn.Module.
+
+[VAIQ_NOTE]: Finish tracing.
+
+[VAIQ_NOTE]: Processing ops...
+██████████████████████████████████████████████████| 350/350 [00:00<00:00, 427.72it/s, OpInfo: name = return_0, type = Return]              
+
+[VAIQ_NOTE]: =>Quantizable module is generated.(.vai_qat/ResNet.py)
+
+[VAIQ_NOTE]: =>Exporting quant config.(.vai_qat/quant_info.json)
+
+[VAIQ_NOTE]: Start to trace and freeze model...
+
+[VAIQ_NOTE]: The input model nndct_st_ResNet_ed is torch.nn.Module.
+
+[VAIQ_NOTE]: Finish tracing.
+
+[VAIQ_NOTE]: Processing ops...
+██████████████████████████████████████████████████| 350/350 [00:00<00:00, 427.40it/s, OpInfo: name = return_0, type = Return]              
+Epoch 1 completed in 238.24 seconds                                                                                                        
+Epochs:   0%|                                                                                                        | 0/1 [03:58<?, ?it/s]Epoch [1/1], Train Loss: 0.2328, Train Accuracy: 0.8906
+Epochs: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [03:58<00:00, 238.32s/it]
+Accuracy: 96.8750%
+
+[VAIQ_NOTE]: Quant config file is empty, use default quant configuration
+
+[VAIQ_NOTE]: Quantization test process start up...
+
+[VAIQ_NOTE]: =>Quant Module is in 'cpu'.
+
+[VAIQ_NOTE]: =>Parsing ResNet...
+
+[VAIQ_NOTE]: Start to trace and freeze model...
+
+[VAIQ_NOTE]: The input model nndct_st_ResNet_ed is torch.nn.Module.
+
+[VAIQ_NOTE]: Finish tracing.
+
+[VAIQ_NOTE]: Processing ops...
+██████████████████████████████████████████████████| 350/350 [00:00<00:00, 378.85it/s, OpInfo: name = return_0, type = Return]              
+
+[VAIQ_NOTE]: =>Quantizable module is generated.(.vai_qat/ResNet.py)
+
+[VAIQ_NOTE]: =>Exporting quant config.(qat_result/test/quant_info.json)
+
+[VAIQ_NOTE]: =>Exporting quant config.(qat_result/quant_info.json)
+I0719 20:58:51.158306 quant_aware_training.py] Saving deployable model to qat_result/deployable.pth, and you can get it by calling "deployable_model()"
+Accuracy: 96.8750%

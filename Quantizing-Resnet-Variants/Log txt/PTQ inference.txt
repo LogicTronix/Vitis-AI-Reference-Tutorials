@@ -1,0 +1,15 @@
+(vitis-ai-pytorch) vitis-ai-user@docker-desktop:/workspace/src/vai_quantizer/vai_q_pytorch/example/resnet101$ python quantized_inference.py
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'
+
+[VAIQ_NOTE]: Loading NNDCT kernels...
+<PIL.PngImagePlugin.PngImageFile image mode=RGB size=32x32 at 0x7F2DE3C7DC40>
+Predicted class: airplane
+Probability: 0.9130832552909851
+
+<PIL.PngImagePlugin.PngImageFile image mode=RGB size=32x32 at 0x7F2DAD83CE20>
+Predicted class: automobile
+Probability: 0.9998601675033569
+
+<PIL.PngImagePlugin.PngImageFile image mode=RGB size=32x32 at 0x7F2DB0FCA6D0>
+Predicted class: bird
+Probability: 0.7770702838897705

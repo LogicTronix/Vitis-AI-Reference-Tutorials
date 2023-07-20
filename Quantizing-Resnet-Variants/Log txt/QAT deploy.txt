@@ -1,0 +1,74 @@
+(vitis-ai-pytorch) vitis-ai-user@VENOM:/workspace/src/vai_quantizer/vai_q_pytorch/example/resnet101$ python qat.py --mode deploy
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'
+
+[VAIQ_NOTE]: Loading NNDCT kernels...
+Used arguments: Namespace(batch_size=4, mode='deploy', output_dir='qat_result', subset_len=128)
+Train dataset size: 12000
+Test dataset size: 3000
+
+[VAIQ_NOTE]: Quant config file is empty, use default quant configuration
+
+[VAIQ_NOTE]: Quantization calibration process start up...
+
+[VAIQ_NOTE]: =>Quant Module is in 'cpu'.
+
+[VAIQ_NOTE]: =>Parsing ResNet...
+
+[VAIQ_NOTE]: Start to trace and freeze model...
+
+[VAIQ_NOTE]: The input model nndct_st_ResNet_ed is torch.nn.Module.
+
+[VAIQ_NOTE]: Finish tracing.
+
+[VAIQ_NOTE]: Processing ops...
+██████████████████████████████████████████████████| 350/350 [00:00<00:00, 356.85it/s, OpInfo: name = return_0, type = Return]              
+
+[VAIQ_NOTE]: =>Quantizable module is generated.(.vai_qat/ResNet.py)
+
+[VAIQ_NOTE]: =>Exporting quant config.(.vai_qat/quant_info.json)
+
+[VAIQ_NOTE]: Start to trace and freeze model...
+
+[VAIQ_NOTE]: The input model nndct_st_ResNet_ed is torch.nn.Module.
+
+[VAIQ_NOTE]: Finish tracing.
+
+[VAIQ_NOTE]: Processing ops...
+██████████████████████████████████████████████████| 350/350 [00:00<00:00, 355.07it/s, OpInfo: name = return_0, type = Return]              
+I0719 21:14:11.562045 quant_aware_training.py] Loading deployable model from qat_result/deployable.pth
+
+[VAIQ_NOTE]: Quant config file is empty, use default quant configuration
+
+[VAIQ_NOTE]: Quantization test process start up...
+
+[VAIQ_NOTE]: =>Quant Module is in 'cpu'.
+
+[VAIQ_NOTE]: =>Parsing ResNet...
+
+[VAIQ_NOTE]: Start to trace and freeze model...
+
+[VAIQ_NOTE]: The input model nndct_st_ResNet_ed is torch.nn.Module.
+
+[VAIQ_NOTE]: Finish tracing.
+
+[VAIQ_NOTE]: Processing ops...
+██████████████████████████████████████████████████| 350/350 [00:01<00:00, 345.76it/s, OpInfo: name = return_0, type = Return]              
+
+[VAIQ_NOTE]: =>Quantizable module is generated.(qat_result/ResNet.py)
+I0719 21:14:21.233762 quant_aware_training.py] Forward the deployable model with data of batch_size=1 in cpu mode to dump xmodel.
+
+[VAIQ_NOTE]: =>Converting to xmodel ...
+
+[VAIQ_WARN]: ResNet::20565 is not tensor.
+
+[VAIQ_NOTE]: =>Successfully convert 'ResNet_0' to xmodel.(qat_result/ResNet_0_int.xmodel)
+/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.8/site-packages/pytorch_nndct/nn/modules/prim_ops.py:116: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if not (list(self.node.out_tensors[0].shape[1:]) == list(input.size())[1:]):
+/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.8/site-packages/pytorch_nndct/quantization/quantizerimpl.py:17: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if inf.sum() > 0 or nan.sum() > 0:
+/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.8/site-packages/pytorch_nndct/nn/modules/fix_ops.py:67: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if (isinstance(tensor, torch.Tensor) and
+/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.8/site-packages/pytorch_nndct/nn/modules/adaptive_avg_pool.py:41: TracerWarning: Converting a tensor to a Python integer might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  input_size = [int(dim) for dim in input.shape[2:]]
+
+[VAIQ_NOTE]: ResNet_int.pt is generated.(qat_result/ResNet_int.pt)
