@@ -1,0 +1,1249 @@
+digraph ResNet {
+	input_0 [label="type:nndct_input
+name:ResNet::input_0
+assigned device:user
+out shape:[[1, 224, 224, 3]]" color=black]
+	"ResNet/Conv2d[conv1]/ret.3" [label="type:nndct_conv2d
+name:ResNet::ResNet/Conv2d[conv1]/ret.3
+assigned device:dpu
+out shape:[[1, 112, 112, 64]]" color=blue]
+	"ResNet/ReLU[relu]/ret.7" [label="type:nndct_relu
+name:ResNet::ResNet/ReLU[relu]/ret.7
+assigned device:dpu
+out shape:[[1, 112, 112, 64]]" color=blue]
+	"ResNet/MaxPool2d[maxpool]/17572" [label="type:nndct_maxpool
+name:ResNet::ResNet/MaxPool2d[maxpool]/17572
+assigned device:dpu
+out shape:[[1, 56, 56, 64]]" color=blue]
+	"ResNet/Sequential[layer1]/block[0]/Conv2d[conv1]/ret.9" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer1]/block[0]/Conv2d[conv1]/ret.9
+assigned device:dpu
+out shape:[[1, 56, 56, 64]]" color=blue]
+	"ResNet/Sequential[layer1]/block[0]/ReLU[relu]/ret.13" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer1]/block[0]/ReLU[relu]/ret.13
+assigned device:dpu
+out shape:[[1, 56, 56, 64]]" color=blue]
+	"ResNet/Sequential[layer1]/block[0]/Conv2d[conv2]/ret.15" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer1]/block[0]/Conv2d[conv2]/ret.15
+assigned device:dpu
+out shape:[[1, 56, 56, 64]]" color=blue]
+	"ResNet/Sequential[layer1]/block[0]/ReLU[relu]/ret.19" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer1]/block[0]/ReLU[relu]/ret.19
+assigned device:dpu
+out shape:[[1, 56, 56, 64]]" color=blue]
+	"ResNet/Sequential[layer1]/block[0]/Conv2d[conv3]/ret.21" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer1]/block[0]/Conv2d[conv3]/ret.21
+assigned device:dpu
+out shape:[[1, 56, 56, 256]]" color=blue]
+	"ResNet/Sequential[layer1]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.25" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer1]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.25
+assigned device:dpu
+out shape:[[1, 56, 56, 256]]" color=blue]
+	"ResNet/Sequential[layer1]/block[0]/17683" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer1]/block[0]/17683
+assigned device:dpu
+out shape:[[1, 56, 56, 256]]" color=blue]
+	"ResNet/Sequential[layer1]/block[0]/ReLU[relu]/ret.29" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer1]/block[0]/ReLU[relu]/ret.29
+assigned device:dpu
+out shape:[[1, 56, 56, 256]]" color=blue]
+	"ResNet/Sequential[layer1]/block[1]/Conv2d[conv1]/ret.31" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer1]/block[1]/Conv2d[conv1]/ret.31
+assigned device:dpu
+out shape:[[1, 56, 56, 64]]" color=blue]
+	"ResNet/Sequential[layer1]/block[1]/ReLU[relu]/ret.35" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer1]/block[1]/ReLU[relu]/ret.35
+assigned device:dpu
+out shape:[[1, 56, 56, 64]]" color=blue]
+	"ResNet/Sequential[layer1]/block[1]/Conv2d[conv2]/ret.37" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer1]/block[1]/Conv2d[conv2]/ret.37
+assigned device:dpu
+out shape:[[1, 56, 56, 64]]" color=blue]
+	"ResNet/Sequential[layer1]/block[1]/ReLU[relu]/ret.41" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer1]/block[1]/ReLU[relu]/ret.41
+assigned device:dpu
+out shape:[[1, 56, 56, 64]]" color=blue]
+	"ResNet/Sequential[layer1]/block[1]/Conv2d[conv3]/ret.43" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer1]/block[1]/Conv2d[conv3]/ret.43
+assigned device:dpu
+out shape:[[1, 56, 56, 256]]" color=blue]
+	"ResNet/Sequential[layer1]/block[1]/17769" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer1]/block[1]/17769
+assigned device:dpu
+out shape:[[1, 56, 56, 256]]" color=blue]
+	"ResNet/Sequential[layer1]/block[1]/ReLU[relu]/ret.47" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer1]/block[1]/ReLU[relu]/ret.47
+assigned device:dpu
+out shape:[[1, 56, 56, 256]]" color=blue]
+	"ResNet/Sequential[layer1]/block[2]/Conv2d[conv1]/ret.49" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer1]/block[2]/Conv2d[conv1]/ret.49
+assigned device:dpu
+out shape:[[1, 56, 56, 64]]" color=blue]
+	"ResNet/Sequential[layer1]/block[2]/ReLU[relu]/ret.53" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer1]/block[2]/ReLU[relu]/ret.53
+assigned device:dpu
+out shape:[[1, 56, 56, 64]]" color=blue]
+	"ResNet/Sequential[layer1]/block[2]/Conv2d[conv2]/ret.55" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer1]/block[2]/Conv2d[conv2]/ret.55
+assigned device:dpu
+out shape:[[1, 56, 56, 64]]" color=blue]
+	"ResNet/Sequential[layer1]/block[2]/ReLU[relu]/ret.59" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer1]/block[2]/ReLU[relu]/ret.59
+assigned device:dpu
+out shape:[[1, 56, 56, 64]]" color=blue]
+	"ResNet/Sequential[layer1]/block[2]/Conv2d[conv3]/ret.61" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer1]/block[2]/Conv2d[conv3]/ret.61
+assigned device:dpu
+out shape:[[1, 56, 56, 256]]" color=blue]
+	"ResNet/Sequential[layer1]/block[2]/17855" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer1]/block[2]/17855
+assigned device:dpu
+out shape:[[1, 56, 56, 256]]" color=blue]
+	"ResNet/Sequential[layer1]/block[2]/ReLU[relu]/ret.65" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer1]/block[2]/ReLU[relu]/ret.65
+assigned device:dpu
+out shape:[[1, 56, 56, 256]]" color=blue]
+	"ResNet/Sequential[layer2]/block[0]/Conv2d[conv1]/ret.67" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer2]/block[0]/Conv2d[conv1]/ret.67
+assigned device:dpu
+out shape:[[1, 56, 56, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[0]/ReLU[relu]/ret.71" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer2]/block[0]/ReLU[relu]/ret.71
+assigned device:dpu
+out shape:[[1, 56, 56, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[0]/Conv2d[conv2]/ret.73" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer2]/block[0]/Conv2d[conv2]/ret.73
+assigned device:dpu
+out shape:[[1, 28, 28, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[0]/ReLU[relu]/ret.77" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer2]/block[0]/ReLU[relu]/ret.77
+assigned device:dpu
+out shape:[[1, 28, 28, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[0]/Conv2d[conv3]/ret.79" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer2]/block[0]/Conv2d[conv3]/ret.79
+assigned device:dpu
+out shape:[[1, 28, 28, 512]]" color=blue]
+	"ResNet/Sequential[layer2]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.83" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer2]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.83
+assigned device:dpu
+out shape:[[1, 28, 28, 512]]" color=blue]
+	"ResNet/Sequential[layer2]/block[0]/17967" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer2]/block[0]/17967
+assigned device:dpu
+out shape:[[1, 28, 28, 512]]" color=blue]
+	"ResNet/Sequential[layer2]/block[0]/ReLU[relu]/ret.87" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer2]/block[0]/ReLU[relu]/ret.87
+assigned device:dpu
+out shape:[[1, 28, 28, 512]]" color=blue]
+	"ResNet/Sequential[layer2]/block[1]/Conv2d[conv1]/ret.89" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer2]/block[1]/Conv2d[conv1]/ret.89
+assigned device:dpu
+out shape:[[1, 28, 28, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[1]/ReLU[relu]/ret.93" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer2]/block[1]/ReLU[relu]/ret.93
+assigned device:dpu
+out shape:[[1, 28, 28, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[1]/Conv2d[conv2]/ret.95" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer2]/block[1]/Conv2d[conv2]/ret.95
+assigned device:dpu
+out shape:[[1, 28, 28, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[1]/ReLU[relu]/ret.99" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer2]/block[1]/ReLU[relu]/ret.99
+assigned device:dpu
+out shape:[[1, 28, 28, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[1]/Conv2d[conv3]/ret.101" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer2]/block[1]/Conv2d[conv3]/ret.101
+assigned device:dpu
+out shape:[[1, 28, 28, 512]]" color=blue]
+	"ResNet/Sequential[layer2]/block[1]/18053" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer2]/block[1]/18053
+assigned device:dpu
+out shape:[[1, 28, 28, 512]]" color=blue]
+	"ResNet/Sequential[layer2]/block[1]/ReLU[relu]/ret.105" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer2]/block[1]/ReLU[relu]/ret.105
+assigned device:dpu
+out shape:[[1, 28, 28, 512]]" color=blue]
+	"ResNet/Sequential[layer2]/block[2]/Conv2d[conv1]/ret.107" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer2]/block[2]/Conv2d[conv1]/ret.107
+assigned device:dpu
+out shape:[[1, 28, 28, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[2]/ReLU[relu]/ret.111" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer2]/block[2]/ReLU[relu]/ret.111
+assigned device:dpu
+out shape:[[1, 28, 28, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[2]/Conv2d[conv2]/ret.113" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer2]/block[2]/Conv2d[conv2]/ret.113
+assigned device:dpu
+out shape:[[1, 28, 28, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[2]/ReLU[relu]/ret.117" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer2]/block[2]/ReLU[relu]/ret.117
+assigned device:dpu
+out shape:[[1, 28, 28, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[2]/Conv2d[conv3]/ret.119" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer2]/block[2]/Conv2d[conv3]/ret.119
+assigned device:dpu
+out shape:[[1, 28, 28, 512]]" color=blue]
+	"ResNet/Sequential[layer2]/block[2]/18139" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer2]/block[2]/18139
+assigned device:dpu
+out shape:[[1, 28, 28, 512]]" color=blue]
+	"ResNet/Sequential[layer2]/block[2]/ReLU[relu]/ret.123" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer2]/block[2]/ReLU[relu]/ret.123
+assigned device:dpu
+out shape:[[1, 28, 28, 512]]" color=blue]
+	"ResNet/Sequential[layer2]/block[3]/Conv2d[conv1]/ret.125" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer2]/block[3]/Conv2d[conv1]/ret.125
+assigned device:dpu
+out shape:[[1, 28, 28, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[3]/ReLU[relu]/ret.129" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer2]/block[3]/ReLU[relu]/ret.129
+assigned device:dpu
+out shape:[[1, 28, 28, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[3]/Conv2d[conv2]/ret.131" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer2]/block[3]/Conv2d[conv2]/ret.131
+assigned device:dpu
+out shape:[[1, 28, 28, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[3]/ReLU[relu]/ret.135" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer2]/block[3]/ReLU[relu]/ret.135
+assigned device:dpu
+out shape:[[1, 28, 28, 128]]" color=blue]
+	"ResNet/Sequential[layer2]/block[3]/Conv2d[conv3]/ret.137" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer2]/block[3]/Conv2d[conv3]/ret.137
+assigned device:dpu
+out shape:[[1, 28, 28, 512]]" color=blue]
+	"ResNet/Sequential[layer2]/block[3]/18225" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer2]/block[3]/18225
+assigned device:dpu
+out shape:[[1, 28, 28, 512]]" color=blue]
+	"ResNet/Sequential[layer2]/block[3]/ReLU[relu]/ret.141" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer2]/block[3]/ReLU[relu]/ret.141
+assigned device:dpu
+out shape:[[1, 28, 28, 512]]" color=blue]
+	"ResNet/Sequential[layer3]/block[0]/Conv2d[conv1]/ret.143" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[0]/Conv2d[conv1]/ret.143
+assigned device:dpu
+out shape:[[1, 28, 28, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[0]/ReLU[relu]/ret.147" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[0]/ReLU[relu]/ret.147
+assigned device:dpu
+out shape:[[1, 28, 28, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[0]/Conv2d[conv2]/ret.149" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[0]/Conv2d[conv2]/ret.149
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[0]/ReLU[relu]/ret.153" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[0]/ReLU[relu]/ret.153
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[0]/Conv2d[conv3]/ret.155" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[0]/Conv2d[conv3]/ret.155
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.159" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.159
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[0]/18337" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[0]/18337
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[0]/ReLU[relu]/ret.163" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[0]/ReLU[relu]/ret.163
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[1]/Conv2d[conv1]/ret.165" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[1]/Conv2d[conv1]/ret.165
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[1]/ReLU[relu]/ret.169" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[1]/ReLU[relu]/ret.169
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[1]/Conv2d[conv2]/ret.171" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[1]/Conv2d[conv2]/ret.171
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[1]/ReLU[relu]/ret.175" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[1]/ReLU[relu]/ret.175
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[1]/Conv2d[conv3]/ret.177" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[1]/Conv2d[conv3]/ret.177
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[1]/18423" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[1]/18423
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[1]/ReLU[relu]/ret.181" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[1]/ReLU[relu]/ret.181
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[2]/Conv2d[conv1]/ret.183" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[2]/Conv2d[conv1]/ret.183
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[2]/ReLU[relu]/ret.187" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[2]/ReLU[relu]/ret.187
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[2]/Conv2d[conv2]/ret.189" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[2]/Conv2d[conv2]/ret.189
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[2]/ReLU[relu]/ret.193" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[2]/ReLU[relu]/ret.193
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[2]/Conv2d[conv3]/ret.195" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[2]/Conv2d[conv3]/ret.195
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[2]/18509" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[2]/18509
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[2]/ReLU[relu]/ret.199" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[2]/ReLU[relu]/ret.199
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[3]/Conv2d[conv1]/ret.201" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[3]/Conv2d[conv1]/ret.201
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[3]/ReLU[relu]/ret.205" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[3]/ReLU[relu]/ret.205
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[3]/Conv2d[conv2]/ret.207" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[3]/Conv2d[conv2]/ret.207
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[3]/ReLU[relu]/ret.211" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[3]/ReLU[relu]/ret.211
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[3]/Conv2d[conv3]/ret.213" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[3]/Conv2d[conv3]/ret.213
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[3]/18595" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[3]/18595
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[3]/ReLU[relu]/ret.217" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[3]/ReLU[relu]/ret.217
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[4]/Conv2d[conv1]/ret.219" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[4]/Conv2d[conv1]/ret.219
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[4]/ReLU[relu]/ret.223" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[4]/ReLU[relu]/ret.223
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[4]/Conv2d[conv2]/ret.225" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[4]/Conv2d[conv2]/ret.225
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[4]/ReLU[relu]/ret.229" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[4]/ReLU[relu]/ret.229
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[4]/Conv2d[conv3]/ret.231" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[4]/Conv2d[conv3]/ret.231
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[4]/18681" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[4]/18681
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[4]/ReLU[relu]/ret.235" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[4]/ReLU[relu]/ret.235
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[5]/Conv2d[conv1]/ret.237" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[5]/Conv2d[conv1]/ret.237
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[5]/ReLU[relu]/ret.241" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[5]/ReLU[relu]/ret.241
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[5]/Conv2d[conv2]/ret.243" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[5]/Conv2d[conv2]/ret.243
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[5]/ReLU[relu]/ret.247" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[5]/ReLU[relu]/ret.247
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[5]/Conv2d[conv3]/ret.249" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[5]/Conv2d[conv3]/ret.249
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[5]/18767" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[5]/18767
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[5]/ReLU[relu]/ret.253" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[5]/ReLU[relu]/ret.253
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[6]/Conv2d[conv1]/ret.255" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[6]/Conv2d[conv1]/ret.255
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[6]/ReLU[relu]/ret.259" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[6]/ReLU[relu]/ret.259
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[6]/Conv2d[conv2]/ret.261" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[6]/Conv2d[conv2]/ret.261
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[6]/ReLU[relu]/ret.265" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[6]/ReLU[relu]/ret.265
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[6]/Conv2d[conv3]/ret.267" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[6]/Conv2d[conv3]/ret.267
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[6]/18853" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[6]/18853
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[6]/ReLU[relu]/ret.271" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[6]/ReLU[relu]/ret.271
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[7]/Conv2d[conv1]/ret.273" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[7]/Conv2d[conv1]/ret.273
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[7]/ReLU[relu]/ret.277" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[7]/ReLU[relu]/ret.277
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[7]/Conv2d[conv2]/ret.279" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[7]/Conv2d[conv2]/ret.279
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[7]/ReLU[relu]/ret.283" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[7]/ReLU[relu]/ret.283
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[7]/Conv2d[conv3]/ret.285" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[7]/Conv2d[conv3]/ret.285
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[7]/18939" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[7]/18939
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[7]/ReLU[relu]/ret.289" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[7]/ReLU[relu]/ret.289
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[8]/Conv2d[conv1]/ret.291" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[8]/Conv2d[conv1]/ret.291
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[8]/ReLU[relu]/ret.295" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[8]/ReLU[relu]/ret.295
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[8]/Conv2d[conv2]/ret.297" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[8]/Conv2d[conv2]/ret.297
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[8]/ReLU[relu]/ret.301" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[8]/ReLU[relu]/ret.301
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[8]/Conv2d[conv3]/ret.303" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[8]/Conv2d[conv3]/ret.303
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[8]/19025" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[8]/19025
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[8]/ReLU[relu]/ret.307" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[8]/ReLU[relu]/ret.307
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[9]/Conv2d[conv1]/ret.309" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[9]/Conv2d[conv1]/ret.309
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[9]/ReLU[relu]/ret.313" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[9]/ReLU[relu]/ret.313
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[9]/Conv2d[conv2]/ret.315" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[9]/Conv2d[conv2]/ret.315
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[9]/ReLU[relu]/ret.319" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[9]/ReLU[relu]/ret.319
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[9]/Conv2d[conv3]/ret.321" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[9]/Conv2d[conv3]/ret.321
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[9]/19111" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[9]/19111
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[9]/ReLU[relu]/ret.325" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[9]/ReLU[relu]/ret.325
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[10]/Conv2d[conv1]/ret.327" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[10]/Conv2d[conv1]/ret.327
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[10]/ReLU[relu]/ret.331" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[10]/ReLU[relu]/ret.331
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[10]/Conv2d[conv2]/ret.333" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[10]/Conv2d[conv2]/ret.333
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[10]/ReLU[relu]/ret.337" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[10]/ReLU[relu]/ret.337
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[10]/Conv2d[conv3]/ret.339" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[10]/Conv2d[conv3]/ret.339
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[10]/19197" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[10]/19197
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[10]/ReLU[relu]/ret.343" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[10]/ReLU[relu]/ret.343
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[11]/Conv2d[conv1]/ret.345" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[11]/Conv2d[conv1]/ret.345
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[11]/ReLU[relu]/ret.349" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[11]/ReLU[relu]/ret.349
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[11]/Conv2d[conv2]/ret.351" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[11]/Conv2d[conv2]/ret.351
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[11]/ReLU[relu]/ret.355" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[11]/ReLU[relu]/ret.355
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[11]/Conv2d[conv3]/ret.357" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[11]/Conv2d[conv3]/ret.357
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[11]/19283" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[11]/19283
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[11]/ReLU[relu]/ret.361" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[11]/ReLU[relu]/ret.361
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[12]/Conv2d[conv1]/ret.363" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[12]/Conv2d[conv1]/ret.363
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[12]/ReLU[relu]/ret.367" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[12]/ReLU[relu]/ret.367
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[12]/Conv2d[conv2]/ret.369" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[12]/Conv2d[conv2]/ret.369
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[12]/ReLU[relu]/ret.373" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[12]/ReLU[relu]/ret.373
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[12]/Conv2d[conv3]/ret.375" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[12]/Conv2d[conv3]/ret.375
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[12]/19369" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[12]/19369
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[12]/ReLU[relu]/ret.379" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[12]/ReLU[relu]/ret.379
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[13]/Conv2d[conv1]/ret.381" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[13]/Conv2d[conv1]/ret.381
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[13]/ReLU[relu]/ret.385" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[13]/ReLU[relu]/ret.385
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[13]/Conv2d[conv2]/ret.387" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[13]/Conv2d[conv2]/ret.387
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[13]/ReLU[relu]/ret.391" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[13]/ReLU[relu]/ret.391
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[13]/Conv2d[conv3]/ret.393" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[13]/Conv2d[conv3]/ret.393
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[13]/19455" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[13]/19455
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[13]/ReLU[relu]/ret.397" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[13]/ReLU[relu]/ret.397
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[14]/Conv2d[conv1]/ret.399" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[14]/Conv2d[conv1]/ret.399
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[14]/ReLU[relu]/ret.403" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[14]/ReLU[relu]/ret.403
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[14]/Conv2d[conv2]/ret.405" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[14]/Conv2d[conv2]/ret.405
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[14]/ReLU[relu]/ret.409" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[14]/ReLU[relu]/ret.409
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[14]/Conv2d[conv3]/ret.411" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[14]/Conv2d[conv3]/ret.411
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[14]/19541" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[14]/19541
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[14]/ReLU[relu]/ret.415" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[14]/ReLU[relu]/ret.415
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[15]/Conv2d[conv1]/ret.417" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[15]/Conv2d[conv1]/ret.417
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[15]/ReLU[relu]/ret.421" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[15]/ReLU[relu]/ret.421
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[15]/Conv2d[conv2]/ret.423" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[15]/Conv2d[conv2]/ret.423
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[15]/ReLU[relu]/ret.427" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[15]/ReLU[relu]/ret.427
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[15]/Conv2d[conv3]/ret.429" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[15]/Conv2d[conv3]/ret.429
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[15]/19627" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[15]/19627
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[15]/ReLU[relu]/ret.433" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[15]/ReLU[relu]/ret.433
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[16]/Conv2d[conv1]/ret.435" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[16]/Conv2d[conv1]/ret.435
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[16]/ReLU[relu]/ret.439" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[16]/ReLU[relu]/ret.439
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[16]/Conv2d[conv2]/ret.441" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[16]/Conv2d[conv2]/ret.441
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[16]/ReLU[relu]/ret.445" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[16]/ReLU[relu]/ret.445
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[16]/Conv2d[conv3]/ret.447" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[16]/Conv2d[conv3]/ret.447
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[16]/19713" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[16]/19713
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[16]/ReLU[relu]/ret.451" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[16]/ReLU[relu]/ret.451
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[17]/Conv2d[conv1]/ret.453" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[17]/Conv2d[conv1]/ret.453
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[17]/ReLU[relu]/ret.457" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[17]/ReLU[relu]/ret.457
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[17]/Conv2d[conv2]/ret.459" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[17]/Conv2d[conv2]/ret.459
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[17]/ReLU[relu]/ret.463" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[17]/ReLU[relu]/ret.463
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[17]/Conv2d[conv3]/ret.465" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[17]/Conv2d[conv3]/ret.465
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[17]/19799" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[17]/19799
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[17]/ReLU[relu]/ret.469" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[17]/ReLU[relu]/ret.469
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[18]/Conv2d[conv1]/ret.471" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[18]/Conv2d[conv1]/ret.471
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[18]/ReLU[relu]/ret.475" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[18]/ReLU[relu]/ret.475
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[18]/Conv2d[conv2]/ret.477" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[18]/Conv2d[conv2]/ret.477
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[18]/ReLU[relu]/ret.481" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[18]/ReLU[relu]/ret.481
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[18]/Conv2d[conv3]/ret.483" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[18]/Conv2d[conv3]/ret.483
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[18]/19885" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[18]/19885
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[18]/ReLU[relu]/ret.487" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[18]/ReLU[relu]/ret.487
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[19]/Conv2d[conv1]/ret.489" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[19]/Conv2d[conv1]/ret.489
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[19]/ReLU[relu]/ret.493" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[19]/ReLU[relu]/ret.493
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[19]/Conv2d[conv2]/ret.495" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[19]/Conv2d[conv2]/ret.495
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[19]/ReLU[relu]/ret.499" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[19]/ReLU[relu]/ret.499
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[19]/Conv2d[conv3]/ret.501" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[19]/Conv2d[conv3]/ret.501
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[19]/19971" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[19]/19971
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[19]/ReLU[relu]/ret.505" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[19]/ReLU[relu]/ret.505
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[20]/Conv2d[conv1]/ret.507" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[20]/Conv2d[conv1]/ret.507
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[20]/ReLU[relu]/ret.511" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[20]/ReLU[relu]/ret.511
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[20]/Conv2d[conv2]/ret.513" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[20]/Conv2d[conv2]/ret.513
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[20]/ReLU[relu]/ret.517" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[20]/ReLU[relu]/ret.517
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[20]/Conv2d[conv3]/ret.519" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[20]/Conv2d[conv3]/ret.519
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[20]/20057" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[20]/20057
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[20]/ReLU[relu]/ret.523" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[20]/ReLU[relu]/ret.523
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[21]/Conv2d[conv1]/ret.525" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[21]/Conv2d[conv1]/ret.525
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[21]/ReLU[relu]/ret.529" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[21]/ReLU[relu]/ret.529
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[21]/Conv2d[conv2]/ret.531" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[21]/Conv2d[conv2]/ret.531
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[21]/ReLU[relu]/ret.535" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[21]/ReLU[relu]/ret.535
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[21]/Conv2d[conv3]/ret.537" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[21]/Conv2d[conv3]/ret.537
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[21]/20143" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[21]/20143
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[21]/ReLU[relu]/ret.541" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[21]/ReLU[relu]/ret.541
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[22]/Conv2d[conv1]/ret.543" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[22]/Conv2d[conv1]/ret.543
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[22]/ReLU[relu]/ret.547" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[22]/ReLU[relu]/ret.547
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[22]/Conv2d[conv2]/ret.549" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[22]/Conv2d[conv2]/ret.549
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[22]/ReLU[relu]/ret.553" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[22]/ReLU[relu]/ret.553
+assigned device:dpu
+out shape:[[1, 14, 14, 256]]" color=blue]
+	"ResNet/Sequential[layer3]/block[22]/Conv2d[conv3]/ret.555" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer3]/block[22]/Conv2d[conv3]/ret.555
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[22]/20229" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer3]/block[22]/20229
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer3]/block[22]/ReLU[relu]/ret.559" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer3]/block[22]/ReLU[relu]/ret.559
+assigned device:dpu
+out shape:[[1, 14, 14, 1024]]" color=blue]
+	"ResNet/Sequential[layer4]/block[0]/Conv2d[conv1]/ret.561" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer4]/block[0]/Conv2d[conv1]/ret.561
+assigned device:dpu
+out shape:[[1, 14, 14, 512]]" color=blue]
+	"ResNet/Sequential[layer4]/block[0]/ReLU[relu]/ret.565" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer4]/block[0]/ReLU[relu]/ret.565
+assigned device:dpu
+out shape:[[1, 14, 14, 512]]" color=blue]
+	"ResNet/Sequential[layer4]/block[0]/Conv2d[conv2]/ret.567" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer4]/block[0]/Conv2d[conv2]/ret.567
+assigned device:dpu
+out shape:[[1, 7, 7, 512]]" color=blue]
+	"ResNet/Sequential[layer4]/block[0]/ReLU[relu]/ret.571" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer4]/block[0]/ReLU[relu]/ret.571
+assigned device:dpu
+out shape:[[1, 7, 7, 512]]" color=blue]
+	"ResNet/Sequential[layer4]/block[0]/Conv2d[conv3]/ret.573" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer4]/block[0]/Conv2d[conv3]/ret.573
+assigned device:dpu
+out shape:[[1, 7, 7, 2048]]" color=blue]
+	"ResNet/Sequential[layer4]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.577" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer4]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.577
+assigned device:dpu
+out shape:[[1, 7, 7, 2048]]" color=blue]
+	"ResNet/Sequential[layer4]/block[0]/20341" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer4]/block[0]/20341
+assigned device:dpu
+out shape:[[1, 7, 7, 2048]]" color=blue]
+	"ResNet/Sequential[layer4]/block[0]/ReLU[relu]/ret.581" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer4]/block[0]/ReLU[relu]/ret.581
+assigned device:dpu
+out shape:[[1, 7, 7, 2048]]" color=blue]
+	"ResNet/Sequential[layer4]/block[1]/Conv2d[conv1]/ret.583" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer4]/block[1]/Conv2d[conv1]/ret.583
+assigned device:dpu
+out shape:[[1, 7, 7, 512]]" color=blue]
+	"ResNet/Sequential[layer4]/block[1]/ReLU[relu]/ret.587" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer4]/block[1]/ReLU[relu]/ret.587
+assigned device:dpu
+out shape:[[1, 7, 7, 512]]" color=blue]
+	"ResNet/Sequential[layer4]/block[1]/Conv2d[conv2]/ret.589" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer4]/block[1]/Conv2d[conv2]/ret.589
+assigned device:dpu
+out shape:[[1, 7, 7, 512]]" color=blue]
+	"ResNet/Sequential[layer4]/block[1]/ReLU[relu]/ret.593" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer4]/block[1]/ReLU[relu]/ret.593
+assigned device:dpu
+out shape:[[1, 7, 7, 512]]" color=blue]
+	"ResNet/Sequential[layer4]/block[1]/Conv2d[conv3]/ret.595" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer4]/block[1]/Conv2d[conv3]/ret.595
+assigned device:dpu
+out shape:[[1, 7, 7, 2048]]" color=blue]
+	"ResNet/Sequential[layer4]/block[1]/20427" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer4]/block[1]/20427
+assigned device:dpu
+out shape:[[1, 7, 7, 2048]]" color=blue]
+	"ResNet/Sequential[layer4]/block[1]/ReLU[relu]/ret.599" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer4]/block[1]/ReLU[relu]/ret.599
+assigned device:dpu
+out shape:[[1, 7, 7, 2048]]" color=blue]
+	"ResNet/Sequential[layer4]/block[2]/Conv2d[conv1]/ret.601" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer4]/block[2]/Conv2d[conv1]/ret.601
+assigned device:dpu
+out shape:[[1, 7, 7, 512]]" color=blue]
+	"ResNet/Sequential[layer4]/block[2]/ReLU[relu]/ret.605" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer4]/block[2]/ReLU[relu]/ret.605
+assigned device:dpu
+out shape:[[1, 7, 7, 512]]" color=blue]
+	"ResNet/Sequential[layer4]/block[2]/Conv2d[conv2]/ret.607" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer4]/block[2]/Conv2d[conv2]/ret.607
+assigned device:dpu
+out shape:[[1, 7, 7, 512]]" color=blue]
+	"ResNet/Sequential[layer4]/block[2]/ReLU[relu]/ret.611" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer4]/block[2]/ReLU[relu]/ret.611
+assigned device:dpu
+out shape:[[1, 7, 7, 512]]" color=blue]
+	"ResNet/Sequential[layer4]/block[2]/Conv2d[conv3]/ret.613" [label="type:nndct_conv2d
+name:ResNet::ResNet/Sequential[layer4]/block[2]/Conv2d[conv3]/ret.613
+assigned device:dpu
+out shape:[[1, 7, 7, 2048]]" color=blue]
+	"ResNet/Sequential[layer4]/block[2]/20513" [label="type:nndct_elemwise_add
+name:ResNet::ResNet/Sequential[layer4]/block[2]/20513
+assigned device:dpu
+out shape:[[1, 7, 7, 2048]]" color=blue]
+	"ResNet/Sequential[layer4]/block[2]/ReLU[relu]/ret.617" [label="type:nndct_relu
+name:ResNet::ResNet/Sequential[layer4]/block[2]/ReLU[relu]/ret.617
+assigned device:dpu
+out shape:[[1, 7, 7, 2048]]" color=blue]
+	"ResNet/AdaptiveAvgPool2d[avgpool]/20532" [label="type:nndct_avgpool
+name:ResNet::ResNet/AdaptiveAvgPool2d[avgpool]/20532
+assigned device:dpu
+out shape:[[1, 1, 1, 2048]]" color=blue]
+	"ResNet/ret.619" [label="type:nndct_reshape
+name:ResNet::ResNet/ret.619
+assigned device:dpu
+out shape:[[1, 2048]]" color=blue]
+	"ResNet/Linear[fc]/ret" [label="type:nndct_dense
+name:ResNet::ResNet/Linear[fc]/ret
+assigned device:dpu
+out shape:[[1, 3]]" color=blue]
+	return_0 [label="type:nndct_return
+name:ResNet::return_0
+assigned device:user
+out shape:[]" color=black]
+	input_0 -> "ResNet/Conv2d[conv1]/ret.3"
+	"ResNet/Conv2d[conv1]/ret.3" -> "ResNet/ReLU[relu]/ret.7"
+	"ResNet/ReLU[relu]/ret.7" -> "ResNet/MaxPool2d[maxpool]/17572"
+	"ResNet/MaxPool2d[maxpool]/17572" -> "ResNet/Sequential[layer1]/block[0]/Conv2d[conv1]/ret.9"
+	"ResNet/MaxPool2d[maxpool]/17572" -> "ResNet/Sequential[layer1]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.25"
+	"ResNet/Sequential[layer1]/block[0]/Conv2d[conv1]/ret.9" -> "ResNet/Sequential[layer1]/block[0]/ReLU[relu]/ret.13"
+	"ResNet/Sequential[layer1]/block[0]/ReLU[relu]/ret.13" -> "ResNet/Sequential[layer1]/block[0]/Conv2d[conv2]/ret.15"
+	"ResNet/Sequential[layer1]/block[0]/Conv2d[conv2]/ret.15" -> "ResNet/Sequential[layer1]/block[0]/ReLU[relu]/ret.19"
+	"ResNet/Sequential[layer1]/block[0]/ReLU[relu]/ret.19" -> "ResNet/Sequential[layer1]/block[0]/Conv2d[conv3]/ret.21"
+	"ResNet/Sequential[layer1]/block[0]/Conv2d[conv3]/ret.21" -> "ResNet/Sequential[layer1]/block[0]/17683"
+	"ResNet/Sequential[layer1]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.25" -> "ResNet/Sequential[layer1]/block[0]/17683"
+	"ResNet/Sequential[layer1]/block[0]/17683" -> "ResNet/Sequential[layer1]/block[0]/ReLU[relu]/ret.29"
+	"ResNet/Sequential[layer1]/block[0]/ReLU[relu]/ret.29" -> "ResNet/Sequential[layer1]/block[1]/Conv2d[conv1]/ret.31"
+	"ResNet/Sequential[layer1]/block[0]/ReLU[relu]/ret.29" -> "ResNet/Sequential[layer1]/block[1]/17769"
+	"ResNet/Sequential[layer1]/block[1]/Conv2d[conv1]/ret.31" -> "ResNet/Sequential[layer1]/block[1]/ReLU[relu]/ret.35"
+	"ResNet/Sequential[layer1]/block[1]/ReLU[relu]/ret.35" -> "ResNet/Sequential[layer1]/block[1]/Conv2d[conv2]/ret.37"
+	"ResNet/Sequential[layer1]/block[1]/Conv2d[conv2]/ret.37" -> "ResNet/Sequential[layer1]/block[1]/ReLU[relu]/ret.41"
+	"ResNet/Sequential[layer1]/block[1]/ReLU[relu]/ret.41" -> "ResNet/Sequential[layer1]/block[1]/Conv2d[conv3]/ret.43"
+	"ResNet/Sequential[layer1]/block[1]/Conv2d[conv3]/ret.43" -> "ResNet/Sequential[layer1]/block[1]/17769"
+	"ResNet/Sequential[layer1]/block[1]/17769" -> "ResNet/Sequential[layer1]/block[1]/ReLU[relu]/ret.47"
+	"ResNet/Sequential[layer1]/block[1]/ReLU[relu]/ret.47" -> "ResNet/Sequential[layer1]/block[2]/Conv2d[conv1]/ret.49"
+	"ResNet/Sequential[layer1]/block[1]/ReLU[relu]/ret.47" -> "ResNet/Sequential[layer1]/block[2]/17855"
+	"ResNet/Sequential[layer1]/block[2]/Conv2d[conv1]/ret.49" -> "ResNet/Sequential[layer1]/block[2]/ReLU[relu]/ret.53"
+	"ResNet/Sequential[layer1]/block[2]/ReLU[relu]/ret.53" -> "ResNet/Sequential[layer1]/block[2]/Conv2d[conv2]/ret.55"
+	"ResNet/Sequential[layer1]/block[2]/Conv2d[conv2]/ret.55" -> "ResNet/Sequential[layer1]/block[2]/ReLU[relu]/ret.59"
+	"ResNet/Sequential[layer1]/block[2]/ReLU[relu]/ret.59" -> "ResNet/Sequential[layer1]/block[2]/Conv2d[conv3]/ret.61"
+	"ResNet/Sequential[layer1]/block[2]/Conv2d[conv3]/ret.61" -> "ResNet/Sequential[layer1]/block[2]/17855"
+	"ResNet/Sequential[layer1]/block[2]/17855" -> "ResNet/Sequential[layer1]/block[2]/ReLU[relu]/ret.65"
+	"ResNet/Sequential[layer1]/block[2]/ReLU[relu]/ret.65" -> "ResNet/Sequential[layer2]/block[0]/Conv2d[conv1]/ret.67"
+	"ResNet/Sequential[layer1]/block[2]/ReLU[relu]/ret.65" -> "ResNet/Sequential[layer2]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.83"
+	"ResNet/Sequential[layer2]/block[0]/Conv2d[conv1]/ret.67" -> "ResNet/Sequential[layer2]/block[0]/ReLU[relu]/ret.71"
+	"ResNet/Sequential[layer2]/block[0]/ReLU[relu]/ret.71" -> "ResNet/Sequential[layer2]/block[0]/Conv2d[conv2]/ret.73"
+	"ResNet/Sequential[layer2]/block[0]/Conv2d[conv2]/ret.73" -> "ResNet/Sequential[layer2]/block[0]/ReLU[relu]/ret.77"
+	"ResNet/Sequential[layer2]/block[0]/ReLU[relu]/ret.77" -> "ResNet/Sequential[layer2]/block[0]/Conv2d[conv3]/ret.79"
+	"ResNet/Sequential[layer2]/block[0]/Conv2d[conv3]/ret.79" -> "ResNet/Sequential[layer2]/block[0]/17967"
+	"ResNet/Sequential[layer2]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.83" -> "ResNet/Sequential[layer2]/block[0]/17967"
+	"ResNet/Sequential[layer2]/block[0]/17967" -> "ResNet/Sequential[layer2]/block[0]/ReLU[relu]/ret.87"
+	"ResNet/Sequential[layer2]/block[0]/ReLU[relu]/ret.87" -> "ResNet/Sequential[layer2]/block[1]/Conv2d[conv1]/ret.89"
+	"ResNet/Sequential[layer2]/block[0]/ReLU[relu]/ret.87" -> "ResNet/Sequential[layer2]/block[1]/18053"
+	"ResNet/Sequential[layer2]/block[1]/Conv2d[conv1]/ret.89" -> "ResNet/Sequential[layer2]/block[1]/ReLU[relu]/ret.93"
+	"ResNet/Sequential[layer2]/block[1]/ReLU[relu]/ret.93" -> "ResNet/Sequential[layer2]/block[1]/Conv2d[conv2]/ret.95"
+	"ResNet/Sequential[layer2]/block[1]/Conv2d[conv2]/ret.95" -> "ResNet/Sequential[layer2]/block[1]/ReLU[relu]/ret.99"
+	"ResNet/Sequential[layer2]/block[1]/ReLU[relu]/ret.99" -> "ResNet/Sequential[layer2]/block[1]/Conv2d[conv3]/ret.101"
+	"ResNet/Sequential[layer2]/block[1]/Conv2d[conv3]/ret.101" -> "ResNet/Sequential[layer2]/block[1]/18053"
+	"ResNet/Sequential[layer2]/block[1]/18053" -> "ResNet/Sequential[layer2]/block[1]/ReLU[relu]/ret.105"
+	"ResNet/Sequential[layer2]/block[1]/ReLU[relu]/ret.105" -> "ResNet/Sequential[layer2]/block[2]/Conv2d[conv1]/ret.107"
+	"ResNet/Sequential[layer2]/block[1]/ReLU[relu]/ret.105" -> "ResNet/Sequential[layer2]/block[2]/18139"
+	"ResNet/Sequential[layer2]/block[2]/Conv2d[conv1]/ret.107" -> "ResNet/Sequential[layer2]/block[2]/ReLU[relu]/ret.111"
+	"ResNet/Sequential[layer2]/block[2]/ReLU[relu]/ret.111" -> "ResNet/Sequential[layer2]/block[2]/Conv2d[conv2]/ret.113"
+	"ResNet/Sequential[layer2]/block[2]/Conv2d[conv2]/ret.113" -> "ResNet/Sequential[layer2]/block[2]/ReLU[relu]/ret.117"
+	"ResNet/Sequential[layer2]/block[2]/ReLU[relu]/ret.117" -> "ResNet/Sequential[layer2]/block[2]/Conv2d[conv3]/ret.119"
+	"ResNet/Sequential[layer2]/block[2]/Conv2d[conv3]/ret.119" -> "ResNet/Sequential[layer2]/block[2]/18139"
+	"ResNet/Sequential[layer2]/block[2]/18139" -> "ResNet/Sequential[layer2]/block[2]/ReLU[relu]/ret.123"
+	"ResNet/Sequential[layer2]/block[2]/ReLU[relu]/ret.123" -> "ResNet/Sequential[layer2]/block[3]/Conv2d[conv1]/ret.125"
+	"ResNet/Sequential[layer2]/block[2]/ReLU[relu]/ret.123" -> "ResNet/Sequential[layer2]/block[3]/18225"
+	"ResNet/Sequential[layer2]/block[3]/Conv2d[conv1]/ret.125" -> "ResNet/Sequential[layer2]/block[3]/ReLU[relu]/ret.129"
+	"ResNet/Sequential[layer2]/block[3]/ReLU[relu]/ret.129" -> "ResNet/Sequential[layer2]/block[3]/Conv2d[conv2]/ret.131"
+	"ResNet/Sequential[layer2]/block[3]/Conv2d[conv2]/ret.131" -> "ResNet/Sequential[layer2]/block[3]/ReLU[relu]/ret.135"
+	"ResNet/Sequential[layer2]/block[3]/ReLU[relu]/ret.135" -> "ResNet/Sequential[layer2]/block[3]/Conv2d[conv3]/ret.137"
+	"ResNet/Sequential[layer2]/block[3]/Conv2d[conv3]/ret.137" -> "ResNet/Sequential[layer2]/block[3]/18225"
+	"ResNet/Sequential[layer2]/block[3]/18225" -> "ResNet/Sequential[layer2]/block[3]/ReLU[relu]/ret.141"
+	"ResNet/Sequential[layer2]/block[3]/ReLU[relu]/ret.141" -> "ResNet/Sequential[layer3]/block[0]/Conv2d[conv1]/ret.143"
+	"ResNet/Sequential[layer2]/block[3]/ReLU[relu]/ret.141" -> "ResNet/Sequential[layer3]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.159"
+	"ResNet/Sequential[layer3]/block[0]/Conv2d[conv1]/ret.143" -> "ResNet/Sequential[layer3]/block[0]/ReLU[relu]/ret.147"
+	"ResNet/Sequential[layer3]/block[0]/ReLU[relu]/ret.147" -> "ResNet/Sequential[layer3]/block[0]/Conv2d[conv2]/ret.149"
+	"ResNet/Sequential[layer3]/block[0]/Conv2d[conv2]/ret.149" -> "ResNet/Sequential[layer3]/block[0]/ReLU[relu]/ret.153"
+	"ResNet/Sequential[layer3]/block[0]/ReLU[relu]/ret.153" -> "ResNet/Sequential[layer3]/block[0]/Conv2d[conv3]/ret.155"
+	"ResNet/Sequential[layer3]/block[0]/Conv2d[conv3]/ret.155" -> "ResNet/Sequential[layer3]/block[0]/18337"
+	"ResNet/Sequential[layer3]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.159" -> "ResNet/Sequential[layer3]/block[0]/18337"
+	"ResNet/Sequential[layer3]/block[0]/18337" -> "ResNet/Sequential[layer3]/block[0]/ReLU[relu]/ret.163"
+	"ResNet/Sequential[layer3]/block[0]/ReLU[relu]/ret.163" -> "ResNet/Sequential[layer3]/block[1]/Conv2d[conv1]/ret.165"
+	"ResNet/Sequential[layer3]/block[0]/ReLU[relu]/ret.163" -> "ResNet/Sequential[layer3]/block[1]/18423"
+	"ResNet/Sequential[layer3]/block[1]/Conv2d[conv1]/ret.165" -> "ResNet/Sequential[layer3]/block[1]/ReLU[relu]/ret.169"
+	"ResNet/Sequential[layer3]/block[1]/ReLU[relu]/ret.169" -> "ResNet/Sequential[layer3]/block[1]/Conv2d[conv2]/ret.171"
+	"ResNet/Sequential[layer3]/block[1]/Conv2d[conv2]/ret.171" -> "ResNet/Sequential[layer3]/block[1]/ReLU[relu]/ret.175"
+	"ResNet/Sequential[layer3]/block[1]/ReLU[relu]/ret.175" -> "ResNet/Sequential[layer3]/block[1]/Conv2d[conv3]/ret.177"
+	"ResNet/Sequential[layer3]/block[1]/Conv2d[conv3]/ret.177" -> "ResNet/Sequential[layer3]/block[1]/18423"
+	"ResNet/Sequential[layer3]/block[1]/18423" -> "ResNet/Sequential[layer3]/block[1]/ReLU[relu]/ret.181"
+	"ResNet/Sequential[layer3]/block[1]/ReLU[relu]/ret.181" -> "ResNet/Sequential[layer3]/block[2]/Conv2d[conv1]/ret.183"
+	"ResNet/Sequential[layer3]/block[1]/ReLU[relu]/ret.181" -> "ResNet/Sequential[layer3]/block[2]/18509"
+	"ResNet/Sequential[layer3]/block[2]/Conv2d[conv1]/ret.183" -> "ResNet/Sequential[layer3]/block[2]/ReLU[relu]/ret.187"
+	"ResNet/Sequential[layer3]/block[2]/ReLU[relu]/ret.187" -> "ResNet/Sequential[layer3]/block[2]/Conv2d[conv2]/ret.189"
+	"ResNet/Sequential[layer3]/block[2]/Conv2d[conv2]/ret.189" -> "ResNet/Sequential[layer3]/block[2]/ReLU[relu]/ret.193"
+	"ResNet/Sequential[layer3]/block[2]/ReLU[relu]/ret.193" -> "ResNet/Sequential[layer3]/block[2]/Conv2d[conv3]/ret.195"
+	"ResNet/Sequential[layer3]/block[2]/Conv2d[conv3]/ret.195" -> "ResNet/Sequential[layer3]/block[2]/18509"
+	"ResNet/Sequential[layer3]/block[2]/18509" -> "ResNet/Sequential[layer3]/block[2]/ReLU[relu]/ret.199"
+	"ResNet/Sequential[layer3]/block[2]/ReLU[relu]/ret.199" -> "ResNet/Sequential[layer3]/block[3]/Conv2d[conv1]/ret.201"
+	"ResNet/Sequential[layer3]/block[2]/ReLU[relu]/ret.199" -> "ResNet/Sequential[layer3]/block[3]/18595"
+	"ResNet/Sequential[layer3]/block[3]/Conv2d[conv1]/ret.201" -> "ResNet/Sequential[layer3]/block[3]/ReLU[relu]/ret.205"
+	"ResNet/Sequential[layer3]/block[3]/ReLU[relu]/ret.205" -> "ResNet/Sequential[layer3]/block[3]/Conv2d[conv2]/ret.207"
+	"ResNet/Sequential[layer3]/block[3]/Conv2d[conv2]/ret.207" -> "ResNet/Sequential[layer3]/block[3]/ReLU[relu]/ret.211"
+	"ResNet/Sequential[layer3]/block[3]/ReLU[relu]/ret.211" -> "ResNet/Sequential[layer3]/block[3]/Conv2d[conv3]/ret.213"
+	"ResNet/Sequential[layer3]/block[3]/Conv2d[conv3]/ret.213" -> "ResNet/Sequential[layer3]/block[3]/18595"
+	"ResNet/Sequential[layer3]/block[3]/18595" -> "ResNet/Sequential[layer3]/block[3]/ReLU[relu]/ret.217"
+	"ResNet/Sequential[layer3]/block[3]/ReLU[relu]/ret.217" -> "ResNet/Sequential[layer3]/block[4]/Conv2d[conv1]/ret.219"
+	"ResNet/Sequential[layer3]/block[3]/ReLU[relu]/ret.217" -> "ResNet/Sequential[layer3]/block[4]/18681"
+	"ResNet/Sequential[layer3]/block[4]/Conv2d[conv1]/ret.219" -> "ResNet/Sequential[layer3]/block[4]/ReLU[relu]/ret.223"
+	"ResNet/Sequential[layer3]/block[4]/ReLU[relu]/ret.223" -> "ResNet/Sequential[layer3]/block[4]/Conv2d[conv2]/ret.225"
+	"ResNet/Sequential[layer3]/block[4]/Conv2d[conv2]/ret.225" -> "ResNet/Sequential[layer3]/block[4]/ReLU[relu]/ret.229"
+	"ResNet/Sequential[layer3]/block[4]/ReLU[relu]/ret.229" -> "ResNet/Sequential[layer3]/block[4]/Conv2d[conv3]/ret.231"
+	"ResNet/Sequential[layer3]/block[4]/Conv2d[conv3]/ret.231" -> "ResNet/Sequential[layer3]/block[4]/18681"
+	"ResNet/Sequential[layer3]/block[4]/18681" -> "ResNet/Sequential[layer3]/block[4]/ReLU[relu]/ret.235"
+	"ResNet/Sequential[layer3]/block[4]/ReLU[relu]/ret.235" -> "ResNet/Sequential[layer3]/block[5]/Conv2d[conv1]/ret.237"
+	"ResNet/Sequential[layer3]/block[4]/ReLU[relu]/ret.235" -> "ResNet/Sequential[layer3]/block[5]/18767"
+	"ResNet/Sequential[layer3]/block[5]/Conv2d[conv1]/ret.237" -> "ResNet/Sequential[layer3]/block[5]/ReLU[relu]/ret.241"
+	"ResNet/Sequential[layer3]/block[5]/ReLU[relu]/ret.241" -> "ResNet/Sequential[layer3]/block[5]/Conv2d[conv2]/ret.243"
+	"ResNet/Sequential[layer3]/block[5]/Conv2d[conv2]/ret.243" -> "ResNet/Sequential[layer3]/block[5]/ReLU[relu]/ret.247"
+	"ResNet/Sequential[layer3]/block[5]/ReLU[relu]/ret.247" -> "ResNet/Sequential[layer3]/block[5]/Conv2d[conv3]/ret.249"
+	"ResNet/Sequential[layer3]/block[5]/Conv2d[conv3]/ret.249" -> "ResNet/Sequential[layer3]/block[5]/18767"
+	"ResNet/Sequential[layer3]/block[5]/18767" -> "ResNet/Sequential[layer3]/block[5]/ReLU[relu]/ret.253"
+	"ResNet/Sequential[layer3]/block[5]/ReLU[relu]/ret.253" -> "ResNet/Sequential[layer3]/block[6]/Conv2d[conv1]/ret.255"
+	"ResNet/Sequential[layer3]/block[5]/ReLU[relu]/ret.253" -> "ResNet/Sequential[layer3]/block[6]/18853"
+	"ResNet/Sequential[layer3]/block[6]/Conv2d[conv1]/ret.255" -> "ResNet/Sequential[layer3]/block[6]/ReLU[relu]/ret.259"
+	"ResNet/Sequential[layer3]/block[6]/ReLU[relu]/ret.259" -> "ResNet/Sequential[layer3]/block[6]/Conv2d[conv2]/ret.261"
+	"ResNet/Sequential[layer3]/block[6]/Conv2d[conv2]/ret.261" -> "ResNet/Sequential[layer3]/block[6]/ReLU[relu]/ret.265"
+	"ResNet/Sequential[layer3]/block[6]/ReLU[relu]/ret.265" -> "ResNet/Sequential[layer3]/block[6]/Conv2d[conv3]/ret.267"
+	"ResNet/Sequential[layer3]/block[6]/Conv2d[conv3]/ret.267" -> "ResNet/Sequential[layer3]/block[6]/18853"
+	"ResNet/Sequential[layer3]/block[6]/18853" -> "ResNet/Sequential[layer3]/block[6]/ReLU[relu]/ret.271"
+	"ResNet/Sequential[layer3]/block[6]/ReLU[relu]/ret.271" -> "ResNet/Sequential[layer3]/block[7]/Conv2d[conv1]/ret.273"
+	"ResNet/Sequential[layer3]/block[6]/ReLU[relu]/ret.271" -> "ResNet/Sequential[layer3]/block[7]/18939"
+	"ResNet/Sequential[layer3]/block[7]/Conv2d[conv1]/ret.273" -> "ResNet/Sequential[layer3]/block[7]/ReLU[relu]/ret.277"
+	"ResNet/Sequential[layer3]/block[7]/ReLU[relu]/ret.277" -> "ResNet/Sequential[layer3]/block[7]/Conv2d[conv2]/ret.279"
+	"ResNet/Sequential[layer3]/block[7]/Conv2d[conv2]/ret.279" -> "ResNet/Sequential[layer3]/block[7]/ReLU[relu]/ret.283"
+	"ResNet/Sequential[layer3]/block[7]/ReLU[relu]/ret.283" -> "ResNet/Sequential[layer3]/block[7]/Conv2d[conv3]/ret.285"
+	"ResNet/Sequential[layer3]/block[7]/Conv2d[conv3]/ret.285" -> "ResNet/Sequential[layer3]/block[7]/18939"
+	"ResNet/Sequential[layer3]/block[7]/18939" -> "ResNet/Sequential[layer3]/block[7]/ReLU[relu]/ret.289"
+	"ResNet/Sequential[layer3]/block[7]/ReLU[relu]/ret.289" -> "ResNet/Sequential[layer3]/block[8]/Conv2d[conv1]/ret.291"
+	"ResNet/Sequential[layer3]/block[7]/ReLU[relu]/ret.289" -> "ResNet/Sequential[layer3]/block[8]/19025"
+	"ResNet/Sequential[layer3]/block[8]/Conv2d[conv1]/ret.291" -> "ResNet/Sequential[layer3]/block[8]/ReLU[relu]/ret.295"
+	"ResNet/Sequential[layer3]/block[8]/ReLU[relu]/ret.295" -> "ResNet/Sequential[layer3]/block[8]/Conv2d[conv2]/ret.297"
+	"ResNet/Sequential[layer3]/block[8]/Conv2d[conv2]/ret.297" -> "ResNet/Sequential[layer3]/block[8]/ReLU[relu]/ret.301"
+	"ResNet/Sequential[layer3]/block[8]/ReLU[relu]/ret.301" -> "ResNet/Sequential[layer3]/block[8]/Conv2d[conv3]/ret.303"
+	"ResNet/Sequential[layer3]/block[8]/Conv2d[conv3]/ret.303" -> "ResNet/Sequential[layer3]/block[8]/19025"
+	"ResNet/Sequential[layer3]/block[8]/19025" -> "ResNet/Sequential[layer3]/block[8]/ReLU[relu]/ret.307"
+	"ResNet/Sequential[layer3]/block[8]/ReLU[relu]/ret.307" -> "ResNet/Sequential[layer3]/block[9]/Conv2d[conv1]/ret.309"
+	"ResNet/Sequential[layer3]/block[8]/ReLU[relu]/ret.307" -> "ResNet/Sequential[layer3]/block[9]/19111"
+	"ResNet/Sequential[layer3]/block[9]/Conv2d[conv1]/ret.309" -> "ResNet/Sequential[layer3]/block[9]/ReLU[relu]/ret.313"
+	"ResNet/Sequential[layer3]/block[9]/ReLU[relu]/ret.313" -> "ResNet/Sequential[layer3]/block[9]/Conv2d[conv2]/ret.315"
+	"ResNet/Sequential[layer3]/block[9]/Conv2d[conv2]/ret.315" -> "ResNet/Sequential[layer3]/block[9]/ReLU[relu]/ret.319"
+	"ResNet/Sequential[layer3]/block[9]/ReLU[relu]/ret.319" -> "ResNet/Sequential[layer3]/block[9]/Conv2d[conv3]/ret.321"
+	"ResNet/Sequential[layer3]/block[9]/Conv2d[conv3]/ret.321" -> "ResNet/Sequential[layer3]/block[9]/19111"
+	"ResNet/Sequential[layer3]/block[9]/19111" -> "ResNet/Sequential[layer3]/block[9]/ReLU[relu]/ret.325"
+	"ResNet/Sequential[layer3]/block[9]/ReLU[relu]/ret.325" -> "ResNet/Sequential[layer3]/block[10]/Conv2d[conv1]/ret.327"
+	"ResNet/Sequential[layer3]/block[9]/ReLU[relu]/ret.325" -> "ResNet/Sequential[layer3]/block[10]/19197"
+	"ResNet/Sequential[layer3]/block[10]/Conv2d[conv1]/ret.327" -> "ResNet/Sequential[layer3]/block[10]/ReLU[relu]/ret.331"
+	"ResNet/Sequential[layer3]/block[10]/ReLU[relu]/ret.331" -> "ResNet/Sequential[layer3]/block[10]/Conv2d[conv2]/ret.333"
+	"ResNet/Sequential[layer3]/block[10]/Conv2d[conv2]/ret.333" -> "ResNet/Sequential[layer3]/block[10]/ReLU[relu]/ret.337"
+	"ResNet/Sequential[layer3]/block[10]/ReLU[relu]/ret.337" -> "ResNet/Sequential[layer3]/block[10]/Conv2d[conv3]/ret.339"
+	"ResNet/Sequential[layer3]/block[10]/Conv2d[conv3]/ret.339" -> "ResNet/Sequential[layer3]/block[10]/19197"
+	"ResNet/Sequential[layer3]/block[10]/19197" -> "ResNet/Sequential[layer3]/block[10]/ReLU[relu]/ret.343"
+	"ResNet/Sequential[layer3]/block[10]/ReLU[relu]/ret.343" -> "ResNet/Sequential[layer3]/block[11]/Conv2d[conv1]/ret.345"
+	"ResNet/Sequential[layer3]/block[10]/ReLU[relu]/ret.343" -> "ResNet/Sequential[layer3]/block[11]/19283"
+	"ResNet/Sequential[layer3]/block[11]/Conv2d[conv1]/ret.345" -> "ResNet/Sequential[layer3]/block[11]/ReLU[relu]/ret.349"
+	"ResNet/Sequential[layer3]/block[11]/ReLU[relu]/ret.349" -> "ResNet/Sequential[layer3]/block[11]/Conv2d[conv2]/ret.351"
+	"ResNet/Sequential[layer3]/block[11]/Conv2d[conv2]/ret.351" -> "ResNet/Sequential[layer3]/block[11]/ReLU[relu]/ret.355"
+	"ResNet/Sequential[layer3]/block[11]/ReLU[relu]/ret.355" -> "ResNet/Sequential[layer3]/block[11]/Conv2d[conv3]/ret.357"
+	"ResNet/Sequential[layer3]/block[11]/Conv2d[conv3]/ret.357" -> "ResNet/Sequential[layer3]/block[11]/19283"
+	"ResNet/Sequential[layer3]/block[11]/19283" -> "ResNet/Sequential[layer3]/block[11]/ReLU[relu]/ret.361"
+	"ResNet/Sequential[layer3]/block[11]/ReLU[relu]/ret.361" -> "ResNet/Sequential[layer3]/block[12]/Conv2d[conv1]/ret.363"
+	"ResNet/Sequential[layer3]/block[11]/ReLU[relu]/ret.361" -> "ResNet/Sequential[layer3]/block[12]/19369"
+	"ResNet/Sequential[layer3]/block[12]/Conv2d[conv1]/ret.363" -> "ResNet/Sequential[layer3]/block[12]/ReLU[relu]/ret.367"
+	"ResNet/Sequential[layer3]/block[12]/ReLU[relu]/ret.367" -> "ResNet/Sequential[layer3]/block[12]/Conv2d[conv2]/ret.369"
+	"ResNet/Sequential[layer3]/block[12]/Conv2d[conv2]/ret.369" -> "ResNet/Sequential[layer3]/block[12]/ReLU[relu]/ret.373"
+	"ResNet/Sequential[layer3]/block[12]/ReLU[relu]/ret.373" -> "ResNet/Sequential[layer3]/block[12]/Conv2d[conv3]/ret.375"
+	"ResNet/Sequential[layer3]/block[12]/Conv2d[conv3]/ret.375" -> "ResNet/Sequential[layer3]/block[12]/19369"
+	"ResNet/Sequential[layer3]/block[12]/19369" -> "ResNet/Sequential[layer3]/block[12]/ReLU[relu]/ret.379"
+	"ResNet/Sequential[layer3]/block[12]/ReLU[relu]/ret.379" -> "ResNet/Sequential[layer3]/block[13]/Conv2d[conv1]/ret.381"
+	"ResNet/Sequential[layer3]/block[12]/ReLU[relu]/ret.379" -> "ResNet/Sequential[layer3]/block[13]/19455"
+	"ResNet/Sequential[layer3]/block[13]/Conv2d[conv1]/ret.381" -> "ResNet/Sequential[layer3]/block[13]/ReLU[relu]/ret.385"
+	"ResNet/Sequential[layer3]/block[13]/ReLU[relu]/ret.385" -> "ResNet/Sequential[layer3]/block[13]/Conv2d[conv2]/ret.387"
+	"ResNet/Sequential[layer3]/block[13]/Conv2d[conv2]/ret.387" -> "ResNet/Sequential[layer3]/block[13]/ReLU[relu]/ret.391"
+	"ResNet/Sequential[layer3]/block[13]/ReLU[relu]/ret.391" -> "ResNet/Sequential[layer3]/block[13]/Conv2d[conv3]/ret.393"
+	"ResNet/Sequential[layer3]/block[13]/Conv2d[conv3]/ret.393" -> "ResNet/Sequential[layer3]/block[13]/19455"
+	"ResNet/Sequential[layer3]/block[13]/19455" -> "ResNet/Sequential[layer3]/block[13]/ReLU[relu]/ret.397"
+	"ResNet/Sequential[layer3]/block[13]/ReLU[relu]/ret.397" -> "ResNet/Sequential[layer3]/block[14]/Conv2d[conv1]/ret.399"
+	"ResNet/Sequential[layer3]/block[13]/ReLU[relu]/ret.397" -> "ResNet/Sequential[layer3]/block[14]/19541"
+	"ResNet/Sequential[layer3]/block[14]/Conv2d[conv1]/ret.399" -> "ResNet/Sequential[layer3]/block[14]/ReLU[relu]/ret.403"
+	"ResNet/Sequential[layer3]/block[14]/ReLU[relu]/ret.403" -> "ResNet/Sequential[layer3]/block[14]/Conv2d[conv2]/ret.405"
+	"ResNet/Sequential[layer3]/block[14]/Conv2d[conv2]/ret.405" -> "ResNet/Sequential[layer3]/block[14]/ReLU[relu]/ret.409"
+	"ResNet/Sequential[layer3]/block[14]/ReLU[relu]/ret.409" -> "ResNet/Sequential[layer3]/block[14]/Conv2d[conv3]/ret.411"
+	"ResNet/Sequential[layer3]/block[14]/Conv2d[conv3]/ret.411" -> "ResNet/Sequential[layer3]/block[14]/19541"
+	"ResNet/Sequential[layer3]/block[14]/19541" -> "ResNet/Sequential[layer3]/block[14]/ReLU[relu]/ret.415"
+	"ResNet/Sequential[layer3]/block[14]/ReLU[relu]/ret.415" -> "ResNet/Sequential[layer3]/block[15]/Conv2d[conv1]/ret.417"
+	"ResNet/Sequential[layer3]/block[14]/ReLU[relu]/ret.415" -> "ResNet/Sequential[layer3]/block[15]/19627"
+	"ResNet/Sequential[layer3]/block[15]/Conv2d[conv1]/ret.417" -> "ResNet/Sequential[layer3]/block[15]/ReLU[relu]/ret.421"
+	"ResNet/Sequential[layer3]/block[15]/ReLU[relu]/ret.421" -> "ResNet/Sequential[layer3]/block[15]/Conv2d[conv2]/ret.423"
+	"ResNet/Sequential[layer3]/block[15]/Conv2d[conv2]/ret.423" -> "ResNet/Sequential[layer3]/block[15]/ReLU[relu]/ret.427"
+	"ResNet/Sequential[layer3]/block[15]/ReLU[relu]/ret.427" -> "ResNet/Sequential[layer3]/block[15]/Conv2d[conv3]/ret.429"
+	"ResNet/Sequential[layer3]/block[15]/Conv2d[conv3]/ret.429" -> "ResNet/Sequential[layer3]/block[15]/19627"
+	"ResNet/Sequential[layer3]/block[15]/19627" -> "ResNet/Sequential[layer3]/block[15]/ReLU[relu]/ret.433"
+	"ResNet/Sequential[layer3]/block[15]/ReLU[relu]/ret.433" -> "ResNet/Sequential[layer3]/block[16]/Conv2d[conv1]/ret.435"
+	"ResNet/Sequential[layer3]/block[15]/ReLU[relu]/ret.433" -> "ResNet/Sequential[layer3]/block[16]/19713"
+	"ResNet/Sequential[layer3]/block[16]/Conv2d[conv1]/ret.435" -> "ResNet/Sequential[layer3]/block[16]/ReLU[relu]/ret.439"
+	"ResNet/Sequential[layer3]/block[16]/ReLU[relu]/ret.439" -> "ResNet/Sequential[layer3]/block[16]/Conv2d[conv2]/ret.441"
+	"ResNet/Sequential[layer3]/block[16]/Conv2d[conv2]/ret.441" -> "ResNet/Sequential[layer3]/block[16]/ReLU[relu]/ret.445"
+	"ResNet/Sequential[layer3]/block[16]/ReLU[relu]/ret.445" -> "ResNet/Sequential[layer3]/block[16]/Conv2d[conv3]/ret.447"
+	"ResNet/Sequential[layer3]/block[16]/Conv2d[conv3]/ret.447" -> "ResNet/Sequential[layer3]/block[16]/19713"
+	"ResNet/Sequential[layer3]/block[16]/19713" -> "ResNet/Sequential[layer3]/block[16]/ReLU[relu]/ret.451"
+	"ResNet/Sequential[layer3]/block[16]/ReLU[relu]/ret.451" -> "ResNet/Sequential[layer3]/block[17]/Conv2d[conv1]/ret.453"
+	"ResNet/Sequential[layer3]/block[16]/ReLU[relu]/ret.451" -> "ResNet/Sequential[layer3]/block[17]/19799"
+	"ResNet/Sequential[layer3]/block[17]/Conv2d[conv1]/ret.453" -> "ResNet/Sequential[layer3]/block[17]/ReLU[relu]/ret.457"
+	"ResNet/Sequential[layer3]/block[17]/ReLU[relu]/ret.457" -> "ResNet/Sequential[layer3]/block[17]/Conv2d[conv2]/ret.459"
+	"ResNet/Sequential[layer3]/block[17]/Conv2d[conv2]/ret.459" -> "ResNet/Sequential[layer3]/block[17]/ReLU[relu]/ret.463"
+	"ResNet/Sequential[layer3]/block[17]/ReLU[relu]/ret.463" -> "ResNet/Sequential[layer3]/block[17]/Conv2d[conv3]/ret.465"
+	"ResNet/Sequential[layer3]/block[17]/Conv2d[conv3]/ret.465" -> "ResNet/Sequential[layer3]/block[17]/19799"
+	"ResNet/Sequential[layer3]/block[17]/19799" -> "ResNet/Sequential[layer3]/block[17]/ReLU[relu]/ret.469"
+	"ResNet/Sequential[layer3]/block[17]/ReLU[relu]/ret.469" -> "ResNet/Sequential[layer3]/block[18]/Conv2d[conv1]/ret.471"
+	"ResNet/Sequential[layer3]/block[17]/ReLU[relu]/ret.469" -> "ResNet/Sequential[layer3]/block[18]/19885"
+	"ResNet/Sequential[layer3]/block[18]/Conv2d[conv1]/ret.471" -> "ResNet/Sequential[layer3]/block[18]/ReLU[relu]/ret.475"
+	"ResNet/Sequential[layer3]/block[18]/ReLU[relu]/ret.475" -> "ResNet/Sequential[layer3]/block[18]/Conv2d[conv2]/ret.477"
+	"ResNet/Sequential[layer3]/block[18]/Conv2d[conv2]/ret.477" -> "ResNet/Sequential[layer3]/block[18]/ReLU[relu]/ret.481"
+	"ResNet/Sequential[layer3]/block[18]/ReLU[relu]/ret.481" -> "ResNet/Sequential[layer3]/block[18]/Conv2d[conv3]/ret.483"
+	"ResNet/Sequential[layer3]/block[18]/Conv2d[conv3]/ret.483" -> "ResNet/Sequential[layer3]/block[18]/19885"
+	"ResNet/Sequential[layer3]/block[18]/19885" -> "ResNet/Sequential[layer3]/block[18]/ReLU[relu]/ret.487"
+	"ResNet/Sequential[layer3]/block[18]/ReLU[relu]/ret.487" -> "ResNet/Sequential[layer3]/block[19]/Conv2d[conv1]/ret.489"
+	"ResNet/Sequential[layer3]/block[18]/ReLU[relu]/ret.487" -> "ResNet/Sequential[layer3]/block[19]/19971"
+	"ResNet/Sequential[layer3]/block[19]/Conv2d[conv1]/ret.489" -> "ResNet/Sequential[layer3]/block[19]/ReLU[relu]/ret.493"
+	"ResNet/Sequential[layer3]/block[19]/ReLU[relu]/ret.493" -> "ResNet/Sequential[layer3]/block[19]/Conv2d[conv2]/ret.495"
+	"ResNet/Sequential[layer3]/block[19]/Conv2d[conv2]/ret.495" -> "ResNet/Sequential[layer3]/block[19]/ReLU[relu]/ret.499"
+	"ResNet/Sequential[layer3]/block[19]/ReLU[relu]/ret.499" -> "ResNet/Sequential[layer3]/block[19]/Conv2d[conv3]/ret.501"
+	"ResNet/Sequential[layer3]/block[19]/Conv2d[conv3]/ret.501" -> "ResNet/Sequential[layer3]/block[19]/19971"
+	"ResNet/Sequential[layer3]/block[19]/19971" -> "ResNet/Sequential[layer3]/block[19]/ReLU[relu]/ret.505"
+	"ResNet/Sequential[layer3]/block[19]/ReLU[relu]/ret.505" -> "ResNet/Sequential[layer3]/block[20]/Conv2d[conv1]/ret.507"
+	"ResNet/Sequential[layer3]/block[19]/ReLU[relu]/ret.505" -> "ResNet/Sequential[layer3]/block[20]/20057"
+	"ResNet/Sequential[layer3]/block[20]/Conv2d[conv1]/ret.507" -> "ResNet/Sequential[layer3]/block[20]/ReLU[relu]/ret.511"
+	"ResNet/Sequential[layer3]/block[20]/ReLU[relu]/ret.511" -> "ResNet/Sequential[layer3]/block[20]/Conv2d[conv2]/ret.513"
+	"ResNet/Sequential[layer3]/block[20]/Conv2d[conv2]/ret.513" -> "ResNet/Sequential[layer3]/block[20]/ReLU[relu]/ret.517"
+	"ResNet/Sequential[layer3]/block[20]/ReLU[relu]/ret.517" -> "ResNet/Sequential[layer3]/block[20]/Conv2d[conv3]/ret.519"
+	"ResNet/Sequential[layer3]/block[20]/Conv2d[conv3]/ret.519" -> "ResNet/Sequential[layer3]/block[20]/20057"
+	"ResNet/Sequential[layer3]/block[20]/20057" -> "ResNet/Sequential[layer3]/block[20]/ReLU[relu]/ret.523"
+	"ResNet/Sequential[layer3]/block[20]/ReLU[relu]/ret.523" -> "ResNet/Sequential[layer3]/block[21]/Conv2d[conv1]/ret.525"
+	"ResNet/Sequential[layer3]/block[20]/ReLU[relu]/ret.523" -> "ResNet/Sequential[layer3]/block[21]/20143"
+	"ResNet/Sequential[layer3]/block[21]/Conv2d[conv1]/ret.525" -> "ResNet/Sequential[layer3]/block[21]/ReLU[relu]/ret.529"
+	"ResNet/Sequential[layer3]/block[21]/ReLU[relu]/ret.529" -> "ResNet/Sequential[layer3]/block[21]/Conv2d[conv2]/ret.531"
+	"ResNet/Sequential[layer3]/block[21]/Conv2d[conv2]/ret.531" -> "ResNet/Sequential[layer3]/block[21]/ReLU[relu]/ret.535"
+	"ResNet/Sequential[layer3]/block[21]/ReLU[relu]/ret.535" -> "ResNet/Sequential[layer3]/block[21]/Conv2d[conv3]/ret.537"
+	"ResNet/Sequential[layer3]/block[21]/Conv2d[conv3]/ret.537" -> "ResNet/Sequential[layer3]/block[21]/20143"
+	"ResNet/Sequential[layer3]/block[21]/20143" -> "ResNet/Sequential[layer3]/block[21]/ReLU[relu]/ret.541"
+	"ResNet/Sequential[layer3]/block[21]/ReLU[relu]/ret.541" -> "ResNet/Sequential[layer3]/block[22]/Conv2d[conv1]/ret.543"
+	"ResNet/Sequential[layer3]/block[21]/ReLU[relu]/ret.541" -> "ResNet/Sequential[layer3]/block[22]/20229"
+	"ResNet/Sequential[layer3]/block[22]/Conv2d[conv1]/ret.543" -> "ResNet/Sequential[layer3]/block[22]/ReLU[relu]/ret.547"
+	"ResNet/Sequential[layer3]/block[22]/ReLU[relu]/ret.547" -> "ResNet/Sequential[layer3]/block[22]/Conv2d[conv2]/ret.549"
+	"ResNet/Sequential[layer3]/block[22]/Conv2d[conv2]/ret.549" -> "ResNet/Sequential[layer3]/block[22]/ReLU[relu]/ret.553"
+	"ResNet/Sequential[layer3]/block[22]/ReLU[relu]/ret.553" -> "ResNet/Sequential[layer3]/block[22]/Conv2d[conv3]/ret.555"
+	"ResNet/Sequential[layer3]/block[22]/Conv2d[conv3]/ret.555" -> "ResNet/Sequential[layer3]/block[22]/20229"
+	"ResNet/Sequential[layer3]/block[22]/20229" -> "ResNet/Sequential[layer3]/block[22]/ReLU[relu]/ret.559"
+	"ResNet/Sequential[layer3]/block[22]/ReLU[relu]/ret.559" -> "ResNet/Sequential[layer4]/block[0]/Conv2d[conv1]/ret.561"
+	"ResNet/Sequential[layer3]/block[22]/ReLU[relu]/ret.559" -> "ResNet/Sequential[layer4]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.577"
+	"ResNet/Sequential[layer4]/block[0]/Conv2d[conv1]/ret.561" -> "ResNet/Sequential[layer4]/block[0]/ReLU[relu]/ret.565"
+	"ResNet/Sequential[layer4]/block[0]/ReLU[relu]/ret.565" -> "ResNet/Sequential[layer4]/block[0]/Conv2d[conv2]/ret.567"
+	"ResNet/Sequential[layer4]/block[0]/Conv2d[conv2]/ret.567" -> "ResNet/Sequential[layer4]/block[0]/ReLU[relu]/ret.571"
+	"ResNet/Sequential[layer4]/block[0]/ReLU[relu]/ret.571" -> "ResNet/Sequential[layer4]/block[0]/Conv2d[conv3]/ret.573"
+	"ResNet/Sequential[layer4]/block[0]/Conv2d[conv3]/ret.573" -> "ResNet/Sequential[layer4]/block[0]/20341"
+	"ResNet/Sequential[layer4]/block[0]/Sequential[identity_downsample]/Conv2d[0]/ret.577" -> "ResNet/Sequential[layer4]/block[0]/20341"
+	"ResNet/Sequential[layer4]/block[0]/20341" -> "ResNet/Sequential[layer4]/block[0]/ReLU[relu]/ret.581"
+	"ResNet/Sequential[layer4]/block[0]/ReLU[relu]/ret.581" -> "ResNet/Sequential[layer4]/block[1]/Conv2d[conv1]/ret.583"
+	"ResNet/Sequential[layer4]/block[0]/ReLU[relu]/ret.581" -> "ResNet/Sequential[layer4]/block[1]/20427"
+	"ResNet/Sequential[layer4]/block[1]/Conv2d[conv1]/ret.583" -> "ResNet/Sequential[layer4]/block[1]/ReLU[relu]/ret.587"
+	"ResNet/Sequential[layer4]/block[1]/ReLU[relu]/ret.587" -> "ResNet/Sequential[layer4]/block[1]/Conv2d[conv2]/ret.589"
+	"ResNet/Sequential[layer4]/block[1]/Conv2d[conv2]/ret.589" -> "ResNet/Sequential[layer4]/block[1]/ReLU[relu]/ret.593"
+	"ResNet/Sequential[layer4]/block[1]/ReLU[relu]/ret.593" -> "ResNet/Sequential[layer4]/block[1]/Conv2d[conv3]/ret.595"
+	"ResNet/Sequential[layer4]/block[1]/Conv2d[conv3]/ret.595" -> "ResNet/Sequential[layer4]/block[1]/20427"
+	"ResNet/Sequential[layer4]/block[1]/20427" -> "ResNet/Sequential[layer4]/block[1]/ReLU[relu]/ret.599"
+	"ResNet/Sequential[layer4]/block[1]/ReLU[relu]/ret.599" -> "ResNet/Sequential[layer4]/block[2]/Conv2d[conv1]/ret.601"
+	"ResNet/Sequential[layer4]/block[1]/ReLU[relu]/ret.599" -> "ResNet/Sequential[layer4]/block[2]/20513"
+	"ResNet/Sequential[layer4]/block[2]/Conv2d[conv1]/ret.601" -> "ResNet/Sequential[layer4]/block[2]/ReLU[relu]/ret.605"
+	"ResNet/Sequential[layer4]/block[2]/ReLU[relu]/ret.605" -> "ResNet/Sequential[layer4]/block[2]/Conv2d[conv2]/ret.607"
+	"ResNet/Sequential[layer4]/block[2]/Conv2d[conv2]/ret.607" -> "ResNet/Sequential[layer4]/block[2]/ReLU[relu]/ret.611"
+	"ResNet/Sequential[layer4]/block[2]/ReLU[relu]/ret.611" -> "ResNet/Sequential[layer4]/block[2]/Conv2d[conv3]/ret.613"
+	"ResNet/Sequential[layer4]/block[2]/Conv2d[conv3]/ret.613" -> "ResNet/Sequential[layer4]/block[2]/20513"
+	"ResNet/Sequential[layer4]/block[2]/20513" -> "ResNet/Sequential[layer4]/block[2]/ReLU[relu]/ret.617"
+	"ResNet/Sequential[layer4]/block[2]/ReLU[relu]/ret.617" -> "ResNet/AdaptiveAvgPool2d[avgpool]/20532"
+	"ResNet/AdaptiveAvgPool2d[avgpool]/20532" -> "ResNet/ret.619"
+	"ResNet/ret.619" -> "ResNet/Linear[fc]/ret"
+	"ResNet/Linear[fc]/ret" -> return_0
+}
