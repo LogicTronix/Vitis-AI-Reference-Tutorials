@@ -1,0 +1,986 @@
+digraph EfficientNet {
+	input_0 [label="type:nndct_input
+name:EfficientNet::input_0
+assigned device:user
+out shape:[[1, 224, 224, 3]]" color=black]
+	"EfficientNet/Sequential[features]/CNNBlock[0]/Conv2d[cnn]/ret.3" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/CNNBlock[0]/Conv2d[cnn]/ret.3
+assigned device:dpu
+out shape:[[1, 112, 112, 32]]" color=blue]
+	"EfficientNet/Sequential[features]/CNNBlock[0]/Hardswish[hard_swish]/ret.7" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/CNNBlock[0]/Hardswish[hard_swish]/ret.7
+assigned device:dpu
+out shape:[[1, 112, 112, 32]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.9" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.9
+assigned device:dpu
+out shape:[[1, 112, 112, 32]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.13" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.13
+assigned device:dpu
+out shape:[[1, 112, 112, 32]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/22789" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/22789
+assigned device:dpu
+out shape:[[1, 1, 1, 32]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.15" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.15
+assigned device:dpu
+out shape:[[1, 1, 1, 8]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.17" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.17
+assigned device:dpu
+out shape:[[1, 1, 1, 8]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.19" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.19
+assigned device:dpu
+out shape:[[1, 1, 1, 32]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.21" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.21
+assigned device:cpu
+out shape:[[1, 1, 1, 32]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/ret.23" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/ret.23
+assigned device:dpu
+out shape:[[1, 112, 112, 32]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/Conv2d[2]/ret.25" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/Conv2d[2]/ret.25
+assigned device:dpu
+out shape:[[1, 112, 112, 16]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.29" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[2]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.29
+assigned device:dpu
+out shape:[[1, 112, 112, 96]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.33" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[2]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.33
+assigned device:dpu
+out shape:[[1, 112, 112, 96]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.35" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.35
+assigned device:dpu
+out shape:[[1, 56, 56, 96]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.39" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.39
+assigned device:dpu
+out shape:[[1, 56, 56, 96]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/22970" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/22970
+assigned device:dpu
+out shape:[[1, 1, 1, 96]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.41" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.41
+assigned device:dpu
+out shape:[[1, 1, 1, 4]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.43" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.43
+assigned device:dpu
+out shape:[[1, 1, 1, 4]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.45" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.45
+assigned device:dpu
+out shape:[[1, 1, 1, 96]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.47" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.47
+assigned device:cpu
+out shape:[[1, 1, 1, 96]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/ret.49" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/ret.49
+assigned device:dpu
+out shape:[[1, 56, 56, 96]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/Conv2d[2]/ret.51" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/Conv2d[2]/ret.51
+assigned device:dpu
+out shape:[[1, 56, 56, 24]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.55" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[3]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.55
+assigned device:dpu
+out shape:[[1, 56, 56, 144]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.59" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[3]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.59
+assigned device:dpu
+out shape:[[1, 56, 56, 144]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.61" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.61
+assigned device:dpu
+out shape:[[1, 56, 56, 144]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.65" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.65
+assigned device:dpu
+out shape:[[1, 56, 56, 144]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23151" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23151
+assigned device:dpu
+out shape:[[1, 1, 1, 144]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.67" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.67
+assigned device:dpu
+out shape:[[1, 1, 1, 6]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.69" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.69
+assigned device:dpu
+out shape:[[1, 1, 1, 6]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.71" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.71
+assigned device:dpu
+out shape:[[1, 1, 1, 144]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.73" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.73
+assigned device:cpu
+out shape:[[1, 1, 1, 144]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/ret.75" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/ret.75
+assigned device:dpu
+out shape:[[1, 56, 56, 144]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/Conv2d[2]/ret.77" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/Conv2d[2]/ret.77
+assigned device:dpu
+out shape:[[1, 56, 56, 24]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/ret.81" [label="type:nndct_elemwise_add
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[3]/ret.81
+assigned device:dpu
+out shape:[[1, 56, 56, 24]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.83" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[4]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.83
+assigned device:dpu
+out shape:[[1, 56, 56, 144]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.87" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[4]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.87
+assigned device:dpu
+out shape:[[1, 56, 56, 144]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.89" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.89
+assigned device:dpu
+out shape:[[1, 28, 28, 144]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.93" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.93
+assigned device:dpu
+out shape:[[1, 28, 28, 144]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23335" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23335
+assigned device:dpu
+out shape:[[1, 1, 1, 144]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.95" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.95
+assigned device:dpu
+out shape:[[1, 1, 1, 6]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.97" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.97
+assigned device:dpu
+out shape:[[1, 1, 1, 6]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.99" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.99
+assigned device:dpu
+out shape:[[1, 1, 1, 144]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.101" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.101
+assigned device:cpu
+out shape:[[1, 1, 1, 144]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/ret.103" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/ret.103
+assigned device:dpu
+out shape:[[1, 28, 28, 144]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/Conv2d[2]/ret.105" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/Conv2d[2]/ret.105
+assigned device:dpu
+out shape:[[1, 28, 28, 40]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.109" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[5]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.109
+assigned device:dpu
+out shape:[[1, 28, 28, 240]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.113" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[5]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.113
+assigned device:dpu
+out shape:[[1, 28, 28, 240]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.115" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.115
+assigned device:dpu
+out shape:[[1, 28, 28, 240]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.119" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.119
+assigned device:dpu
+out shape:[[1, 28, 28, 240]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23516" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23516
+assigned device:dpu
+out shape:[[1, 1, 1, 240]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.121" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.121
+assigned device:dpu
+out shape:[[1, 1, 1, 10]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.123" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.123
+assigned device:dpu
+out shape:[[1, 1, 1, 10]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.125" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.125
+assigned device:dpu
+out shape:[[1, 1, 1, 240]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.127" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.127
+assigned device:cpu
+out shape:[[1, 1, 1, 240]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/ret.129" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/ret.129
+assigned device:dpu
+out shape:[[1, 28, 28, 240]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/Conv2d[2]/ret.131" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/Conv2d[2]/ret.131
+assigned device:dpu
+out shape:[[1, 28, 28, 40]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/ret.135" [label="type:nndct_elemwise_add
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[5]/ret.135
+assigned device:dpu
+out shape:[[1, 28, 28, 40]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.137" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[6]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.137
+assigned device:dpu
+out shape:[[1, 28, 28, 240]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.141" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[6]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.141
+assigned device:dpu
+out shape:[[1, 28, 28, 240]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.143" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.143
+assigned device:dpu
+out shape:[[1, 14, 14, 240]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.147" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.147
+assigned device:dpu
+out shape:[[1, 14, 14, 240]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23700" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23700
+assigned device:dpu
+out shape:[[1, 1, 1, 240]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.149" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.149
+assigned device:dpu
+out shape:[[1, 1, 1, 10]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.151" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.151
+assigned device:dpu
+out shape:[[1, 1, 1, 10]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.153" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.153
+assigned device:dpu
+out shape:[[1, 1, 1, 240]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.155" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.155
+assigned device:cpu
+out shape:[[1, 1, 1, 240]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/ret.157" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/ret.157
+assigned device:dpu
+out shape:[[1, 14, 14, 240]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/Conv2d[2]/ret.159" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/Conv2d[2]/ret.159
+assigned device:dpu
+out shape:[[1, 14, 14, 80]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.163" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[7]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.163
+assigned device:dpu
+out shape:[[1, 14, 14, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.167" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[7]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.167
+assigned device:dpu
+out shape:[[1, 14, 14, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.169" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.169
+assigned device:dpu
+out shape:[[1, 14, 14, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.173" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.173
+assigned device:dpu
+out shape:[[1, 14, 14, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23881" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23881
+assigned device:dpu
+out shape:[[1, 1, 1, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.175" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.175
+assigned device:dpu
+out shape:[[1, 1, 1, 20]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.177" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.177
+assigned device:dpu
+out shape:[[1, 1, 1, 20]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.179" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.179
+assigned device:dpu
+out shape:[[1, 1, 1, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.181" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.181
+assigned device:cpu
+out shape:[[1, 1, 1, 480]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/ret.183" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/ret.183
+assigned device:dpu
+out shape:[[1, 14, 14, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/Conv2d[2]/ret.185" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/Conv2d[2]/ret.185
+assigned device:dpu
+out shape:[[1, 14, 14, 80]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/ret.189" [label="type:nndct_elemwise_add
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[7]/ret.189
+assigned device:dpu
+out shape:[[1, 14, 14, 80]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.191" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[8]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.191
+assigned device:dpu
+out shape:[[1, 14, 14, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.195" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[8]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.195
+assigned device:dpu
+out shape:[[1, 14, 14, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.197" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.197
+assigned device:dpu
+out shape:[[1, 14, 14, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.201" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.201
+assigned device:dpu
+out shape:[[1, 14, 14, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24065" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24065
+assigned device:dpu
+out shape:[[1, 1, 1, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.203" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.203
+assigned device:dpu
+out shape:[[1, 1, 1, 20]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.205" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.205
+assigned device:dpu
+out shape:[[1, 1, 1, 20]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.207" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.207
+assigned device:dpu
+out shape:[[1, 1, 1, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.209" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.209
+assigned device:cpu
+out shape:[[1, 1, 1, 480]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/ret.211" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/ret.211
+assigned device:dpu
+out shape:[[1, 14, 14, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/Conv2d[2]/ret.213" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/Conv2d[2]/ret.213
+assigned device:dpu
+out shape:[[1, 14, 14, 80]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/ret.217" [label="type:nndct_elemwise_add
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[8]/ret.217
+assigned device:dpu
+out shape:[[1, 14, 14, 80]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.219" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[9]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.219
+assigned device:dpu
+out shape:[[1, 14, 14, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.223" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[9]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.223
+assigned device:dpu
+out shape:[[1, 14, 14, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.225" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.225
+assigned device:dpu
+out shape:[[1, 14, 14, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.229" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.229
+assigned device:dpu
+out shape:[[1, 14, 14, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24249" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24249
+assigned device:dpu
+out shape:[[1, 1, 1, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.231" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.231
+assigned device:dpu
+out shape:[[1, 1, 1, 20]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.233" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.233
+assigned device:dpu
+out shape:[[1, 1, 1, 20]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.235" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.235
+assigned device:dpu
+out shape:[[1, 1, 1, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.237" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.237
+assigned device:cpu
+out shape:[[1, 1, 1, 480]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/ret.239" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/ret.239
+assigned device:dpu
+out shape:[[1, 14, 14, 480]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/Conv2d[2]/ret.241" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/Conv2d[2]/ret.241
+assigned device:dpu
+out shape:[[1, 14, 14, 112]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.245" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[10]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.245
+assigned device:dpu
+out shape:[[1, 14, 14, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.249" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[10]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.249
+assigned device:dpu
+out shape:[[1, 14, 14, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.251" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.251
+assigned device:dpu
+out shape:[[1, 14, 14, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.255" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.255
+assigned device:dpu
+out shape:[[1, 14, 14, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24430" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24430
+assigned device:dpu
+out shape:[[1, 1, 1, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.257" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.257
+assigned device:dpu
+out shape:[[1, 1, 1, 28]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.259" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.259
+assigned device:dpu
+out shape:[[1, 1, 1, 28]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.261" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.261
+assigned device:dpu
+out shape:[[1, 1, 1, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.263" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.263
+assigned device:cpu
+out shape:[[1, 1, 1, 672]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/ret.265" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/ret.265
+assigned device:dpu
+out shape:[[1, 14, 14, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/Conv2d[2]/ret.267" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/Conv2d[2]/ret.267
+assigned device:dpu
+out shape:[[1, 14, 14, 112]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/ret.271" [label="type:nndct_elemwise_add
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[10]/ret.271
+assigned device:dpu
+out shape:[[1, 14, 14, 112]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.273" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[11]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.273
+assigned device:dpu
+out shape:[[1, 14, 14, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.277" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[11]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.277
+assigned device:dpu
+out shape:[[1, 14, 14, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.279" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.279
+assigned device:dpu
+out shape:[[1, 14, 14, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.283" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.283
+assigned device:dpu
+out shape:[[1, 14, 14, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24614" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24614
+assigned device:dpu
+out shape:[[1, 1, 1, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.285" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.285
+assigned device:dpu
+out shape:[[1, 1, 1, 28]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.287" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.287
+assigned device:dpu
+out shape:[[1, 1, 1, 28]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.289" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.289
+assigned device:dpu
+out shape:[[1, 1, 1, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.291" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.291
+assigned device:cpu
+out shape:[[1, 1, 1, 672]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/ret.293" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/ret.293
+assigned device:dpu
+out shape:[[1, 14, 14, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/Conv2d[2]/ret.295" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/Conv2d[2]/ret.295
+assigned device:dpu
+out shape:[[1, 14, 14, 112]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/ret.299" [label="type:nndct_elemwise_add
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[11]/ret.299
+assigned device:dpu
+out shape:[[1, 14, 14, 112]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.301" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[12]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.301
+assigned device:dpu
+out shape:[[1, 14, 14, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.305" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[12]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.305
+assigned device:dpu
+out shape:[[1, 14, 14, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.307" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.307
+assigned device:dpu
+out shape:[[1, 7, 7, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.311" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.311
+assigned device:dpu
+out shape:[[1, 7, 7, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24798" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24798
+assigned device:dpu
+out shape:[[1, 1, 1, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.313" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.313
+assigned device:dpu
+out shape:[[1, 1, 1, 28]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.315" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.315
+assigned device:dpu
+out shape:[[1, 1, 1, 28]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.317" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.317
+assigned device:dpu
+out shape:[[1, 1, 1, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.319" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.319
+assigned device:cpu
+out shape:[[1, 1, 1, 672]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/ret.321" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/ret.321
+assigned device:dpu
+out shape:[[1, 7, 7, 672]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/Conv2d[2]/ret.323" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/Conv2d[2]/ret.323
+assigned device:dpu
+out shape:[[1, 7, 7, 192]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.327" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[13]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.327
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.331" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[13]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.331
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.333" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.333
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.337" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.337
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24979" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24979
+assigned device:dpu
+out shape:[[1, 1, 1, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.339" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.339
+assigned device:dpu
+out shape:[[1, 1, 1, 48]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.341" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.341
+assigned device:dpu
+out shape:[[1, 1, 1, 48]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.343" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.343
+assigned device:dpu
+out shape:[[1, 1, 1, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.345" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.345
+assigned device:cpu
+out shape:[[1, 1, 1, 1152]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/ret.347" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/ret.347
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/Conv2d[2]/ret.349" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/Conv2d[2]/ret.349
+assigned device:dpu
+out shape:[[1, 7, 7, 192]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/ret.353" [label="type:nndct_elemwise_add
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[13]/ret.353
+assigned device:dpu
+out shape:[[1, 7, 7, 192]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.355" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[14]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.355
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.359" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[14]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.359
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.361" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.361
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.365" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.365
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/25163" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/25163
+assigned device:dpu
+out shape:[[1, 1, 1, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.367" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.367
+assigned device:dpu
+out shape:[[1, 1, 1, 48]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.369" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.369
+assigned device:dpu
+out shape:[[1, 1, 1, 48]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.371" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.371
+assigned device:dpu
+out shape:[[1, 1, 1, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.373" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.373
+assigned device:cpu
+out shape:[[1, 1, 1, 1152]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/ret.375" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/ret.375
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/Conv2d[2]/ret.377" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/Conv2d[2]/ret.377
+assigned device:dpu
+out shape:[[1, 7, 7, 192]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/ret.381" [label="type:nndct_elemwise_add
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[14]/ret.381
+assigned device:dpu
+out shape:[[1, 7, 7, 192]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.383" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[15]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.383
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.387" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[15]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.387
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.389" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.389
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.393" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.393
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/25347" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/25347
+assigned device:dpu
+out shape:[[1, 1, 1, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.395" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.395
+assigned device:dpu
+out shape:[[1, 1, 1, 48]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.397" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.397
+assigned device:dpu
+out shape:[[1, 1, 1, 48]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.399" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.399
+assigned device:dpu
+out shape:[[1, 1, 1, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.401" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.401
+assigned device:cpu
+out shape:[[1, 1, 1, 1152]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/ret.403" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/ret.403
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/Conv2d[2]/ret.405" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/Conv2d[2]/ret.405
+assigned device:dpu
+out shape:[[1, 7, 7, 192]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/ret.409" [label="type:nndct_elemwise_add
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[15]/ret.409
+assigned device:dpu
+out shape:[[1, 7, 7, 192]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.411" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[16]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.411
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.415" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[16]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.415
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.417" [label="type:nndct_depthwise_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.417
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.421" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.421
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/25531" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/25531
+assigned device:dpu
+out shape:[[1, 1, 1, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.423" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.423
+assigned device:dpu
+out shape:[[1, 1, 1, 48]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.425" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.425
+assigned device:dpu
+out shape:[[1, 1, 1, 48]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.427" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.427
+assigned device:dpu
+out shape:[[1, 1, 1, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.429" [label="type:nndct_sigmoid
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.429
+assigned device:cpu
+out shape:[[1, 1, 1, 1152]]" color=red]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/ret.431" [label="type:nndct_elemwise_mul
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/ret.431
+assigned device:dpu
+out shape:[[1, 7, 7, 1152]]" color=blue]
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/Conv2d[2]/ret.433" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/Conv2d[2]/ret.433
+assigned device:dpu
+out shape:[[1, 7, 7, 320]]" color=blue]
+	"EfficientNet/Sequential[features]/CNNBlock[17]/Conv2d[cnn]/ret.437" [label="type:nndct_conv2d
+name:EfficientNet::EfficientNet/Sequential[features]/CNNBlock[17]/Conv2d[cnn]/ret.437
+assigned device:dpu
+out shape:[[1, 7, 7, 1280]]" color=blue]
+	"EfficientNet/Sequential[features]/CNNBlock[17]/Hardswish[hard_swish]/ret.441" [label="type:nndct_hswish
+name:EfficientNet::EfficientNet/Sequential[features]/CNNBlock[17]/Hardswish[hard_swish]/ret.441
+assigned device:dpu
+out shape:[[1, 7, 7, 1280]]" color=blue]
+	"EfficientNet/AdaptiveAvgPool2d[pool]/25683" [label="type:nndct_avgpool
+name:EfficientNet::EfficientNet/AdaptiveAvgPool2d[pool]/25683
+assigned device:dpu
+out shape:[[1, 1, 1, 1280]]" color=blue]
+	"EfficientNet/ret.443" [label="type:nndct_reshape
+name:EfficientNet::EfficientNet/ret.443
+assigned device:dpu
+out shape:[[1, 1280]]" color=blue]
+	"EfficientNet/Sequential[classifier]/Linear[1]/ret" [label="type:nndct_dense
+name:EfficientNet::EfficientNet/Sequential[classifier]/Linear[1]/ret
+assigned device:dpu
+out shape:[[1, 3]]" color=blue]
+	return_0 [label="type:nndct_return
+name:EfficientNet::return_0
+assigned device:user
+out shape:[]" color=black]
+	input_0 -> "EfficientNet/Sequential[features]/CNNBlock[0]/Conv2d[cnn]/ret.3"
+	"EfficientNet/Sequential[features]/CNNBlock[0]/Conv2d[cnn]/ret.3" -> "EfficientNet/Sequential[features]/CNNBlock[0]/Hardswish[hard_swish]/ret.7"
+	"EfficientNet/Sequential[features]/CNNBlock[0]/Hardswish[hard_swish]/ret.7" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.9"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.9" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.13"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.13" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/22789"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.13" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/ret.23"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/22789" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.15"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.15" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.17"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.17" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.19"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.19" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.21"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.21" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/ret.23"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/SqueezeExcitation[1]/ret.23" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/Conv2d[2]/ret.25"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[1]/Sequential[conv]/Conv2d[2]/ret.25" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[2]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.29"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.29" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[2]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.33"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.33" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.35"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.35" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.39"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.39" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/22970"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.39" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/ret.49"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/22970" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.41"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.41" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.43"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.43" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.45"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.45" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.47"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.47" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/ret.49"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/SqueezeExcitation[1]/ret.49" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/Conv2d[2]/ret.51"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/Conv2d[2]/ret.51" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[3]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.55"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[2]/Sequential[conv]/Conv2d[2]/ret.51" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[3]/ret.81"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.55" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[3]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.59"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.59" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.61"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.61" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.65"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.65" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23151"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.65" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/ret.75"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23151" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.67"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.67" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.69"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.69" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.71"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.71" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.73"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.73" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/ret.75"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/SqueezeExcitation[1]/ret.75" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/Conv2d[2]/ret.77"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/Sequential[conv]/Conv2d[2]/ret.77" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[3]/ret.81"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[3]/ret.81" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[4]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.83"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.83" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[4]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.87"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.87" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.89"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.89" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.93"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.93" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23335"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.93" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/ret.103"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23335" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.95"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.95" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.97"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.97" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.99"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.99" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.101"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.101" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/ret.103"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/SqueezeExcitation[1]/ret.103" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/Conv2d[2]/ret.105"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/Conv2d[2]/ret.105" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[5]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.109"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[4]/Sequential[conv]/Conv2d[2]/ret.105" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[5]/ret.135"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.109" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[5]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.113"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.113" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.115"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.115" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.119"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.119" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23516"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.119" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/ret.129"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23516" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.121"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.121" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.123"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.123" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.125"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.125" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.127"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.127" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/ret.129"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/SqueezeExcitation[1]/ret.129" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/Conv2d[2]/ret.131"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/Sequential[conv]/Conv2d[2]/ret.131" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[5]/ret.135"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[5]/ret.135" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[6]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.137"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.137" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[6]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.141"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.141" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.143"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.143" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.147"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.147" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23700"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.147" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/ret.157"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23700" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.149"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.149" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.151"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.151" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.153"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.153" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.155"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.155" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/ret.157"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/SqueezeExcitation[1]/ret.157" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/Conv2d[2]/ret.159"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/Conv2d[2]/ret.159" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[7]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.163"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[6]/Sequential[conv]/Conv2d[2]/ret.159" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[7]/ret.189"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.163" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[7]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.167"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.167" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.169"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.169" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.173"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.173" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23881"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.173" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/ret.183"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/23881" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.175"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.175" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.177"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.177" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.179"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.179" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.181"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.181" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/ret.183"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/SqueezeExcitation[1]/ret.183" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/Conv2d[2]/ret.185"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/Sequential[conv]/Conv2d[2]/ret.185" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[7]/ret.189"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/ret.189" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[8]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.191"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[7]/ret.189" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[8]/ret.217"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.191" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[8]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.195"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.195" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.197"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.197" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.201"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.201" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24065"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.201" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/ret.211"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24065" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.203"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.203" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.205"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.205" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.207"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.207" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.209"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.209" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/ret.211"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/SqueezeExcitation[1]/ret.211" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/Conv2d[2]/ret.213"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/Sequential[conv]/Conv2d[2]/ret.213" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[8]/ret.217"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[8]/ret.217" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[9]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.219"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.219" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[9]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.223"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.223" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.225"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.225" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.229"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.229" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24249"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.229" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/ret.239"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24249" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.231"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.231" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.233"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.233" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.235"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.235" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.237"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.237" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/ret.239"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/SqueezeExcitation[1]/ret.239" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/Conv2d[2]/ret.241"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/Conv2d[2]/ret.241" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[10]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.245"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[9]/Sequential[conv]/Conv2d[2]/ret.241" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[10]/ret.271"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.245" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[10]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.249"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.249" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.251"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.251" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.255"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.255" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24430"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.255" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/ret.265"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24430" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.257"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.257" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.259"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.259" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.261"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.261" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.263"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.263" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/ret.265"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/SqueezeExcitation[1]/ret.265" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/Conv2d[2]/ret.267"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/Sequential[conv]/Conv2d[2]/ret.267" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[10]/ret.271"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/ret.271" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[11]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.273"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[10]/ret.271" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[11]/ret.299"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.273" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[11]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.277"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.277" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.279"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.279" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.283"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.283" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24614"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.283" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/ret.293"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24614" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.285"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.285" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.287"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.287" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.289"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.289" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.291"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.291" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/ret.293"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/SqueezeExcitation[1]/ret.293" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/Conv2d[2]/ret.295"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/Sequential[conv]/Conv2d[2]/ret.295" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[11]/ret.299"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[11]/ret.299" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[12]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.301"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.301" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[12]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.305"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.305" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.307"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.307" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.311"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.311" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24798"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.311" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/ret.321"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24798" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.313"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.313" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.315"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.315" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.317"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.317" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.319"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.319" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/ret.321"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/SqueezeExcitation[1]/ret.321" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/Conv2d[2]/ret.323"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/Conv2d[2]/ret.323" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[13]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.327"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[12]/Sequential[conv]/Conv2d[2]/ret.323" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[13]/ret.353"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.327" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[13]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.331"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.331" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.333"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.333" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.337"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.337" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24979"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.337" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/ret.347"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/24979" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.339"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.339" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.341"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.341" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.343"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.343" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.345"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.345" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/ret.347"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/SqueezeExcitation[1]/ret.347" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/Conv2d[2]/ret.349"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/Sequential[conv]/Conv2d[2]/ret.349" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[13]/ret.353"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/ret.353" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[14]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.355"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[13]/ret.353" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[14]/ret.381"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.355" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[14]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.359"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.359" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.361"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.361" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.365"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.365" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/25163"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.365" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/ret.375"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/25163" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.367"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.367" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.369"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.369" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.371"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.371" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.373"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.373" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/ret.375"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/SqueezeExcitation[1]/ret.375" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/Conv2d[2]/ret.377"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/Sequential[conv]/Conv2d[2]/ret.377" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[14]/ret.381"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/ret.381" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[15]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.383"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[14]/ret.381" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[15]/ret.409"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.383" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[15]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.387"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.387" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.389"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.389" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.393"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.393" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/25347"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.393" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/ret.403"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/25347" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.395"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.395" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.397"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.397" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.399"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.399" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.401"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.401" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/ret.403"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/SqueezeExcitation[1]/ret.403" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/Conv2d[2]/ret.405"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/Sequential[conv]/Conv2d[2]/ret.405" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[15]/ret.409"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[15]/ret.409" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[16]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.411"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/CNNBlock[expand_conv]/Conv2d[cnn]/ret.411" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[16]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.415"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/CNNBlock[expand_conv]/Hardswish[hard_swish]/ret.415" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.417"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/CNNBlock[0]/Conv2d[cnn]/ret.417" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.421"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.421" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/25531"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/CNNBlock[0]/Hardswish[hard_swish]/ret.421" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/ret.431"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/AdaptiveAvgPool2d[0]/25531" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.423"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[1]/ret.423" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.425"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Hardswish[2]/ret.425" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.427"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Conv2d[3]/ret.427" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.429"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/Sequential[se]/Sigmoid[4]/ret.429" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/ret.431"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/SqueezeExcitation[1]/ret.431" -> "EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/Conv2d[2]/ret.433"
+	"EfficientNet/Sequential[features]/InvertedResidualBlock[16]/Sequential[conv]/Conv2d[2]/ret.433" -> "EfficientNet/Sequential[features]/CNNBlock[17]/Conv2d[cnn]/ret.437"
+	"EfficientNet/Sequential[features]/CNNBlock[17]/Conv2d[cnn]/ret.437" -> "EfficientNet/Sequential[features]/CNNBlock[17]/Hardswish[hard_swish]/ret.441"
+	"EfficientNet/Sequential[features]/CNNBlock[17]/Hardswish[hard_swish]/ret.441" -> "EfficientNet/AdaptiveAvgPool2d[pool]/25683"
+	"EfficientNet/AdaptiveAvgPool2d[pool]/25683" -> "EfficientNet/ret.443"
+	"EfficientNet/ret.443" -> "EfficientNet/Sequential[classifier]/Linear[1]/ret"
+	"EfficientNet/Sequential[classifier]/Linear[1]/ret" -> return_0
+}
