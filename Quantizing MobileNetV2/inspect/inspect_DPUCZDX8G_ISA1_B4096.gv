@@ -1,0 +1,521 @@
+digraph MobileNetV2 {
+	input_0 [label="type:nndct_input
+name:MobileNetV2::input_0
+assigned device:user
+out shape:[[1, 224, 224, 3]]" color=black]
+	"MobileNetV2/Sequential[features]/Conv2dNormActivation[0]/Conv2d[0]/ret.3" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/Conv2dNormActivation[0]/Conv2d[0]/ret.3
+assigned device:dpu
+out shape:[[1, 112, 112, 32]]" color=blue]
+	"MobileNetV2/Sequential[features]/Conv2dNormActivation[0]/ReLU[2]/10873" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/Conv2dNormActivation[0]/ReLU[2]/10873
+assigned device:dpu
+out shape:[[1, 112, 112, 32]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[1]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.7" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[1]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.7
+assigned device:dpu
+out shape:[[1, 112, 112, 32]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[1]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/10901" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[1]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/10901
+assigned device:dpu
+out shape:[[1, 112, 112, 32]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[1]/Sequential[conv]/Conv2d[1]/ret.11" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[1]/Sequential[conv]/Conv2d[1]/ret.11
+assigned device:dpu
+out shape:[[1, 112, 112, 16]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.15" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.15
+assigned device:dpu
+out shape:[[1, 112, 112, 96]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/10956" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/10956
+assigned device:dpu
+out shape:[[1, 112, 112, 96]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.19" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.19
+assigned device:dpu
+out shape:[[1, 56, 56, 96]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/10984" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/10984
+assigned device:dpu
+out shape:[[1, 56, 56, 96]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2d[2]/ret.23" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2d[2]/ret.23
+assigned device:dpu
+out shape:[[1, 56, 56, 24]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.27" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.27
+assigned device:dpu
+out shape:[[1, 56, 56, 144]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11039" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11039
+assigned device:dpu
+out shape:[[1, 56, 56, 144]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.31" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.31
+assigned device:dpu
+out shape:[[1, 56, 56, 144]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11067" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11067
+assigned device:dpu
+out shape:[[1, 56, 56, 144]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2d[2]/ret.35" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2d[2]/ret.35
+assigned device:dpu
+out shape:[[1, 56, 56, 24]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[3]/ret.39" [label="type:nndct_elemwise_add
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[3]/ret.39
+assigned device:dpu
+out shape:[[1, 56, 56, 24]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.41" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.41
+assigned device:dpu
+out shape:[[1, 56, 56, 144]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11125" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11125
+assigned device:dpu
+out shape:[[1, 56, 56, 144]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.45" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.45
+assigned device:dpu
+out shape:[[1, 28, 28, 144]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11153" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11153
+assigned device:dpu
+out shape:[[1, 28, 28, 144]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2d[2]/ret.49" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2d[2]/ret.49
+assigned device:dpu
+out shape:[[1, 28, 28, 32]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.53" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.53
+assigned device:dpu
+out shape:[[1, 28, 28, 192]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11208" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11208
+assigned device:dpu
+out shape:[[1, 28, 28, 192]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.57" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.57
+assigned device:dpu
+out shape:[[1, 28, 28, 192]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11236" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11236
+assigned device:dpu
+out shape:[[1, 28, 28, 192]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2d[2]/ret.61" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2d[2]/ret.61
+assigned device:dpu
+out shape:[[1, 28, 28, 32]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[5]/ret.65" [label="type:nndct_elemwise_add
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[5]/ret.65
+assigned device:dpu
+out shape:[[1, 28, 28, 32]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.67" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.67
+assigned device:dpu
+out shape:[[1, 28, 28, 192]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11294" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11294
+assigned device:dpu
+out shape:[[1, 28, 28, 192]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.71" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.71
+assigned device:dpu
+out shape:[[1, 28, 28, 192]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11322" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11322
+assigned device:dpu
+out shape:[[1, 28, 28, 192]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2d[2]/ret.75" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2d[2]/ret.75
+assigned device:dpu
+out shape:[[1, 28, 28, 32]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[6]/ret.79" [label="type:nndct_elemwise_add
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[6]/ret.79
+assigned device:dpu
+out shape:[[1, 28, 28, 32]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.81" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.81
+assigned device:dpu
+out shape:[[1, 28, 28, 192]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11380" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11380
+assigned device:dpu
+out shape:[[1, 28, 28, 192]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.85" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.85
+assigned device:dpu
+out shape:[[1, 14, 14, 192]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11408" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11408
+assigned device:dpu
+out shape:[[1, 14, 14, 192]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2d[2]/ret.89" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2d[2]/ret.89
+assigned device:dpu
+out shape:[[1, 14, 14, 64]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.93" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.93
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11463" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11463
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.97" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.97
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11491" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11491
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2d[2]/ret.101" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2d[2]/ret.101
+assigned device:dpu
+out shape:[[1, 14, 14, 64]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[8]/ret.105" [label="type:nndct_elemwise_add
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[8]/ret.105
+assigned device:dpu
+out shape:[[1, 14, 14, 64]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.107" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.107
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11549" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11549
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.111" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.111
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11577" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11577
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2d[2]/ret.115" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2d[2]/ret.115
+assigned device:dpu
+out shape:[[1, 14, 14, 64]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[9]/ret.119" [label="type:nndct_elemwise_add
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[9]/ret.119
+assigned device:dpu
+out shape:[[1, 14, 14, 64]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.121" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.121
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11635" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11635
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.125" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.125
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11663" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11663
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2d[2]/ret.129" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2d[2]/ret.129
+assigned device:dpu
+out shape:[[1, 14, 14, 64]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[10]/ret.133" [label="type:nndct_elemwise_add
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[10]/ret.133
+assigned device:dpu
+out shape:[[1, 14, 14, 64]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.135" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.135
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11721" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11721
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.139" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.139
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11749" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11749
+assigned device:dpu
+out shape:[[1, 14, 14, 384]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2d[2]/ret.143" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2d[2]/ret.143
+assigned device:dpu
+out shape:[[1, 14, 14, 96]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.147" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.147
+assigned device:dpu
+out shape:[[1, 14, 14, 576]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11804" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11804
+assigned device:dpu
+out shape:[[1, 14, 14, 576]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.151" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.151
+assigned device:dpu
+out shape:[[1, 14, 14, 576]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11832" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11832
+assigned device:dpu
+out shape:[[1, 14, 14, 576]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2d[2]/ret.155" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2d[2]/ret.155
+assigned device:dpu
+out shape:[[1, 14, 14, 96]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[12]/ret.159" [label="type:nndct_elemwise_add
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[12]/ret.159
+assigned device:dpu
+out shape:[[1, 14, 14, 96]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.161" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.161
+assigned device:dpu
+out shape:[[1, 14, 14, 576]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11890" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11890
+assigned device:dpu
+out shape:[[1, 14, 14, 576]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.165" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.165
+assigned device:dpu
+out shape:[[1, 14, 14, 576]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11918" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11918
+assigned device:dpu
+out shape:[[1, 14, 14, 576]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2d[2]/ret.169" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2d[2]/ret.169
+assigned device:dpu
+out shape:[[1, 14, 14, 96]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[13]/ret.173" [label="type:nndct_elemwise_add
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[13]/ret.173
+assigned device:dpu
+out shape:[[1, 14, 14, 96]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.175" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.175
+assigned device:dpu
+out shape:[[1, 14, 14, 576]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11976" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11976
+assigned device:dpu
+out shape:[[1, 14, 14, 576]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.179" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.179
+assigned device:dpu
+out shape:[[1, 7, 7, 576]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12004" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12004
+assigned device:dpu
+out shape:[[1, 7, 7, 576]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2d[2]/ret.183" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2d[2]/ret.183
+assigned device:dpu
+out shape:[[1, 7, 7, 160]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.187" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.187
+assigned device:dpu
+out shape:[[1, 7, 7, 960]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/12059" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/12059
+assigned device:dpu
+out shape:[[1, 7, 7, 960]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.191" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.191
+assigned device:dpu
+out shape:[[1, 7, 7, 960]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12087" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12087
+assigned device:dpu
+out shape:[[1, 7, 7, 960]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2d[2]/ret.195" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2d[2]/ret.195
+assigned device:dpu
+out shape:[[1, 7, 7, 160]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[15]/ret.199" [label="type:nndct_elemwise_add
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[15]/ret.199
+assigned device:dpu
+out shape:[[1, 7, 7, 160]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.201" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.201
+assigned device:dpu
+out shape:[[1, 7, 7, 960]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/12145" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/12145
+assigned device:dpu
+out shape:[[1, 7, 7, 960]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.205" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.205
+assigned device:dpu
+out shape:[[1, 7, 7, 960]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12173" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12173
+assigned device:dpu
+out shape:[[1, 7, 7, 960]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2d[2]/ret.209" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2d[2]/ret.209
+assigned device:dpu
+out shape:[[1, 7, 7, 160]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[16]/ret.213" [label="type:nndct_elemwise_add
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[16]/ret.213
+assigned device:dpu
+out shape:[[1, 7, 7, 160]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.215" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.215
+assigned device:dpu
+out shape:[[1, 7, 7, 960]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/12231" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/12231
+assigned device:dpu
+out shape:[[1, 7, 7, 960]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.219" [label="type:nndct_depthwise_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.219
+assigned device:dpu
+out shape:[[1, 7, 7, 960]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12259" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12259
+assigned device:dpu
+out shape:[[1, 7, 7, 960]]" color=blue]
+	"MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2d[2]/ret.223" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2d[2]/ret.223
+assigned device:dpu
+out shape:[[1, 7, 7, 320]]" color=blue]
+	"MobileNetV2/Sequential[features]/Conv2dNormActivation[18]/Conv2d[0]/ret.227" [label="type:nndct_conv2d
+name:MobileNetV2::MobileNetV2/Sequential[features]/Conv2dNormActivation[18]/Conv2d[0]/ret.227
+assigned device:dpu
+out shape:[[1, 7, 7, 1280]]" color=blue]
+	"MobileNetV2/Sequential[features]/Conv2dNormActivation[18]/ReLU[2]/12314" [label="type:nndct_relu
+name:MobileNetV2::MobileNetV2/Sequential[features]/Conv2dNormActivation[18]/ReLU[2]/12314
+assigned device:dpu
+out shape:[[1, 7, 7, 1280]]" color=blue]
+	"MobileNetV2/12331" [label="type:nndct_avgpool
+name:MobileNetV2::MobileNetV2/12331
+assigned device:dpu
+out shape:[[1, 1, 1, 1280]]" color=blue]
+	"MobileNetV2/ret.231" [label="type:nndct_reshape
+name:MobileNetV2::MobileNetV2/ret.231
+assigned device:dpu
+out shape:[[1, 1280]]" color=blue]
+	"MobileNetV2/Sequential[classifier]/Linear[new_linear]/ret" [label="type:nndct_dense
+name:MobileNetV2::MobileNetV2/Sequential[classifier]/Linear[new_linear]/ret
+assigned device:dpu
+out shape:[[1, 3]]" color=blue]
+	return_0 [label="type:nndct_return
+name:MobileNetV2::return_0
+assigned device:user
+out shape:[]" color=black]
+	input_0 -> "MobileNetV2/Sequential[features]/Conv2dNormActivation[0]/Conv2d[0]/ret.3"
+	"MobileNetV2/Sequential[features]/Conv2dNormActivation[0]/Conv2d[0]/ret.3" -> "MobileNetV2/Sequential[features]/Conv2dNormActivation[0]/ReLU[2]/10873"
+	"MobileNetV2/Sequential[features]/Conv2dNormActivation[0]/ReLU[2]/10873" -> "MobileNetV2/Sequential[features]/InvertedResidual[1]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.7"
+	"MobileNetV2/Sequential[features]/InvertedResidual[1]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.7" -> "MobileNetV2/Sequential[features]/InvertedResidual[1]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/10901"
+	"MobileNetV2/Sequential[features]/InvertedResidual[1]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/10901" -> "MobileNetV2/Sequential[features]/InvertedResidual[1]/Sequential[conv]/Conv2d[1]/ret.11"
+	"MobileNetV2/Sequential[features]/InvertedResidual[1]/Sequential[conv]/Conv2d[1]/ret.11" -> "MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.15"
+	"MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.15" -> "MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/10956"
+	"MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/10956" -> "MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.19"
+	"MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.19" -> "MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/10984"
+	"MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/10984" -> "MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2d[2]/ret.23"
+	"MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2d[2]/ret.23" -> "MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.27"
+	"MobileNetV2/Sequential[features]/InvertedResidual[2]/Sequential[conv]/Conv2d[2]/ret.23" -> "MobileNetV2/Sequential[features]/InvertedResidual[3]/ret.39"
+	"MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.27" -> "MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11039"
+	"MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11039" -> "MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.31"
+	"MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.31" -> "MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11067"
+	"MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11067" -> "MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2d[2]/ret.35"
+	"MobileNetV2/Sequential[features]/InvertedResidual[3]/Sequential[conv]/Conv2d[2]/ret.35" -> "MobileNetV2/Sequential[features]/InvertedResidual[3]/ret.39"
+	"MobileNetV2/Sequential[features]/InvertedResidual[3]/ret.39" -> "MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.41"
+	"MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.41" -> "MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11125"
+	"MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11125" -> "MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.45"
+	"MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.45" -> "MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11153"
+	"MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11153" -> "MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2d[2]/ret.49"
+	"MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2d[2]/ret.49" -> "MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.53"
+	"MobileNetV2/Sequential[features]/InvertedResidual[4]/Sequential[conv]/Conv2d[2]/ret.49" -> "MobileNetV2/Sequential[features]/InvertedResidual[5]/ret.65"
+	"MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.53" -> "MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11208"
+	"MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11208" -> "MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.57"
+	"MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.57" -> "MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11236"
+	"MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11236" -> "MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2d[2]/ret.61"
+	"MobileNetV2/Sequential[features]/InvertedResidual[5]/Sequential[conv]/Conv2d[2]/ret.61" -> "MobileNetV2/Sequential[features]/InvertedResidual[5]/ret.65"
+	"MobileNetV2/Sequential[features]/InvertedResidual[5]/ret.65" -> "MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.67"
+	"MobileNetV2/Sequential[features]/InvertedResidual[5]/ret.65" -> "MobileNetV2/Sequential[features]/InvertedResidual[6]/ret.79"
+	"MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.67" -> "MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11294"
+	"MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11294" -> "MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.71"
+	"MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.71" -> "MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11322"
+	"MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11322" -> "MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2d[2]/ret.75"
+	"MobileNetV2/Sequential[features]/InvertedResidual[6]/Sequential[conv]/Conv2d[2]/ret.75" -> "MobileNetV2/Sequential[features]/InvertedResidual[6]/ret.79"
+	"MobileNetV2/Sequential[features]/InvertedResidual[6]/ret.79" -> "MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.81"
+	"MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.81" -> "MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11380"
+	"MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11380" -> "MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.85"
+	"MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.85" -> "MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11408"
+	"MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11408" -> "MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2d[2]/ret.89"
+	"MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2d[2]/ret.89" -> "MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.93"
+	"MobileNetV2/Sequential[features]/InvertedResidual[7]/Sequential[conv]/Conv2d[2]/ret.89" -> "MobileNetV2/Sequential[features]/InvertedResidual[8]/ret.105"
+	"MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.93" -> "MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11463"
+	"MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11463" -> "MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.97"
+	"MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.97" -> "MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11491"
+	"MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11491" -> "MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2d[2]/ret.101"
+	"MobileNetV2/Sequential[features]/InvertedResidual[8]/Sequential[conv]/Conv2d[2]/ret.101" -> "MobileNetV2/Sequential[features]/InvertedResidual[8]/ret.105"
+	"MobileNetV2/Sequential[features]/InvertedResidual[8]/ret.105" -> "MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.107"
+	"MobileNetV2/Sequential[features]/InvertedResidual[8]/ret.105" -> "MobileNetV2/Sequential[features]/InvertedResidual[9]/ret.119"
+	"MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.107" -> "MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11549"
+	"MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11549" -> "MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.111"
+	"MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.111" -> "MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11577"
+	"MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11577" -> "MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2d[2]/ret.115"
+	"MobileNetV2/Sequential[features]/InvertedResidual[9]/Sequential[conv]/Conv2d[2]/ret.115" -> "MobileNetV2/Sequential[features]/InvertedResidual[9]/ret.119"
+	"MobileNetV2/Sequential[features]/InvertedResidual[9]/ret.119" -> "MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.121"
+	"MobileNetV2/Sequential[features]/InvertedResidual[9]/ret.119" -> "MobileNetV2/Sequential[features]/InvertedResidual[10]/ret.133"
+	"MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.121" -> "MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11635"
+	"MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11635" -> "MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.125"
+	"MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.125" -> "MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11663"
+	"MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11663" -> "MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2d[2]/ret.129"
+	"MobileNetV2/Sequential[features]/InvertedResidual[10]/Sequential[conv]/Conv2d[2]/ret.129" -> "MobileNetV2/Sequential[features]/InvertedResidual[10]/ret.133"
+	"MobileNetV2/Sequential[features]/InvertedResidual[10]/ret.133" -> "MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.135"
+	"MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.135" -> "MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11721"
+	"MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11721" -> "MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.139"
+	"MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.139" -> "MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11749"
+	"MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11749" -> "MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2d[2]/ret.143"
+	"MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2d[2]/ret.143" -> "MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.147"
+	"MobileNetV2/Sequential[features]/InvertedResidual[11]/Sequential[conv]/Conv2d[2]/ret.143" -> "MobileNetV2/Sequential[features]/InvertedResidual[12]/ret.159"
+	"MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.147" -> "MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11804"
+	"MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11804" -> "MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.151"
+	"MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.151" -> "MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11832"
+	"MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11832" -> "MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2d[2]/ret.155"
+	"MobileNetV2/Sequential[features]/InvertedResidual[12]/Sequential[conv]/Conv2d[2]/ret.155" -> "MobileNetV2/Sequential[features]/InvertedResidual[12]/ret.159"
+	"MobileNetV2/Sequential[features]/InvertedResidual[12]/ret.159" -> "MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.161"
+	"MobileNetV2/Sequential[features]/InvertedResidual[12]/ret.159" -> "MobileNetV2/Sequential[features]/InvertedResidual[13]/ret.173"
+	"MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.161" -> "MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11890"
+	"MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11890" -> "MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.165"
+	"MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.165" -> "MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11918"
+	"MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/11918" -> "MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2d[2]/ret.169"
+	"MobileNetV2/Sequential[features]/InvertedResidual[13]/Sequential[conv]/Conv2d[2]/ret.169" -> "MobileNetV2/Sequential[features]/InvertedResidual[13]/ret.173"
+	"MobileNetV2/Sequential[features]/InvertedResidual[13]/ret.173" -> "MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.175"
+	"MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.175" -> "MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11976"
+	"MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/11976" -> "MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.179"
+	"MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.179" -> "MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12004"
+	"MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12004" -> "MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2d[2]/ret.183"
+	"MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2d[2]/ret.183" -> "MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.187"
+	"MobileNetV2/Sequential[features]/InvertedResidual[14]/Sequential[conv]/Conv2d[2]/ret.183" -> "MobileNetV2/Sequential[features]/InvertedResidual[15]/ret.199"
+	"MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.187" -> "MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/12059"
+	"MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/12059" -> "MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.191"
+	"MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.191" -> "MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12087"
+	"MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12087" -> "MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2d[2]/ret.195"
+	"MobileNetV2/Sequential[features]/InvertedResidual[15]/Sequential[conv]/Conv2d[2]/ret.195" -> "MobileNetV2/Sequential[features]/InvertedResidual[15]/ret.199"
+	"MobileNetV2/Sequential[features]/InvertedResidual[15]/ret.199" -> "MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.201"
+	"MobileNetV2/Sequential[features]/InvertedResidual[15]/ret.199" -> "MobileNetV2/Sequential[features]/InvertedResidual[16]/ret.213"
+	"MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.201" -> "MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/12145"
+	"MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/12145" -> "MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.205"
+	"MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.205" -> "MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12173"
+	"MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12173" -> "MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2d[2]/ret.209"
+	"MobileNetV2/Sequential[features]/InvertedResidual[16]/Sequential[conv]/Conv2d[2]/ret.209" -> "MobileNetV2/Sequential[features]/InvertedResidual[16]/ret.213"
+	"MobileNetV2/Sequential[features]/InvertedResidual[16]/ret.213" -> "MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.215"
+	"MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[0]/Conv2d[0]/ret.215" -> "MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/12231"
+	"MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[0]/ReLU[2]/12231" -> "MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.219"
+	"MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[1]/Conv2d[0]/ret.219" -> "MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12259"
+	"MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2dNormActivation[1]/ReLU[2]/12259" -> "MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2d[2]/ret.223"
+	"MobileNetV2/Sequential[features]/InvertedResidual[17]/Sequential[conv]/Conv2d[2]/ret.223" -> "MobileNetV2/Sequential[features]/Conv2dNormActivation[18]/Conv2d[0]/ret.227"
+	"MobileNetV2/Sequential[features]/Conv2dNormActivation[18]/Conv2d[0]/ret.227" -> "MobileNetV2/Sequential[features]/Conv2dNormActivation[18]/ReLU[2]/12314"
+	"MobileNetV2/Sequential[features]/Conv2dNormActivation[18]/ReLU[2]/12314" -> "MobileNetV2/12331"
+	"MobileNetV2/12331" -> "MobileNetV2/ret.231"
+	"MobileNetV2/ret.231" -> "MobileNetV2/Sequential[classifier]/Linear[new_linear]/ret"
+	"MobileNetV2/Sequential[classifier]/Linear[new_linear]/ret" -> return_0
+}
