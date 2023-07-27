@@ -227,7 +227,7 @@ def quantization(title='optimize',
 if __name__ == '__main__':
 
   model_name = 'MobileNetV2'
-  file_path = 'MobileNetV2.pth'
+  file_path = 'MobileNetV2_transfer_learning.pth'
 
   feature_test = ' float model evaluation'
   if args.quant_mode != 'float':

@@ -1,37 +1,19 @@
 import torch
 import torch.nn as nn
-import torchvision.transforms as transforms
+from torchvision import transforms
 
 from PIL import Image
-import matplotlib.pyplot as plt
 
-from torchvision.models.mobilenet import mobilenet_v2
+import pytorch_nndct
 
 def predict(image):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    model = torch.jit.load('transfer_learning_quantize_result/MobileNetV2_int.pt', map_location=torch.device('cpu'))
 
-    # Instantiate MobileNetV2 model
-    model = mobilenet_v2(pretrained=True)
-
-    # Access the classifier of the model
-    classifier = model.classifier
-
-    # Remove the last layer from the classifier
-    classifier = classifier[:-1]
-
-    # Add a new linear layer at the end of the classifier
-    new_linear_layer = nn.Linear(in_features=1280, out_features=3)
-    classifier.add_module('new_linear', new_linear_layer)
-
-    # Assign the modified classifier back to the model
-    model.classifier = classifier
-
-    # Load the model to be inspected
-    model.load_state_dict(torch.load("MobileNetV2.pth", map_location=torch.device('cpu')))
     model.eval()
     model = model.to(device)
 
-    transform = transforms.Compose([transforms.Resize((224,224)),
+    transform = transforms.Compose([transforms.Resize((224,224)), #<-- Resize for ResNet input
                                 transforms.ToTensor(),
                                 transforms.Normalize((0.5,0.5,0.5), (0.5,0.5,0.5))])
     input_image = transform(image).unsqueeze(0)
@@ -48,7 +30,7 @@ def predict(image):
 
     # Get the predicted class label
     predicted_class = torch.argmax(probabilities).item()
-
+    
     return probabilities, predicted_class
 
 # Test on airplane
