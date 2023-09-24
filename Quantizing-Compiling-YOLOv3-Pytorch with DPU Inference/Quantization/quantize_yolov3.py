@@ -5,6 +5,13 @@ import torch
 import torch.nn as nn
 from pytorch_nndct.apis import torch_quantizer
 
+import sys
+import os
+
+# Add the project directory to the Python path
+project_root = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(project_root, '..'))
+
 from nets.model_main import ModelMain
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -63,7 +70,7 @@ def quantization(title='optimize',
   # Set data parallel
   model = nn.DataParallel(model)
 
-  state_dict = torch.load(config["pretrain_snapshot"])
+  state_dict = torch.load(config["pretrain_snapshot"], map_location=torch.device('cpu'))
   model.load_state_dict(state_dict)
   model = model.to(device)
   print(model)

@@ -4,6 +4,14 @@ import numpy as np
 import cv2
 import importlib
 import random
+
+import sys
+import os
+
+# Add the project directory to the Python path
+project_root = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(project_root, '..'))
+
 from nets.model_main import ModelMain
 from gpu_utils import YOLOPost, non_max_suppression
 
