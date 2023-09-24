@@ -1,0 +1,8 @@
+{
+    "lib": "libvart-dpu-runner.so",
+    "filename": "Yolooooov3.xmodel",
+    "kernel": [
+        "subgraph_ModelMain__ModelMain_Conv2d_embedding0__ModuleList_6__12013"
+    ],
+    "target": "DPUCZDX8G_ISA1_B4096"
+}
