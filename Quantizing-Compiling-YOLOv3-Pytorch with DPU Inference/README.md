@@ -1,6 +1,24 @@
 ## 0. Overview
 
-This documentation outlines the steps for quantizing, compiling, and performing inference with YOLOv3-Pytorch using DPU Inference. It covers GPU inference, quantization, quantized Torch Script inference, Compilation, and DPU inference on KV260 board to be specific.
+Welcome to the "Quantizing-Compiling-YOLOv3-Pytorch with DPU Inference" project within the "Vitis-AI-Reference-Tutorials" repository. This project focuses on the implementation and optimization of YOLOv3 object detection using PyTorch, quantization for DPU (Deep Processing Unit) inference, and various related tasks. Whether you are new to the topic or looking to deepen your understanding, this repository offers a comprehensive set of resources and tutorials.
+
+### Getting Started
+If you're new to this project, we recommend starting with the README.md file, which provides an introduction and instructions for getting started. Explore the various directories to access tutorials, scripts, and resources relevant to your needs.
+
+### Project Structure
+- **Compiled:** This directory contains the compiled model outputs generated during the compilation process. These models are optimized for DPU inference.
+
+- **DPU Inference:** Here, you will find scripts and resources related to DPU inference. This is where the magic happens when you run your optimized models on Xilinx's Deep Processing Unit.
+
+- **GPU Inference:** This directory covers GPU inference scripts and modules. It's useful for those who want to leverage GPU acceleration for their YOLOv3 model.
+
+- **Quantization:** Dive into quantization techniques and tools. This is where we optimize our models for deployment on DPU hardware.
+
+- **Quantized Inference:** Learn how to perform inference with quantized models using Torch Script.
+
+- **Common:** Find common utilities and scripts that are shared across different parts of the project.
+
+- **Data, Evaluate, Nets, Test, Training, Weights:** These directories are the building blocks for training and evaluating your YOLOv3 models.
 
 ## 1. GPU inference
 * Run **gpu_inference.py** script
@@ -89,3 +107,6 @@ python dpu_inference.py <compiled_xmodel_file> <test_image_path>
 ```
 * <compiled_xmodel_file> : The compiled xmodel. Here, ../Compiled/Yolooooov3.xmodel
 * <test_image_path> : The image you want to inference on. Here, ../test/images/test1.jpg
+
+## Contribution
+We welcome contributions from the community. If you have ideas, improvements, or fixes to share, please feel free to open issues or submit pull requests. Together, we can make this resource even more valuable to the community.
