@@ -12,10 +12,10 @@ TRAINING_PARAMS = \
     },
     "batch_size": 16,
     "confidence_threshold": 0.5,
-    "images_path": "./test/images/",
-    "classes_names_path": "./data/coco.names",
+    "images_path": "../test/images/",
+    "classes_names_path": "../data/coco.names",
     "img_h": 416,
     "img_w": 416,
     "parallels": [0],
-    "pretrain_snapshot": "./weights/official_yolov3_weights_pytorch.pth",
+    "pretrain_snapshot": "../weights/official_yolov3_weights_pytorch.pth",
 }

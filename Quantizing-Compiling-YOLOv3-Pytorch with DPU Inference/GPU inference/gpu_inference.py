@@ -45,7 +45,7 @@ for i in range(3):
 ####### Inference
 
 # Pre-processing
-image_path = "test/images/test1.jpg"
+image_path = "../test/images/test1.jpg"
 image = cv2.imread(image_path, cv2.IMREAD_COLOR)
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 image = cv2.resize(image, (config["img_w"], config["img_h"]),
@@ -131,5 +131,5 @@ for idx, detections in enumerate(batch_detections):
             cv2.putText(im, label, (int(x1), int(y1) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
 
     # Save generated image with detections
-    output_path = 'prediction_gpu_0.2.jpg'
+    output_path = '../Prediction/prediction_gpu_0.2.jpg'
     cv2.imwrite(output_path, im)
