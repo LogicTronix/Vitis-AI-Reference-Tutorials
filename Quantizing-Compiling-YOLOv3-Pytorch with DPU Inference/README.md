@@ -1,8 +1,8 @@
-### 0. Overview
+## 0. Overview
 
 This documentation outlines the steps for quantizing, compiling, and performing inference with YOLOv3-Pytorch using DPU Inference. It covers GPU inference, quantization, quantized Torch Script inference, Compilation, and DPU inference on KV260 board to be specific.
 
-### 1. GPU inference
+## 1. GPU inference
 * Run **gpu_inference.py** script
 
 ├── Quantizing-Compiling-YOLOv3-Pytorch with DPU Inference\
@@ -17,7 +17,7 @@ python gpu_inference.py
 ```
 *Note:* Run the above script on Vitis AI pytorch environment to avoid errors. 
 
-### 2. Quantization 
+## 2. Quantization 
 * Run **quantize_yolov3.py** script
 
 ├── Quantizing-Compiling-YOLOv3-Pytorch with DPU Inference\
@@ -39,7 +39,7 @@ python gpu_inference.py --quant_mode test --batch_size 1 --deploy
 ```
 *Note:* Run the above script on Vitis AI pytorch environment to avoid errors. 
 
-### 3. Inference of Quantized Torch Script
+## 3. Inference of Quantized Torch Script
 * Run **quantized_inference.py** script
 
 ├── Quantizing-Compiling-YOLOv3-Pytorch with DPU Inference\
@@ -53,7 +53,7 @@ python quantized_inference.py
 ```
 *Note:* Run the above script on Vitis AI pytorch environment to avoid errors. 
 
-### 4. Compile
+## 4. Compile
 Compile quantized XIR formatted model using **VAI_C** from Vitis AI. 
 
 ```bash
@@ -75,7 +75,7 @@ After compilation, the Compiled (output directory) should look something like th
 
 *Note:* Run the above commands on Vitis AI pytorch environment to avoid errors. 
 
-### 5. DPU Inference
+## 5. DPU Inference
 * Run **dpu_inference.py** script
 
 ├── Quantizing-Compiling-YOLOv3-Pytorch with DPU Inference\
