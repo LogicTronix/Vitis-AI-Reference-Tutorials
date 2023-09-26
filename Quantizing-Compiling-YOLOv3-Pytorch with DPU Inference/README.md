@@ -108,5 +108,11 @@ python dpu_inference.py <compiled_xmodel_file> <test_image_path>
 * <compiled_xmodel_file> : The compiled xmodel. Here, ../Compiled/Yolooooov3.xmodel
 * <test_image_path> : The image you want to inference on. Here, ../test/images/test1.jpg
 
+## YOLOv3 Weight Source
+We used pre-trained YOLOv3 weights from the following repository as a starting point for our object detection model:
+
+- [BobLiu20/YOLOv3_PyTorch](https://github.com/BobLiu20/YOLOv3_PyTorch)
+
+
 ## Contribution
 We welcome contributions from the community. If you have ideas, improvements, or fixes to share, please feel free to open issues or submit pull requests. Together, we can make this resource even more valuable to the community.
