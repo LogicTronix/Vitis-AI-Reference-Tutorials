@@ -19,4 +19,4 @@ python quantize_yolov3.py --deploy_mode test --batch_size 1 --deploy
 ## Directly download the Quantized Result
 Get the quantized torch script and xmodel from the google drive link below: 
 
-> https://drive.google.com/drive/folders/1HON_lcEEscUbTDkRjFEapefXXrPVGJIC?usp=sharing
+> [Google Drive](https://drive.google.com/drive/folders/1HON_lcEEscUbTDkRjFEapefXXrPVGJIC?usp=sharing)
