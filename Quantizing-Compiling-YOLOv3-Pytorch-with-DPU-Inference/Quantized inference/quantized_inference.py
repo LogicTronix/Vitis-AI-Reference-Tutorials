@@ -11,7 +11,7 @@ import pytorch_nndct
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Load the model
-model = torch.jit.load('../Quantization/quantized_result/ModelMain_int.pt', map_location=torch.device('cpu'))
+model = torch.jit.load('../Quantization/quantize_result/ModelMain_int.pt', map_location=torch.device('cpu'))
 
 model.eval()
 model = model.to(device)

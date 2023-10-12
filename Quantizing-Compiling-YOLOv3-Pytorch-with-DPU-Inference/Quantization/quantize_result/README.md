@@ -4,12 +4,12 @@
 
 ### Step 1: Run 'quantize_yolov3.py' script - "calib"
 ```python
-python quantize_yolov3.py --deploy_mode calib
+python quantize_yolov3.py --quant_mode calib
 ``` 
 
 ### Step 2: Run 'quantize_yolov3.py' script - "test"
 ```python
-python quantize_yolov3.py --deploy_mode test --batch_size 1 --deploy
+python quantize_yolov3.py --quant_mode test --batch_size 1 --deploy
 ```
 
 *Note:* Run the script inside the Vitis AI pytorch environment because of certain APIs that Vitis AI provides and supports.
