@@ -49,11 +49,11 @@ python gpu_inference.py
 
 * For "calib"
 ```bash
-python gpu_inference.py --quant_mode calib
+python quantize_yolov3.py --quant_mode calib
 ```
 * For "test"
 ```bash
-python gpu_inference.py --quant_mode test --batch_size 1 --deploy
+python quantize_yolov3.py --quant_mode test --batch_size 1 --deploy
 ```
 *Note:* Run the above script on Vitis AI pytorch environment to avoid errors. 
 
