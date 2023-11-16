@@ -81,9 +81,9 @@ with torch.no_grad():
 
 # Convert tensor to numpy
 output = []
-output.append(out[0].numpy())
-output.append(out[1].numpy())
-output.append(out[2].numpy())
+output.append(out[0].cpu().numpy())
+output.append(out[1].cpu().numpy())
+output.append(out[2].cpu().numpy())
 # print(len(output))
 # print(output[0].shape) # (1, 255, 13, 13) -> numpy
 
