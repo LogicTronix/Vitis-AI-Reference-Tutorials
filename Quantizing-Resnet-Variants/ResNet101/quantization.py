@@ -43,11 +43,6 @@ parser.add_argument('--deploy',
     dest='deploy',
     action='store_true',
     help='export xmodel for deployment')
-parser.add_argument('--target', 
-    dest='target',
-    nargs="?",
-    const="",
-    help='specify target device')
 
 args, _ = parser.parse_known_args()
 
@@ -146,7 +141,6 @@ def quantization(title='optimize',
   batch_size = args.batch_size
   subset_len = args.subset_len
   config_file = args.config_file
-  target = args.target
 
   # Assertions
   if quant_mode != 'test' and deploy:
@@ -158,7 +152,7 @@ def quantization(title='optimize',
     subset_len = 1
 
   model = ResNet101(image_channels=3, num_classes=3)
-  model.load_state_dict(torch.load(file_path,  map_location=torch.device('cpu')))
+  model.load_state_dict(torch.load(file_path,  map_location=torch.device(device)))
   model = model.to(device)
 
   input = torch.randn([batch_size, 3, 224, 224])
@@ -168,7 +162,7 @@ def quantization(title='optimize',
     ## new api
     ####################################################################################
     quantizer = torch_quantizer(
-        quant_mode, model, (input), device=device, quant_config_file=config_file, target=target)
+        quant_mode, model, (input), device=device, quant_config_file=config_file)
 
     quant_model = quantizer.quant_model
     #####################################################################################

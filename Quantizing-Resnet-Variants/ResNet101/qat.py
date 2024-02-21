@@ -264,7 +264,7 @@ def main():
   
   """# Load the model"""
   model = ResNet101(image_channels=3, num_classes=3)
-  model.load_state_dict(torch.load("ResNet101.pth", map_location=torch.device('cpu')))
+  model.load_state_dict(torch.load("ResNet101.pth", map_location=torch.device(device)))
   model = model.to(device)
 
   # define loss function (criterion)
@@ -290,7 +290,7 @@ def main():
 
     # Step 2: Get deployable model and test it.
     # There may be some slight differences in accuracy with the quantized model.
-    quantized_model.load_state_dict(torch.load("ResNet101_QAT_trained.pth", map_location=torch.device('cpu')))
+    quantized_model.load_state_dict(torch.load("ResNet101_QAT_trained.pth", map_location=torch.device(device)))
     deployable_model = qat_processor.to_deployable(quantized_model,
                                                    args.output_dir)
     validate(val_loader, deployable_model, device)
