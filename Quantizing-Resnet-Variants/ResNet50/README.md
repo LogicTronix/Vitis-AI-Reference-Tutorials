@@ -109,7 +109,7 @@ This guide walks you through the process of training a ResNet50 model, performin
 
 <hr>
 
-10. Compile
+10. Compile (For Kv260)
     - For compiling PTQ xmodel:
     ```bash
     vai_c_xir --xmodel ./quantize_result/ResNet_int.xmodel --arch /opt/vitis_ai/compiler/arch/DPUCZDX8G/KV260/arch.json --net_name RESNET50 --output_dir ./Compiled
