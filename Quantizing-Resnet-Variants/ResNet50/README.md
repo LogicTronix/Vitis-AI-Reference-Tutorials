@@ -75,7 +75,7 @@ This guide walks you through the process of training a ResNet50 model, performin
 <hr>
 
 8. **Quantization Aware Training (QAT):**
-   - Run `resnet50_qat.py` to perform Quantization Aware Training (QAT) on the trained model.
+   - Run `resnet_qat.py` to perform Quantization Aware Training (QAT) on the trained model.
 
    **Train step**
    ```bash
