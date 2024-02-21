@@ -1,0 +1,8 @@
+{
+    "lib": "libvart-dpu-runner.so",
+    "filename": "RESNET50.xmodel",
+    "kernel": [
+        "subgraph_ResNet__ResNet_AdaptiveAvgPool2d_avgpool__10553_fix"
+    ],
+    "target": "DPUCZDX8G_ISA1_B4096"
+}
