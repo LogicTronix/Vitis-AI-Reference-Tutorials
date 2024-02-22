@@ -23,7 +23,7 @@ This guide walks you through the process of training a MobileNetV2 model, perfor
    ```bash
    git clone https://github.com/LogicTronix/Vitis-AI-Reference-Tutorials.git
    ```
-2. **Navigate to ResNet50 Directory:**
+2. **Navigate to MobileNetV2 Directory:**
    ```bash
    cd 'Vitis-AI-Reference-Tutorials/Quantizing MobileNetV2/MobileNetV2 Transfer Learning'/
    ```
