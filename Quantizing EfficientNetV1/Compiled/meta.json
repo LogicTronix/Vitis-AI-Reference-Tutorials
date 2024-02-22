@@ -1,0 +1,24 @@
+{
+    "lib": "libvart-dpu-runner.so",
+    "filename": "EfficientNetV1.xmodel",
+    "kernel": [
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__CNNBlock_0__Conv2d_cnn__ret_3",
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__InvertedResidualBlock_15__Sequential_conv__Conv2d_2__ret_405",
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__InvertedResidualBlock_14__Sequential_conv__Conv2d_2__ret_377",
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__InvertedResidualBlock_11__Sequential_conv__Conv2d_2__ret_295",
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__InvertedResidualBlock_12__Sequential_conv__Conv2d_2__ret_323",
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__InvertedResidualBlock_10__CNNBlock_expand_conv__Conv2d_cnn__ret_245",
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__InvertedResidualBlock_8__Sequential_conv__Conv2d_2__ret_213",
+        "subgraph_EfficientNet__EfficientNet_AdaptiveAvgPool2d_pool__25683_fix",
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__InvertedResidualBlock_5__Sequential_conv__Conv2d_2__ret_131",
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__InvertedResidualBlock_4__Sequential_conv__Conv2d_2__ret_105",
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__InvertedResidualBlock_6__Sequential_conv__Conv2d_2__ret_159",
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__InvertedResidualBlock_7__Sequential_conv__Conv2d_2__ret_185",
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__InvertedResidualBlock_10__Sequential_conv__Conv2d_2__ret_267",
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__InvertedResidualBlock_1__Sequential_conv__Conv2d_2__ret_25",
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__InvertedResidualBlock_2__Sequential_conv__Conv2d_2__ret_51",
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__InvertedResidualBlock_3__Sequential_conv__Conv2d_2__ret_77",
+        "subgraph_EfficientNet__EfficientNet_Sequential_features__InvertedResidualBlock_13__Sequential_conv__Conv2d_2__ret_349"
+    ],
+    "target": "DPUCZDX8G_ISA1_B4096"
+}
