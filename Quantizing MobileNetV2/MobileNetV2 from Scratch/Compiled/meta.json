@@ -1,0 +1,8 @@
+{
+    "lib": "libvart-dpu-runner.so",
+    "filename": "MobileNetV2.xmodel",
+    "kernel": [
+        "subgraph_MobileNetV2__MobileNetV2_AdaptiveAvgPool2d_adp_avgpool__11397_fix"
+    ],
+    "target": "DPUCZDX8G_ISA1_B4096"
+}
