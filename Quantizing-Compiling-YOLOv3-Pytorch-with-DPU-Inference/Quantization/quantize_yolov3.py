@@ -34,11 +34,6 @@ parser.add_argument('--deploy',
     dest='deploy',
     action='store_true',
     help='export xmodel for deployment')
-parser.add_argument('--target', 
-    dest='target',
-    nargs="?",
-    const="",
-    help='specify target device')
 
 args, _ = parser.parse_known_args()
 
@@ -50,7 +45,6 @@ def quantization(title='optimize',
   deploy = args.deploy
   batch_size = args.batch_size
   config_file = args.config_file
-  target = args.target
 
   # Assertions
   if quant_mode != 'test' and deploy:
@@ -70,7 +64,7 @@ def quantization(title='optimize',
   # Set data parallel
   model = nn.DataParallel(model)
 
-  state_dict = torch.load(config["pretrain_snapshot"], map_location=torch.device('cpu'))
+  state_dict = torch.load(config["pretrain_snapshot"], map_location=torch.device(device))
   model.load_state_dict(state_dict)
   model = model.to(device)
   print(model)
@@ -83,7 +77,7 @@ def quantization(title='optimize',
     ## new api
     ####################################################################################
     quantizer = torch_quantizer(
-        quant_mode, model, (input), device=device, quant_config_file=config_file, target=target)
+        quant_mode, model, (input), device=device, quant_config_file=config_file)
 
     quant_model = quantizer.quant_model
     #####################################################################################
