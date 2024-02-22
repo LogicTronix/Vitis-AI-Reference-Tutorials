@@ -14,7 +14,7 @@ def predict(image):
     model = MobileNetV2()
 
     # Load the model 
-    model.load_state_dict(torch.load("MobileNetV2_scratch.pth", map_location=torch.device('cpu')))
+    model.load_state_dict(torch.load("MobileNetV2_scratch.pth", map_location=torch.device(device)))
     model.eval()
     model = model.to(device)
 

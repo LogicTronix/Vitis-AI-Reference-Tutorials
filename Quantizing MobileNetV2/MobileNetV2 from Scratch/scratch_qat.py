@@ -300,7 +300,7 @@ def main():
   model = MobileNetV2()
 
   # Load the model
-  model.load_state_dict(torch.load('MobileNetV2_scratch.pth', map_location=torch.device('cpu')))
+  model.load_state_dict(torch.load('MobileNetV2_scratch.pth', map_location=torch.device(device)))
   model = model.to(device)
 
   # define loss function (criterion)
@@ -326,7 +326,7 @@ def main():
 
     # Step 2: Get deployable model and test it.
     # There may be some slight differences in accuracy with the quantized model.
-    quantized_model.load_state_dict(torch.load("MobileNetV2_QAT.pth", map_location=torch.device('cpu')))
+    quantized_model.load_state_dict(torch.load("MobileNetV2_QAT.pth", map_location=torch.device(device)))
     deployable_model = qat_processor.to_deployable(quantized_model,
                                                    args.output_dir)
     validate(val_loader, deployable_model, device)

@@ -14,7 +14,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = MobileNetV2()
 
 # Load the model to be inspected
-model.load_state_dict(torch.load("MobileNetV2_scratch.pth", map_location=torch.device('cpu')))
+model.load_state_dict(torch.load("MobileNetV2_scratch.pth", map_location=torch.device(device)))
 
 # Random input
 dummy_input = torch.randn(1,3,224,224)
