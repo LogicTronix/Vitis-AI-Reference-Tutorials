@@ -8,33 +8,24 @@ from quantized_utils import YOLOPost, non_max_suppression
 
 import pytorch_nndct
 
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+# Determine device availability (CPU or CUDA)
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# Load the model
-model = torch.jit.load('../Quantization/quantize_result/ModelMain_int.pt', map_location=torch.device('cpu'))
-
-model.eval()
-model = model.to(device)
-# print(model)
-
-
-####### Load the config 
+# Load model configuration
 params_path = "params.py"
 config = importlib.import_module(params_path[:-3]).TRAINING_PARAMS
 
+# Load the model
+model = torch.jit.load('../Quantization/quantize_result/ModelMain_int.pt', map_location=torch.device(device))
+model.eval()
+model = model.to(device)
 
 # YOLO loss with 3 scales
 yolo_losses = []
 for i in range(3):
-    # yolo_losses.append(YOLOLoss(config["yolo"]["anchors"][i],
-    #                             config["yolo"]["classes"], (config["img_w"], config["img_h"])))
-
     yolo_losses.append(YOLOPost(config["yolo"]["anchors"][i],
                                 config["yolo"]["classes"], (config["img_w"], config["img_h"])))
 
-
-
-####### Inference
 
 # Pre-processing
 image_path = "../test/images/test1.jpg"
@@ -46,60 +37,40 @@ image = image.astype(np.float32)
 image /= 255.0
 image = np.transpose(image, (2, 0, 1))
 image = image.astype(np.float32)
-
-# print(image.shape) # (3,416,416)
-
 image = torch.from_numpy(image)
 image = image.unsqueeze(0)
 
-# print(image.shape) # ([1,3,416,416])
-
-
-####### Inference
 
 # Perform inference
 with torch.no_grad():
     out = model(image.to(device))
 
-# print(out[0].shape) # ([1,255,13,13]) -> torch
 
 # Convert tensor to numpy
-output = []
-output.append(out[0].numpy())
-output.append(out[1].numpy())
-output.append(out[2].numpy())
-# print(len(output))
-# print(output[0].shape) # (1, 255, 13, 13) -> numpy
+output = [out[i].cpu().numpy() for i in range(len(out))]
 
+
+# Apply YOLO post-processing
 output_list = []
 for i in range(3):
     output_list.append(yolo_losses[i].forward(output[i]))
 output_con = np.concatenate(output_list, 1)
 
 
-# print(len(output_list))
-# print(output_list[0].shape) # ([1, 507, 85]) | 13*13*3
-# print(output_list[1].shape) # ([1, 2028, 85]) | 26*26*3
-# print(output_list[2].shape) # ([1, 8112, 85]) | 52*52*3
-
-# print(len(output_con))
-# print(output_con.shape) # ([1, 10647, 85])
-
+# Perform non-maximum supression
 batch_detections = non_max_suppression(output_con, config["yolo"]["classes"],
                                                    conf_thres=config["confidence_threshold"],
                                                    nms_thres=0.45)
-
 print(batch_detections)
 
 
-######## Plot prediction with bounding box
+# Plot prediction with bounding box
 classes = open(config["classes_names_path"], "r").read().split("\n")[:-1]
-# print(classes)
+
 
 for idx, detections in enumerate(batch_detections):
     if detections is not None:
         im = cv2.imread(image_path)
-        # print(im.shape) # eg. (428, 640, 3)
         unique_labels = np.unique(detections[:, -1])
         n_cls_preds = len(unique_labels)
         bbox_colors = {int(cls_pred): (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)) for cls_pred in unique_labels}
