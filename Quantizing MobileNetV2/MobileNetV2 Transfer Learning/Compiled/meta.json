@@ -1,0 +1,8 @@
+{
+    "lib": "libvart-dpu-runner.so",
+    "filename": "MobileNetV2.xmodel",
+    "kernel": [
+        "subgraph_MobileNetV2__MobileNetV2_12331_fix"
+    ],
+    "target": "DPUCZDX8G_ISA1_B4096"
+}
