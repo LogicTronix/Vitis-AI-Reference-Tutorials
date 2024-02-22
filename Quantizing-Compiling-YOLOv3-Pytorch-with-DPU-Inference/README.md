@@ -75,11 +75,11 @@ python quantized_inference.py
 Compile quantized XIR formatted model using **VAI_C** from Vitis AI. 
 
 ```bash
-vai_c_xir --xmodel ./Quantization/quantize_result/ModelMain_int.xmodel --arch /opt/vitis_ai/compiler/arch/DPUCZDX8G/KV260/arch.json --net_name Yolooooov3 --output_dir ./Compiled_Yolov3
+vai_c_xir --xmodel ./Quantization/quantize_result/ModelMain_int.xmodel --arch /opt/vitis_ai/compiler/arch/DPUCZDX8G/KV260/arch.json --net_name Yolooooov3 --output_dir ./Compiled
 ```
 
 * --xmodel : Path to quantized XIR formatted model.
-* -- arch : Target to compile for. Here, KV260.
+* -- arch : Target to compile for. Here, `KV260`.
 * -- net_name : Name of compiled XIR formatted model.
 * --output_dir : Directory of compiled model.
 
@@ -105,8 +105,13 @@ After compilation, the Compiled (output directory) should look something like th
 ```bash
 python dpu_inference.py <compiled_xmodel_file> <test_image_path>
 ```
-* <compiled_xmodel_file> : The compiled xmodel. Here, ../Compiled/Yolooooov3.xmodel
-* <test_image_path> : The image you want to inference on. Here, ../test/images/test1.jpg
+* <compiled_xmodel_file> : The compiled xmodel. Here, `../Compiled/Yolooooov3.xmodel`
+* <test_image_path> : The image you want to inference on. Here, `../test/images/test1.jpg`
+
+**Note:** DPU Inference Limitation
+
+Please note that DPU (Deep Learning Processing Unit) inference is only possible on DPU-enabled hardware (here, Xilinx boards). The compiled model provided in this repository is specifically optimized for the KV260 board. If you intend to utilize the inference capabilities of this repository, ensure compatibility with DPU or Xilinx-based hardware configurations.
+
 
 ## YOLOv3 Weight Source
 We used pre-trained YOLOv3 weights from the following repository as a starting point for our object detection model:
