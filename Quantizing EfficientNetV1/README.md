@@ -10,7 +10,7 @@ This guide walks you through the process of training a EfficientNetV1 model, per
    ```bash
    git clone https://github.com/LogicTronix/Vitis-AI-Reference-Tutorials.git
    ```
-2. **Navigate to ResNet50 Directory:**
+2. **Navigate to EfficientNetV1 Directory:**
    ```bash
    cd 'Vitis-AI-Reference-Tutorials/Quantizing EfficientNetV1'/
    ```
