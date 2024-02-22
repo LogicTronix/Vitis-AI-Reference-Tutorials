@@ -3,6 +3,8 @@
 ### Overview:
 This guide walks you through the process of training a RESNET152 model, performing quantization using Post Training Quantization (PTQ) and Quantization Aware Training (QAT), and compiling it into a model. Additionally, it provides links to download the results of quantization and Quantization Aware Training (QAT) for direct use.
 
+### Requirements for PTQ and QAT Quantization, Compile
+For Post-Training Quantization (PTQ), Quantization-Aware Training (QAT), and model compilation, it is necessary to utilize the Vitis-AI PyTorch Docker image. Please ensure that you are running this repository on the appropriate environment with compatibility for the Vitis AI 3.0 GitHub branch and the latest Vitis-AI PyTorch Docker environment.
 
 ### Steps:
 
@@ -109,7 +111,7 @@ This guide walks you through the process of training a RESNET152 model, performi
 
 <hr>
 
-10. Compile (For Kv260)
+10. **Compile (For Kv260):**
     - For compiling PTQ xmodel:
     ```bash
     vai_c_xir --xmodel ./quantize_result/ResNet_int.xmodel --arch /opt/vitis_ai/compiler/arch/DPUCZDX8G/KV260/arch.json --net_name RESNET152 --output_dir ./Compiled
