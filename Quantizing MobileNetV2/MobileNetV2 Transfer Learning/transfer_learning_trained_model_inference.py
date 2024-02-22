@@ -27,7 +27,7 @@ def predict(image):
     model.classifier = classifier
 
     # Load the model 
-    model.load_state_dict(torch.load("MobileNetV2_transfer_learning.pth", map_location=torch.device('cpu')))
+    model.load_state_dict(torch.load("MobileNetV2_transfer_learning.pth", map_location=torch.device(device)))
     model.eval()
     model = model.to(device)
 

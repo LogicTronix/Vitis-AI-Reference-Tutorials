@@ -8,7 +8,7 @@ import pytorch_nndct
 
 def predict(image):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model = torch.jit.load('transfer_learning_quantize_result/MobileNetV2_int.pt', map_location=torch.device('cpu'))
+    model = torch.jit.load('transfer_learning_quantize_result/MobileNetV2_int.pt', map_location=torch.device(device))
 
     model.eval()
     model = model.to(device)
