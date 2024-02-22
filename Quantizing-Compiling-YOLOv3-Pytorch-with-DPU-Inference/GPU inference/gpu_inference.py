@@ -31,7 +31,7 @@ model = model.to(device)
 
 # Restore pretrain model
 if config["pretrain_snapshot"]:
-    state_dict = torch.load(config["pretrain_snapshot"], map_location=torch.device('cpu'))
+    state_dict = torch.load(config["pretrain_snapshot"], map_location=torch.device(device))
     model.load_state_dict(state_dict)
 else:
     raise Exception("missing pretrain_snapshot!!!")
@@ -80,10 +80,7 @@ with torch.no_grad():
 # print(out[0].shape) # ([1,255,13,13]) -> torch
 
 # Convert tensor to numpy
-output = []
-output.append(out[0].numpy())
-output.append(out[1].numpy())
-output.append(out[2].numpy())
+output = [out[i].cpu().numpy() for i in range(len(out))]
 # print(len(output))
 # print(output[0].shape) # (1, 255, 13, 13) -> numpy
 
