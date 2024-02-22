@@ -98,11 +98,11 @@ This guide walks you through the process of training a RESNET152 model, performi
 <hr>
 
 9. **Inference:**
-   - For inference with the QAT torch script model, use `quantized_inference.py`.
+   - For inference with the PTQ torch script model, use `quantized_inference.py`.
    ```bash
    python quantized_inference.py
    ```
-   - For inference with the PTQ torch script model, use `qat_inference.py`.
+   - For inference with the QAT torch script model, use `qat_inference.py`.
    ```bash
    python qat_inference.py
    ```
