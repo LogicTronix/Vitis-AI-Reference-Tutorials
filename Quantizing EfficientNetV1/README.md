@@ -27,7 +27,7 @@ For Post-Training Quantization (PTQ), Quantization-Aware Training (QAT), and mod
 <hr>
 
 4. **Download dataset:**
-    - Download the dataset used in this repository from the following link: [Dataset - Google Drive](https://drive.google.com/file/d/1cB6OLCdHq0iMBBuqWRAA4SaQF6jxiz1z/view?usp=drive_link)
+    - Download the dataset used in this repository from the following link: [Dataset - Google Drive](https://drive.google.com/file/d/167L5B9ORegMzydr1SAT8EGDKjXgYaEim/view?usp=drive_link)
     - This dataset is necessary for training the EfficientNetV1 model. Ensure it is available in the appropriate directory within the project.
 
 <hr>
