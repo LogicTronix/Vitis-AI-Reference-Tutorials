@@ -27,7 +27,7 @@ For Post-Training Quantization (PTQ), Quantization-Aware Training (QAT), and mod
 <hr>
 
 4. **Download dataset:**
-    - Download the dataset used in this repository from the following link: [Dataset - Google Drive](https://drive.google.com/file/d/1cB6OLCdHq0iMBBuqWRAA4SaQF6jxiz1z/view?usp=drive_link)
+    - Download the dataset used in this repository from the following link: [Dataset - Google Drive](https://drive.google.com/file/d/167L5B9ORegMzydr1SAT8EGDKjXgYaEim/view?usp=drive_link)
     - This dataset is necessary for training the ResNet101 model. Ensure it is available in the appropriate directory within the project.
 
 <hr>
@@ -38,7 +38,7 @@ For Post-Training Quantization (PTQ), Quantization-Aware Training (QAT), and mod
    python train_model.py
    ```
    **Optional**
-   - You can download the pre-trained floating-point model directly from the following Google Drive link: [Float Model - Google Drive](https://drive.google.com/file/d/1xUTKhkpLdBbSFM5DfcyUO_4oRloRuEBR/view?usp=drive_link)
+   - You can download the pre-trained floating-point model directly from the following Google Drive link: [Float Model - Google Drive](https://drive.google.com/file/d/1D47eF_OBuC-3MN4EWcRc_zTjL3Md7bOx/view?usp=drive_link)
    - Save the downloaded model file in the appropriate directory within the project.
 
 <hr>
@@ -73,7 +73,7 @@ For Post-Training Quantization (PTQ), Quantization-Aware Training (QAT), and mod
     <br>
 
    **Optional**
-   - The results of Post Training Quantization (PTQ) are available for download from the following Google Drive link: [PTQ Results - Google Drive](https://drive.google.com/drive/folders/1mW1uLG4s4cNKxcm9RNjF1z4DUxTxFxDZ?usp=drive_link)
+   - The results of Post Training Quantization (PTQ) are available for download from the following Google Drive link: [PTQ Results - Google Drive](https://drive.google.com/drive/folders/1lnKIpZwAvGlKJfZlE1VN8PEOeozoGRKJ?usp=drive_link)
    - Download the PTQ results (.pt and .xmodel) files and save them in the project directory.
 
 <hr>
@@ -96,7 +96,7 @@ For Post-Training Quantization (PTQ), Quantization-Aware Training (QAT), and mod
     <br>
 
    **Optional**
-   - The results of Quantization Aware Training (QAT) are available for download from the following Google Drive link: [QAT Results - Google Drive](https://drive.google.com/drive/folders/1gHiMqgSTkl-qJrBey4l8FFhVXME6_oRi?usp=drive_link)
+   - The results of Quantization Aware Training (QAT) are available for download from the following Google Drive link: [QAT Results - Google Drive](https://drive.google.com/drive/folders/1osXKz-LEdapqVkmgDK9IrXX51NmnhSHP?usp=drive_link)
    - Download the QAT results (.pt and .xmodel) files and save them in the project directory.
 
 <hr>
@@ -122,6 +122,9 @@ For Post-Training Quantization (PTQ), Quantization-Aware Training (QAT), and mod
     ```bash
     vai_c_xir --xmodel ./qat_result/ResNet_0_int.xmodel --arch /opt/vitis_ai/compiler/arch/DPUCZDX8G/KV260/arch.json --net_name RESNET101 --output_dir ./Compiled_QAT
     ```
+    
+    **Optional**
+    - The compiled xmodel is available for download from the following Google Drive link: [Compiled Resnet101 - Google Drive](https://drive.google.com/drive/folders/1nZ23de0t98_22rrq3MX5n_fIkmUNbUn-?usp=drive_link)
 
 <hr>
 
