@@ -1,0 +1,37 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# COCO 2017 dataset http://cocodataset.org by Microsoft
+# Example usage: yolo train data=coco.yaml
+# parent
+# ├── ultralytics
+# └── datasets
+#     └── coco  ← downloads here (20.1 GB)
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: datasets/bdd  # dataset root dir
+
+
+# Classes
+# Please insure that your custom_dataset are put in same dir with YOLOv6_DIR
+train: ./train/images # t/images
+val: ./val/images #/images
+test: ./test/images # /images (optional)
+
+# whether it is coco dataset, only coco dataset should be set to True.
+is_coco: False
+# Classes
+nc: 13  # number of classes
+names: 
+  0: pedestrian
+  1: rider 
+  2: car 
+  3: truck
+  4: bus
+  5: train
+  6: motorcycle
+  7: bicycle
+  8: traffic light
+  9: traffic sign
+  10: other vehicle
+  11: other person
+  12: trailer

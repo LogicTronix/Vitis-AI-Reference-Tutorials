@@ -1,0 +1,1 @@
+python detect.py --source data/images/v0.mp4 --weights runs/train/exp3/weights/epoch25.pt --view-img --data data/bdd.yaml

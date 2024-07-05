@@ -1,0 +1,8 @@
+{
+    "lib": "libvart-dpu-runner.so",
+    "filename": "Yolov5_kv260.xmodel",
+    "kernel": [
+        "subgraph_DetectMultiBackend__DetectMultiBackend_DetectionModel_model__C3_model__C3_13__Conv_cv1__Conv2d_conv__input_189"
+    ],
+    "target": "DPUCZDX8G_ISA1_B4096"
+}

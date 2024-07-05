@@ -1,0 +1,1 @@
+python train.py --data data/bdd.yaml --batch-size 16 --workers 4 --optimizer Adam --cos-lr --save-period 5 --batch-size 16 --resume

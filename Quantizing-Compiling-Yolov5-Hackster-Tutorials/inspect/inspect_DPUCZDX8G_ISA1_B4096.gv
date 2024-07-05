@@ -1,0 +1,1007 @@
+digraph DetectMultiBackend {
+	input_0 [label="type:nndct_input
+name:DetectMultiBackend::input_0
+assigned device:user
+out shape:[[1, 640, 640, 3]]" color=black]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/Conv2d[conv]/input.3" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/Conv2d[conv]/input.3
+assigned device:dpu
+out shape:[[1, 320, 320, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/LeakyReLU[act]/input.5" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/LeakyReLU[act]/input.5
+assigned device:dpu
+out shape:[[1, 320, 320, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/Conv2d[conv]/input.7" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/Conv2d[conv]/input.7
+assigned device:dpu
+out shape:[[1, 160, 160, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/LeakyReLU[act]/input.9" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/LeakyReLU[act]/input.9
+assigned device:dpu
+out shape:[[1, 160, 160, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/Conv2d[conv]/input.11" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/Conv2d[conv]/input.11
+assigned device:dpu
+out shape:[[1, 160, 160, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/LeakyReLU[act]/input.13" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/LeakyReLU[act]/input.13
+assigned device:dpu
+out shape:[[1, 160, 160, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.15" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.15
+assigned device:dpu
+out shape:[[1, 160, 160, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.17" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.17
+assigned device:dpu
+out shape:[[1, 160, 160, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.19" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.19
+assigned device:dpu
+out shape:[[1, 160, 160, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/11690" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/11690
+assigned device:dpu
+out shape:[[1, 160, 160, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/input.21" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/input.21
+assigned device:dpu
+out shape:[[1, 160, 160, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.23" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.23
+assigned device:dpu
+out shape:[[1, 160, 160, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.25" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.25
+assigned device:dpu
+out shape:[[1, 160, 160, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.27" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.27
+assigned device:dpu
+out shape:[[1, 160, 160, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/11734" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/11734
+assigned device:dpu
+out shape:[[1, 160, 160, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/11736" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/11736
+assigned device:dpu
+out shape:[[1, 160, 160, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/Conv2d[conv]/input.29" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/Conv2d[conv]/input.29
+assigned device:dpu
+out shape:[[1, 160, 160, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/LeakyReLU[act]/11757" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/LeakyReLU[act]/11757
+assigned device:dpu
+out shape:[[1, 160, 160, 48]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/input.31" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/input.31
+assigned device:dpu
+out shape:[[1, 160, 160, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/Conv2d[conv]/input.33" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/Conv2d[conv]/input.33
+assigned device:dpu
+out shape:[[1, 160, 160, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/LeakyReLU[act]/input.35" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/LeakyReLU[act]/input.35
+assigned device:dpu
+out shape:[[1, 160, 160, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/Conv2d[conv]/input.37" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/Conv2d[conv]/input.37
+assigned device:dpu
+out shape:[[1, 80, 80, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/LeakyReLU[act]/input.39" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/LeakyReLU[act]/input.39
+assigned device:dpu
+out shape:[[1, 80, 80, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/Conv2d[conv]/input.41" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/Conv2d[conv]/input.41
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/LeakyReLU[act]/input.43" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/LeakyReLU[act]/input.43
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.45" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.45
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.47" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.47
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.49" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.49
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/11865" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/11865
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/input.51" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/input.51
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.53" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.53
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.55" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.55
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.57" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.57
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/11909" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/11909
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/input.59" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/input.59
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/input.61" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/input.61
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv1]/LeakyReLU[act]/input.63" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv1]/LeakyReLU[act]/input.63
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/input.65" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/input.65
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv2]/LeakyReLU[act]/11953" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv2]/LeakyReLU[act]/11953
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/input.67" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/input.67
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv1]/Conv2d[conv]/input.69" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv1]/Conv2d[conv]/input.69
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv1]/LeakyReLU[act]/input.71" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv1]/LeakyReLU[act]/input.71
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv2]/Conv2d[conv]/input.73" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv2]/Conv2d[conv]/input.73
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv2]/LeakyReLU[act]/11997" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv2]/LeakyReLU[act]/11997
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/11999" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/11999
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/Conv2d[conv]/input.75" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/Conv2d[conv]/input.75
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/LeakyReLU[act]/12020" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/LeakyReLU[act]/12020
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/input.77" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/input.77
+assigned device:dpu
+out shape:[[1, 80, 80, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/Conv2d[conv]/input.79" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/Conv2d[conv]/input.79
+assigned device:dpu
+out shape:[[1, 80, 80, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/LeakyReLU[act]/input.81" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/LeakyReLU[act]/input.81
+assigned device:dpu
+out shape:[[1, 80, 80, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/Conv2d[conv]/input.83" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/Conv2d[conv]/input.83
+assigned device:dpu
+out shape:[[1, 40, 40, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/LeakyReLU[act]/input.85" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/LeakyReLU[act]/input.85
+assigned device:dpu
+out shape:[[1, 40, 40, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/Conv2d[conv]/input.87" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/Conv2d[conv]/input.87
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/LeakyReLU[act]/input.89" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/LeakyReLU[act]/input.89
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.91" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.91
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.93" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.93
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.95" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.95
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/12128" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/12128
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/input.97" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/input.97
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.99" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.99
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.101" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.101
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.103" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.103
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12172" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12172
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/input.105" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/input.105
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/input.107" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/input.107
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/LeakyReLU[act]/input.109" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/LeakyReLU[act]/input.109
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/input.111" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/input.111
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/LeakyReLU[act]/12216" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/LeakyReLU[act]/12216
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/input.113" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/input.113
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv1]/Conv2d[conv]/input.115" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv1]/Conv2d[conv]/input.115
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv1]/LeakyReLU[act]/input.117" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv1]/LeakyReLU[act]/input.117
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv2]/Conv2d[conv]/input.119" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv2]/Conv2d[conv]/input.119
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv2]/LeakyReLU[act]/12260" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv2]/LeakyReLU[act]/12260
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/input.121" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/input.121
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv1]/Conv2d[conv]/input.123" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv1]/Conv2d[conv]/input.123
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv1]/LeakyReLU[act]/input.125" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv1]/LeakyReLU[act]/input.125
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv2]/Conv2d[conv]/input.127" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv2]/Conv2d[conv]/input.127
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv2]/LeakyReLU[act]/12304" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv2]/LeakyReLU[act]/12304
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/input.129" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/input.129
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv1]/Conv2d[conv]/input.131" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv1]/Conv2d[conv]/input.131
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv1]/LeakyReLU[act]/input.133" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv1]/LeakyReLU[act]/input.133
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv2]/Conv2d[conv]/input.135" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv2]/Conv2d[conv]/input.135
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv2]/LeakyReLU[act]/12348" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv2]/LeakyReLU[act]/12348
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/12350" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/12350
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/Conv2d[conv]/input.137" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/Conv2d[conv]/input.137
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/LeakyReLU[act]/12371" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/LeakyReLU[act]/12371
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/input.139" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/input.139
+assigned device:dpu
+out shape:[[1, 40, 40, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/Conv2d[conv]/input.141" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/Conv2d[conv]/input.141
+assigned device:dpu
+out shape:[[1, 40, 40, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/LeakyReLU[act]/input.143" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/LeakyReLU[act]/input.143
+assigned device:dpu
+out shape:[[1, 40, 40, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/Conv2d[conv]/input.145" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/Conv2d[conv]/input.145
+assigned device:dpu
+out shape:[[1, 20, 20, 768]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/LeakyReLU[act]/input.147" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/LeakyReLU[act]/input.147
+assigned device:dpu
+out shape:[[1, 20, 20, 768]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/Conv2d[conv]/input.149" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/Conv2d[conv]/input.149
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/LeakyReLU[act]/input.151" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/LeakyReLU[act]/input.151
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.153" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.153
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.155" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.155
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.157" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.157
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/12479" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/12479
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/input.159" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/input.159
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.161" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.161
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.163" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.163
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.165" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.165
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12523" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12523
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/12525" [label="type:nndct_elemwise_add
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/12525
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/Conv2d[conv]/input.167" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/Conv2d[conv]/input.167
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/LeakyReLU[act]/12546" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/LeakyReLU[act]/12546
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/input.169" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/input.169
+assigned device:dpu
+out shape:[[1, 20, 20, 768]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/Conv2d[conv]/input.171" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/Conv2d[conv]/input.171
+assigned device:dpu
+out shape:[[1, 20, 20, 768]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/LeakyReLU[act]/input.173" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/LeakyReLU[act]/input.173
+assigned device:dpu
+out shape:[[1, 20, 20, 768]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/Conv2d[conv]/input.175" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/Conv2d[conv]/input.175
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/LeakyReLU[act]/12591" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/LeakyReLU[act]/12591
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/12605" [label="type:nndct_maxpool
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/12605
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/12619" [label="type:nndct_maxpool
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/12619
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/12633" [label="type:nndct_maxpool
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/12633
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/input.177" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/input.177
+assigned device:dpu
+out shape:[[1, 20, 20, 1536]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/Conv2d[conv]/input.179" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/Conv2d[conv]/input.179
+assigned device:dpu
+out shape:[[1, 20, 20, 768]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/LeakyReLU[act]/input.181" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/LeakyReLU[act]/input.181
+assigned device:dpu
+out shape:[[1, 20, 20, 768]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/Conv2d[conv]/input.183" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/Conv2d[conv]/input.183
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/LeakyReLU[act]/input.185" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/LeakyReLU[act]/input.185
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[11]/12683" [label="type:nndct_resize
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[11]/12683
+assigned device:dpu
+out shape:[[1, 40, 40, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[12]/input.187" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[12]/input.187
+assigned device:dpu
+out shape:[[1, 40, 40, 768]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/Conv2d[conv]/input.189" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/Conv2d[conv]/input.189
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/LeakyReLU[act]/input.191" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/LeakyReLU[act]/input.191
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.193" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.193
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.195" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.195
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.197" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.197
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.199" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.199
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.201" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.201
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.203" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.203
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.205" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.205
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12791" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12791
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/Conv2d[conv]/input.207" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/Conv2d[conv]/input.207
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/LeakyReLU[act]/12812" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/LeakyReLU[act]/12812
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/input.209" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/input.209
+assigned device:dpu
+out shape:[[1, 40, 40, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/Conv2d[conv]/input.211" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/Conv2d[conv]/input.211
+assigned device:dpu
+out shape:[[1, 40, 40, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/LeakyReLU[act]/input.213" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/LeakyReLU[act]/input.213
+assigned device:dpu
+out shape:[[1, 40, 40, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/Conv2d[conv]/input.215" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/Conv2d[conv]/input.215
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/LeakyReLU[act]/input.217" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/LeakyReLU[act]/input.217
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[15]/12862" [label="type:nndct_resize
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[15]/12862
+assigned device:dpu
+out shape:[[1, 80, 80, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[16]/input.219" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[16]/input.219
+assigned device:dpu
+out shape:[[1, 80, 80, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/Conv2d[conv]/input.221" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/Conv2d[conv]/input.221
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/LeakyReLU[act]/input.223" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/LeakyReLU[act]/input.223
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.225" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.225
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.227" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.227
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.229" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.229
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.231" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.231
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.233" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.233
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.235" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.235
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.237" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.237
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12970" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12970
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/Conv2d[conv]/input.239" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/Conv2d[conv]/input.239
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/LeakyReLU[act]/12991" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/LeakyReLU[act]/12991
+assigned device:dpu
+out shape:[[1, 80, 80, 96]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/input.241" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/input.241
+assigned device:dpu
+out shape:[[1, 80, 80, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/Conv2d[conv]/input.243" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/Conv2d[conv]/input.243
+assigned device:dpu
+out shape:[[1, 80, 80, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/LeakyReLU[act]/input.245" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/LeakyReLU[act]/input.245
+assigned device:dpu
+out shape:[[1, 80, 80, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/Conv2d[conv]/input.247" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/Conv2d[conv]/input.247
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/LeakyReLU[act]/13036" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/LeakyReLU[act]/13036
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[19]/input.249" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[19]/input.249
+assigned device:dpu
+out shape:[[1, 40, 40, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/Conv2d[conv]/input.251" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/Conv2d[conv]/input.251
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/LeakyReLU[act]/input.253" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/LeakyReLU[act]/input.253
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.255" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.255
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.257" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.257
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.259" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.259
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.261" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.261
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.263" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.263
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.265" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.265
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.267" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.267
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/13144" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/13144
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/Conv2d[conv]/input.269" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/Conv2d[conv]/input.269
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/LeakyReLU[act]/13165" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/LeakyReLU[act]/13165
+assigned device:dpu
+out shape:[[1, 40, 40, 192]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/input.271" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/input.271
+assigned device:dpu
+out shape:[[1, 40, 40, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/Conv2d[conv]/input.273" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/Conv2d[conv]/input.273
+assigned device:dpu
+out shape:[[1, 40, 40, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/LeakyReLU[act]/input.275" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/LeakyReLU[act]/input.275
+assigned device:dpu
+out shape:[[1, 40, 40, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/Conv2d[conv]/input.277" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/Conv2d[conv]/input.277
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/LeakyReLU[act]/13210" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/LeakyReLU[act]/13210
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[22]/input.279" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[22]/input.279
+assigned device:dpu
+out shape:[[1, 20, 20, 768]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/Conv2d[conv]/input.281" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/Conv2d[conv]/input.281
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/LeakyReLU[act]/input.283" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/LeakyReLU[act]/input.283
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.285" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.285
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.287" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.287
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.289" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.289
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.291" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.291
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.293" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.293
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.295" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.295
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.297" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.297
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/13318" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/13318
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/Conv2d[conv]/input.299" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/Conv2d[conv]/input.299
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/LeakyReLU[act]/13339" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/LeakyReLU[act]/13339
+assigned device:dpu
+out shape:[[1, 20, 20, 384]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/input.301" [label="type:nndct_concat
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/input.301
+assigned device:dpu
+out shape:[[1, 20, 20, 768]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/Conv2d[conv]/input.303" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/Conv2d[conv]/input.303
+assigned device:dpu
+out shape:[[1, 20, 20, 768]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/LeakyReLU[act]/input" [label="type:nndct_leaky_relu
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/LeakyReLU[act]/input
+assigned device:dpu
+out shape:[[1, 20, 20, 768]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[0]/13382" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[0]/13382
+assigned device:dpu
+out shape:[[1, 80, 80, 54]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[1]/13413" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[1]/13413
+assigned device:dpu
+out shape:[[1, 40, 40, 54]]" color=blue]
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[2]/13444" [label="type:nndct_conv2d
+name:DetectMultiBackend::DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[2]/13444
+assigned device:dpu
+out shape:[[1, 20, 20, 54]]" color=blue]
+	return_0 [label="type:nndct_return
+name:DetectMultiBackend::return_0
+assigned device:user
+out shape:[]" color=black]
+	input_0 -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/Conv2d[conv]/input.3"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/Conv2d[conv]/input.3" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/LeakyReLU[act]/input.5"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[0]/LeakyReLU[act]/input.5" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/Conv2d[conv]/input.7"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/Conv2d[conv]/input.7" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/LeakyReLU[act]/input.9"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/LeakyReLU[act]/input.9" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/Conv2d[conv]/input.11"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[1]/LeakyReLU[act]/input.9" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/Conv2d[conv]/input.29"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/Conv2d[conv]/input.11" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/LeakyReLU[act]/input.13"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/LeakyReLU[act]/input.13" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.15"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv1]/LeakyReLU[act]/input.13" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/input.21"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.15" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.17"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.17" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.19"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.19" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/11690"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/11690" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/input.21"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/input.21" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.23"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[0]/input.21" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/11736"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.23" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.25"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.25" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.27"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.27" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/11734"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/11734" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/11736"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Sequential[m]/Bottleneck[1]/11736" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/input.31"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/Conv2d[conv]/input.29" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/LeakyReLU[act]/11757"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv2]/LeakyReLU[act]/11757" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/input.31"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/input.31" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/Conv2d[conv]/input.33"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/Conv2d[conv]/input.33" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/LeakyReLU[act]/input.35"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[2]/Conv[cv3]/LeakyReLU[act]/input.35" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/Conv2d[conv]/input.37"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/Conv2d[conv]/input.37" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/LeakyReLU[act]/input.39"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/LeakyReLU[act]/input.39" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/Conv2d[conv]/input.41"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[3]/LeakyReLU[act]/input.39" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/Conv2d[conv]/input.75"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/Conv2d[conv]/input.41" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/LeakyReLU[act]/input.43"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/LeakyReLU[act]/input.43" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.45"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv1]/LeakyReLU[act]/input.43" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/input.51"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.45" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.47"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.47" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.49"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.49" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/11865"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/11865" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/input.51"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/input.51" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.53"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[0]/input.51" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/input.59"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.53" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.55"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.55" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.57"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.57" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/11909"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/11909" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/input.59"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/input.59" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/input.61"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[1]/input.59" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/input.67"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/input.61" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv1]/LeakyReLU[act]/input.63"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv1]/LeakyReLU[act]/input.63" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/input.65"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/input.65" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv2]/LeakyReLU[act]/11953"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/Conv[cv2]/LeakyReLU[act]/11953" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/input.67"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/input.67" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv1]/Conv2d[conv]/input.69"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[2]/input.67" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/11999"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv1]/Conv2d[conv]/input.69" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv1]/LeakyReLU[act]/input.71"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv1]/LeakyReLU[act]/input.71" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv2]/Conv2d[conv]/input.73"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv2]/Conv2d[conv]/input.73" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv2]/LeakyReLU[act]/11997"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/Conv[cv2]/LeakyReLU[act]/11997" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/11999"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Sequential[m]/Bottleneck[3]/11999" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/input.77"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/Conv2d[conv]/input.75" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/LeakyReLU[act]/12020"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv2]/LeakyReLU[act]/12020" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/input.77"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/input.77" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/Conv2d[conv]/input.79"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/Conv2d[conv]/input.79" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/LeakyReLU[act]/input.81"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/LeakyReLU[act]/input.81" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/Conv2d[conv]/input.83"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[4]/Conv[cv3]/LeakyReLU[act]/input.81" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[16]/input.219"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/Conv2d[conv]/input.83" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/LeakyReLU[act]/input.85"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/LeakyReLU[act]/input.85" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/Conv2d[conv]/input.87"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[5]/LeakyReLU[act]/input.85" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/Conv2d[conv]/input.137"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/Conv2d[conv]/input.87" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/LeakyReLU[act]/input.89"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/LeakyReLU[act]/input.89" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.91"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv1]/LeakyReLU[act]/input.89" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/input.97"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.91" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.93"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.93" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.95"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.95" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/12128"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/12128" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/input.97"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/input.97" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.99"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[0]/input.97" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/input.105"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.99" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.101"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.101" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.103"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.103" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12172"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12172" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/input.105"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/input.105" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/input.107"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[1]/input.105" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/input.113"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/Conv2d[conv]/input.107" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/LeakyReLU[act]/input.109"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv1]/LeakyReLU[act]/input.109" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/input.111"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/Conv2d[conv]/input.111" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/LeakyReLU[act]/12216"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/Conv[cv2]/LeakyReLU[act]/12216" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/input.113"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/input.113" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv1]/Conv2d[conv]/input.115"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[2]/input.113" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/input.121"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv1]/Conv2d[conv]/input.115" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv1]/LeakyReLU[act]/input.117"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv1]/LeakyReLU[act]/input.117" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv2]/Conv2d[conv]/input.119"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv2]/Conv2d[conv]/input.119" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv2]/LeakyReLU[act]/12260"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/Conv[cv2]/LeakyReLU[act]/12260" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/input.121"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/input.121" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv1]/Conv2d[conv]/input.123"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[3]/input.121" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/input.129"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv1]/Conv2d[conv]/input.123" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv1]/LeakyReLU[act]/input.125"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv1]/LeakyReLU[act]/input.125" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv2]/Conv2d[conv]/input.127"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv2]/Conv2d[conv]/input.127" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv2]/LeakyReLU[act]/12304"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/Conv[cv2]/LeakyReLU[act]/12304" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/input.129"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/input.129" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv1]/Conv2d[conv]/input.131"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[4]/input.129" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/12350"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv1]/Conv2d[conv]/input.131" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv1]/LeakyReLU[act]/input.133"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv1]/LeakyReLU[act]/input.133" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv2]/Conv2d[conv]/input.135"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv2]/Conv2d[conv]/input.135" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv2]/LeakyReLU[act]/12348"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/Conv[cv2]/LeakyReLU[act]/12348" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/12350"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Sequential[m]/Bottleneck[5]/12350" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/input.139"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/Conv2d[conv]/input.137" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/LeakyReLU[act]/12371"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv2]/LeakyReLU[act]/12371" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/input.139"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/input.139" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/Conv2d[conv]/input.141"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/Conv2d[conv]/input.141" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/LeakyReLU[act]/input.143"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/LeakyReLU[act]/input.143" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/Conv2d[conv]/input.145"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[6]/Conv[cv3]/LeakyReLU[act]/input.143" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[12]/input.187"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/Conv2d[conv]/input.145" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/LeakyReLU[act]/input.147"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/LeakyReLU[act]/input.147" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/Conv2d[conv]/input.149"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[7]/LeakyReLU[act]/input.147" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/Conv2d[conv]/input.167"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/Conv2d[conv]/input.149" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/LeakyReLU[act]/input.151"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/LeakyReLU[act]/input.151" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.153"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv1]/LeakyReLU[act]/input.151" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/input.159"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.153" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.155"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.155" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.157"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.157" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/12479"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/12479" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/input.159"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/input.159" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.161"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[0]/input.159" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/12525"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.161" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.163"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.163" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.165"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.165" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12523"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12523" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/12525"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Sequential[m]/Bottleneck[1]/12525" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/input.169"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/Conv2d[conv]/input.167" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/LeakyReLU[act]/12546"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv2]/LeakyReLU[act]/12546" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/input.169"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/input.169" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/Conv2d[conv]/input.171"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/Conv2d[conv]/input.171" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/LeakyReLU[act]/input.173"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[8]/Conv[cv3]/LeakyReLU[act]/input.173" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/Conv2d[conv]/input.175"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/Conv2d[conv]/input.175" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/LeakyReLU[act]/12591"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/LeakyReLU[act]/12591" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/12605"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv1]/LeakyReLU[act]/12591" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/input.177"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/12605" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/12619"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/12605" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/input.177"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/12619" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/12633"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/12619" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/input.177"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/MaxPool2d[m]/12633" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/input.177"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/input.177" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/Conv2d[conv]/input.179"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/Conv2d[conv]/input.179" -> "DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/LeakyReLU[act]/input.181"
+	"DetectMultiBackend/DetectionModel[model]/SPPF[model]/SPPF[9]/Conv[cv2]/LeakyReLU[act]/input.181" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/Conv2d[conv]/input.183"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/Conv2d[conv]/input.183" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/LeakyReLU[act]/input.185"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/LeakyReLU[act]/input.185" -> "DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[11]/12683"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[10]/LeakyReLU[act]/input.185" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[22]/input.279"
+	"DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[11]/12683" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[12]/input.187"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[12]/input.187" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/Conv2d[conv]/input.189"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[12]/input.187" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/Conv2d[conv]/input.207"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/Conv2d[conv]/input.189" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/LeakyReLU[act]/input.191"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv1]/LeakyReLU[act]/input.191" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.193"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.193" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.195"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.195" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.197"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.197" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.199"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.199" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.201"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.201" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.203"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.203" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.205"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.205" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12791"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12791" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/input.209"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/Conv2d[conv]/input.207" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/LeakyReLU[act]/12812"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv2]/LeakyReLU[act]/12812" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/input.209"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/input.209" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/Conv2d[conv]/input.211"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/Conv2d[conv]/input.211" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/LeakyReLU[act]/input.213"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[13]/Conv[cv3]/LeakyReLU[act]/input.213" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/Conv2d[conv]/input.215"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/Conv2d[conv]/input.215" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/LeakyReLU[act]/input.217"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/LeakyReLU[act]/input.217" -> "DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[15]/12862"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[14]/LeakyReLU[act]/input.217" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[19]/input.249"
+	"DetectMultiBackend/DetectionModel[model]/Upsample[model]/Upsample[15]/12862" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[16]/input.219"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[16]/input.219" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/Conv2d[conv]/input.221"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[16]/input.219" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/Conv2d[conv]/input.239"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/Conv2d[conv]/input.221" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/LeakyReLU[act]/input.223"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv1]/LeakyReLU[act]/input.223" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.225"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.225" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.227"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.227" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.229"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.229" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.231"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.231" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.233"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.233" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.235"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.235" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.237"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.237" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12970"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/12970" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/input.241"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/Conv2d[conv]/input.239" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/LeakyReLU[act]/12991"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv2]/LeakyReLU[act]/12991" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/input.241"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/input.241" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/Conv2d[conv]/input.243"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/Conv2d[conv]/input.243" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/LeakyReLU[act]/input.245"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/LeakyReLU[act]/input.245" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/Conv2d[conv]/input.247"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[17]/Conv[cv3]/LeakyReLU[act]/input.245" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[0]/13382"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/Conv2d[conv]/input.247" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/LeakyReLU[act]/13036"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[18]/LeakyReLU[act]/13036" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[19]/input.249"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[19]/input.249" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/Conv2d[conv]/input.251"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[19]/input.249" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/Conv2d[conv]/input.269"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/Conv2d[conv]/input.251" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/LeakyReLU[act]/input.253"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv1]/LeakyReLU[act]/input.253" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.255"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.255" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.257"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.257" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.259"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.259" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.261"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.261" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.263"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.263" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.265"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.265" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.267"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.267" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/13144"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/13144" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/input.271"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/Conv2d[conv]/input.269" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/LeakyReLU[act]/13165"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv2]/LeakyReLU[act]/13165" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/input.271"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/input.271" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/Conv2d[conv]/input.273"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/Conv2d[conv]/input.273" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/LeakyReLU[act]/input.275"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/LeakyReLU[act]/input.275" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/Conv2d[conv]/input.277"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[20]/Conv[cv3]/LeakyReLU[act]/input.275" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[1]/13413"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/Conv2d[conv]/input.277" -> "DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/LeakyReLU[act]/13210"
+	"DetectMultiBackend/DetectionModel[model]/Conv[model]/Conv[21]/LeakyReLU[act]/13210" -> "DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[22]/input.279"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[22]/input.279" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/Conv2d[conv]/input.281"
+	"DetectMultiBackend/DetectionModel[model]/Concat[model]/Concat[22]/input.279" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/Conv2d[conv]/input.299"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/Conv2d[conv]/input.281" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/LeakyReLU[act]/input.283"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv1]/LeakyReLU[act]/input.283" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.285"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/Conv2d[conv]/input.285" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.287"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv1]/LeakyReLU[act]/input.287" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.289"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/Conv2d[conv]/input.289" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.291"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[0]/Conv[cv2]/LeakyReLU[act]/input.291" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.293"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv1]/Conv2d[conv]/input.293" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.295"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv1]/LeakyReLU[act]/input.295" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.297"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv2]/Conv2d[conv]/input.297" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/13318"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Sequential[m]/Bottleneck[1]/Conv[cv2]/LeakyReLU[act]/13318" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/input.301"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/Conv2d[conv]/input.299" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/LeakyReLU[act]/13339"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv2]/LeakyReLU[act]/13339" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/input.301"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/input.301" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/Conv2d[conv]/input.303"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/Conv2d[conv]/input.303" -> "DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/LeakyReLU[act]/input"
+	"DetectMultiBackend/DetectionModel[model]/C3[model]/C3[23]/Conv[cv3]/LeakyReLU[act]/input" -> "DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[2]/13444"
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[0]/13382" -> return_0
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[1]/13413" -> return_0
+	"DetectMultiBackend/DetectionModel[model]/Detect[model]/Detect[24]/Conv2d[m]/ModuleList[2]/13444" -> return_0
+}
