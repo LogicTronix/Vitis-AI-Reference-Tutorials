@@ -9,6 +9,9 @@ LogicTronix is just sharing the changes needed in network level , and Vitis AI Q
 This repo is also github source repo of Hackster.io tutorial: https://www.hackster.io/LogicTronix/yolov5-quantization-compilation-with-vitis-ai-3-0-for-kria-7b005d. \
 **You can visit Hackster.io for detail steps performed in Yolov5 pytorch quantization and compilation!**
 
-![Yolov5-Quantization-Compilation-KV260](https://github.com/LogicTronix/Vitis-AI-Reference-Tutorials/blob/main/Quantizing-Compiling-Yolov5-Hackster-Tutorials/Yolov5-Quantization-Compilation-KV260.png)
+
+KV260-Vitis-AI_Yolov5 Pytorch Quantization/Compilation: 
+![Yolov5-Quantization-Compilation-KV260](https://github.com/LogicTronix/Vitis-AI-Reference-Tutorials/blob/main/Quantizing-Compiling-Yolov5-Hackster-Tutorial/Yolov5-Quantization-Compilation-KV260.png)
+
 
 For any Queries, you can write us at : info@logictronix.com
