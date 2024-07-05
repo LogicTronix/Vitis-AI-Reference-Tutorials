@@ -1,4 +1,6 @@
 # ADAS (Advanced Driver Assistance Systems) Object Detection using Vitis AI 3.0
+This code and flow explanation document is based on VART Resnet50 github example: https://github.com/Xilinx/Vitis-AI/tree/3.0/examples/vai_runtime/adas_detection \
+This ADAS Detection source is same for Vitis AI 3.5 and 3.0 repo.
 
 ## 1. Introduction
 

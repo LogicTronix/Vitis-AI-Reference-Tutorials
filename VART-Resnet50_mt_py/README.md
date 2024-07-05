@@ -1,4 +1,6 @@
-# ResNet50 DPU Implementation Documentation
+# VART ResNet50 DPU Implementation Documentation
+This code and flow explanation document is based on VART Resnet50 github example: https://github.com/Xilinx/Vitis-AI/tree/3.0/examples/vai_runtime/resnet50_mt_py
+This ADAS Detection source is same for Vitis AI 3.5 and 3.0 repo.
 
 ## 1. Introduction
 
